@@ -4,7 +4,7 @@ using Products.Core.Entities;
 namespace Products.Core.Interfaces
 {
 
-    public interface ICatalogContext
+    public interface IProductContext
     {
 
         IMongoCollection<Product> Products { get; }

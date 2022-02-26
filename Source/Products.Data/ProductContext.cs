@@ -5,11 +5,11 @@ using Products.Core.Interfaces;
 namespace Products.Data
 {
 
-    public class CatalogContext : ICatalogContext
+    public class ProductContext : IProductContext
     {
         public IMongoCollection<Product> Products { get; }
 
-        public CatalogContext(IMongoDbSettings mongoDbSettings)
+        public ProductContext(IMongoDbSettings mongoDbSettings)
         {
             var client = new MongoClient(mongoDbSettings.ConnectionString);
             var database = client.GetDatabase(mongoDbSettings.DatabaseName);
@@ -17,7 +17,7 @@ namespace Products.Data
             Products = database.GetCollection<Product>(mongoDbSettings.CollectionName);
 
             // Seed the required data
-            CatalogContextSeed.SeedData(Products);
+            ProductContextSeed.SeedData(Products);
         }
     }
 

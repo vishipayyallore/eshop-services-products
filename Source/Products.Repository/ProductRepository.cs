@@ -7,9 +7,9 @@ namespace Products.Repository
 
     public class ProductRepository : IProductRepository
     {
-        private readonly ICatalogContext _context;
+        private readonly IProductContext _context;
 
-        public ProductRepository(ICatalogContext context)
+        public ProductRepository(IProductContext context)
         {
             _context = context ?? throw new ArgumentNullException(nameof(context));
         }
@@ -40,7 +40,7 @@ namespace Products.Repository
                             .ToListAsync();
         }
 
-        public async Task<IEnumerable<Product>> GetProductByCategory(string categoryName)
+        public async Task<IEnumerable<Product>> GetProductsByCategory(string categoryName)
         {
             FilterDefinition<Product> filter = Builders<Product>.Filter.Eq(p => p.Category, categoryName);
 

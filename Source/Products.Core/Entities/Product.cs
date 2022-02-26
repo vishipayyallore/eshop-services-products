@@ -22,6 +22,16 @@ namespace Products.Core.Entities
         public string? ImageFile { get; set; }
 
         public decimal Price { get; set; }
+
+        public string CreatedBy { get; set; } = "No Name";
+
+        public DateTime CreatedDateTime { get; set; }
+
+        public string ModifiedBy { get; set; } = "No Name";
+
+        public DateTime ModifiedDateTime { get; set; }
+
+
     }
 
 }

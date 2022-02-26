@@ -13,7 +13,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.Configure<MongoDbSettings>(builder.Configuration.GetSection(nameof(MongoDbSettings)));
 builder.Services.AddSingleton<IMongoDbSettings>(sp => sp.GetRequiredService<IOptions<MongoDbSettings>>().Value);
 
-builder.Services.ConfigureCatalogContextServices();
+builder.Services.ConfigureProductContextServices();
 builder.Services.ConfigureProductRepositoryServices();
 
 builder.Services.AddControllers();

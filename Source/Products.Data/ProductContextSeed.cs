@@ -4,7 +4,7 @@ using Products.Core.Entities;
 namespace Products.Data
 {
 
-    public class CatalogContextSeed
+    public class ProductContextSeed
     {
 
         public static void SeedData(IMongoCollection<Product> productCollection)

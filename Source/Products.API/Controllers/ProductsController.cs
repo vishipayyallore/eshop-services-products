@@ -8,14 +8,15 @@ namespace Products.API.Controllers
 
     [ApiController]
     [Route("api/v1/[controller]")]
-    public class CatalogController : ControllerBase
+    public class ProductsController : ControllerBase
     {
         private readonly IProductRepository _repository;
-        private readonly ILogger<CatalogController> _logger;
+        private readonly ILogger<ProductsController> _logger;
 
-        public CatalogController(IProductRepository repository, ILogger<CatalogController> logger)
+        public ProductsController(IProductRepository repository, ILogger<ProductsController> logger)
         {
             _repository = repository ?? throw new ArgumentNullException(nameof(repository));
+
             _logger = logger ?? throw new ArgumentNullException(nameof(logger));
         }
 
@@ -49,7 +50,7 @@ namespace Products.API.Controllers
         [ProducesResponseType(typeof(IEnumerable<Product>), (int)HttpStatusCode.OK)]
         public async Task<ActionResult<IEnumerable<Product>>> GetProductByCategory(string category)
         {
-            var products = await _repository.GetProductByCategory(category);
+            var products = await _repository.GetProductsByCategory(category);
 
             return Ok(products);
         }
