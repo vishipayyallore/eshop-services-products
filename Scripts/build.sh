@@ -1,2 +1,2 @@
 #!/bin/bash
-dotnet build -c release
+dotnet build eshop-services-products.sln -c release 
