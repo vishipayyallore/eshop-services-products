@@ -1,7 +1,7 @@
 #!/bin/bash
 TAG=latest
 VERSION_TAG=$(git log -1 --pretty=format:%h)
-DOCKER_USERNAME=vishipayyallore
+DOCKER_USERNAME=YourDockerUsername
 
 REPOSITORY=$DOCKER_USERNAME/eshop-services-products
 
