@@ -11,6 +11,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentation", "{2A976898-71B8-4802-B034-46C2F8B47EC9}"
+	ProjectSection(SolutionItems) = preProject
+		Documentation\eshop-services-products.dgml = Documentation\eshop-services-products.dgml
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Images", "Images", "{F6102B47-7AC8-49FD-BE8A-A0F51404455E}"
 	ProjectSection(SolutionItems) = preProject
@@ -37,6 +40,8 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Products.Repository", "Source\Products.Repository\Products.Repository.csproj", "{156DDE89-26D4-4DF9-B146-85F4D462B501}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Products.API.Tests", "Tests\Products.API.Tests\Products.API.Tests.csproj", "{6A718CD9-B6F0-4DC4-9F84-7FCBEF35D0B3}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{E308C3F3-0076-461C-AAE3-4B55504F55D3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -68,6 +73,10 @@ Global
 		{6A718CD9-B6F0-4DC4-9F84-7FCBEF35D0B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6A718CD9-B6F0-4DC4-9F84-7FCBEF35D0B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6A718CD9-B6F0-4DC4-9F84-7FCBEF35D0B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E308C3F3-0076-461C-AAE3-4B55504F55D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E308C3F3-0076-461C-AAE3-4B55504F55D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E308C3F3-0076-461C-AAE3-4B55504F55D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E308C3F3-0076-461C-AAE3-4B55504F55D3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
