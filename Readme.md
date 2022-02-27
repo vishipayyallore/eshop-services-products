@@ -31,9 +31,12 @@ eshop Product Micro Service
 
 ![Execute With Docker Compose |150x150](./Documentation/Images/ExecuteWithDockerCompose.PNG)
 
+## Build And Push Image To Docker Hub
+
+![Build And Push Image To Docker Hub |150x150](./Documentation/Images/BuildAndPushImageToDockerHub.PNG)
+
 ## Deployment
 
-> 1. Docker Hub
 > 1. Azure Container Instances
 
 ## To Do List
