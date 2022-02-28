@@ -37,7 +37,37 @@ eshop Product Micro Service
 
 ## Deployment
 
-> 1. Docker Compose inside Azure App Service
+**Docker Compose** inside Azure **App Service**
+
+```
+version: '3.4'
+
+services:
+  productsdb:
+    image: mongo
+    container_name: productsdb
+    restart: always
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+
+  products.api:
+    image: vishipayyallore/productsapi:latest
+    container_name: products.api
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - "MongoDbSettings__ConnectionString=mongodb://productsdb:27017"
+    depends_on:
+      - productsdb
+    ports:
+      - "8000:80"
+    volumes:
+      - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
+
+volumes:
+  mongo_data:
+```
 
 ![Deploy To App Services Multi Container |150x150](./Documentation/Images/DeployToAppServicesMultiContainer.PNG)
 
@@ -55,13 +85,16 @@ eshop Product Micro Service
 ## Future Deployment Models
 
 **Container Apps**
+
 > 1. GitHub Registry
 > 1. Azure Container Apps
 
 **Kubernetes**
+
 > 1. Azure Container Registry
 > 1. Azure Kubernetes Service
 
 **Service Mesh**
+
 > 1. Azure Container Registry
 > 1. Kubernetes Service Mesh
