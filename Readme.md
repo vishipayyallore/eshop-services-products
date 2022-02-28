@@ -54,8 +54,14 @@ eshop Product Micro Service
 
 ## Future Deployment Models
 
+**Container Apps**
 > 1. GitHub Registry
 > 1. Azure Container Apps
 
+**Kubernetes**
 > 1. Azure Container Registry
 > 1. Azure Kubernetes Service
+
+**Service Mesh**
+> 1. Azure Container Registry
+> 1. Kubernetes Service Mesh
