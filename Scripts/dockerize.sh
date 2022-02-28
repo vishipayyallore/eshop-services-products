@@ -3,7 +3,7 @@ TAG=latest
 VERSION_TAG=$(git log -1 --pretty=format:%h)
 DOCKER_USERNAME=YourDockerUsername
 
-REPOSITORY=$DOCKER_USERNAME/eshop-services-products
+REPOSITORY=$DOCKER_USERNAME/productsapi
 
 docker login
 
