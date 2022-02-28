@@ -37,7 +37,9 @@ eshop Product Micro Service
 
 ## Deployment
 
-> 1. Azure Container Instances
+> 1. Docker Compose inside Azure App Service
+
+![Deploy To App Services Multi Container |150x150](./Documentation/Images/DeployToAppServicesMultiContainer.PNG)
 
 ## To Do List
 
