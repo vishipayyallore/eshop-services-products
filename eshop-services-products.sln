@@ -17,7 +17,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentat
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Images", "Images", "{F6102B47-7AC8-49FD-BE8A-A0F51404455E}"
 	ProjectSection(SolutionItems) = preProject
+		Documentation\Images\BuildAndPushImageToDockerHub.PNG = Documentation\Images\BuildAndPushImageToDockerHub.PNG
+		Documentation\Images\DeployToAppServicesMultiContainer.PNG = Documentation\Images\DeployToAppServicesMultiContainer.PNG
 		Documentation\Images\eshop-services-products.PNG = Documentation\Images\eshop-services-products.PNG
+		Documentation\Images\ExecuteWithDocker.PNG = Documentation\Images\ExecuteWithDocker.PNG
+		Documentation\Images\ExecuteWithDockerCompose.PNG = Documentation\Images\ExecuteWithDockerCompose.PNG
+		Documentation\Images\ExecuteWithIISExpress.PNG = Documentation\Images\ExecuteWithIISExpress.PNG
+		Documentation\Images\ExecuteWithKestrel.PNG = Documentation\Images\ExecuteWithKestrel.PNG
+		Documentation\Images\ProductsAPIDockerLogs.PNG = Documentation\Images\ProductsAPIDockerLogs.PNG
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source", "Source", "{11B66EC7-A252-4466-931E-047C6D529F69}"
@@ -27,6 +34,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{98988EBA-904E-4989-A087-D3D2D476A7F5}"
 	ProjectSection(SolutionItems) = preProject
 		Scripts\build.sh = Scripts\build.sh
+		Scripts\dockerize.sh = Scripts\dockerize.sh
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Products.API", "Source\Products.API\Products.API.csproj", "{DE060A93-2C22-4636-94B2-D159D52E8562}"
@@ -39,7 +47,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Products.Infrastructure", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Products.Repository", "Source\Products.Repository\Products.Repository.csproj", "{156DDE89-26D4-4DF9-B146-85F4D462B501}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Products.API.Tests", "Tests\Products.API.Tests\Products.API.Tests.csproj", "{6A718CD9-B6F0-4DC4-9F84-7FCBEF35D0B3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Products.API.Tests", "Tests\Products.API.Tests\Products.API.Tests.csproj", "{6A718CD9-B6F0-4DC4-9F84-7FCBEF35D0B3}"
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{E308C3F3-0076-461C-AAE3-4B55504F55D3}"
 EndProject
