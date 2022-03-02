@@ -43,6 +43,9 @@ To Be Done
 
 ## Deployment
 
+Single Container using Azure **Container Instances**
+To be done
+
 Multi Containers in **App Service** using **Docker Compose**
 
 ```
@@ -79,9 +82,9 @@ volumes:
 ## To Do List
 
 > 1. Serilog
+> 1. Model Validations
 > 1. DTO
 > 1. Auto Mapper
-> 1. Model Validations
 > 1. Paging, Filtering, Sorting, and Searching
 > 1. Versioning
 > 1. Unit Testing
