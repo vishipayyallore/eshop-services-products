@@ -2,6 +2,12 @@
 
 eshop Product Micro Service
 
+## Individual Microservice Architecture
+To Be Done
+
+## Solution Architecture
+To Be Done
+
 ## Solution Map Diagram
 
 ![Solution Map Diagram |150x150](./Documentation/Images/eshop-services-products.PNG)
