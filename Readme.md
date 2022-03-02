@@ -77,6 +77,13 @@ volumes:
   mongo_data:
 ```
 
+**AppSettings** Under **Configuration** of App Service
+```
+MongoDbSettings_CollectionName = Products
+MongoDbSettings_ConnectionString = mongodb://localhost:27017
+MongoDbSettings_DatabaseName = ProductsDb
+```
+
 ![Deploy To App Services Multi Container |150x150](./Documentation/Images/DeployToAppServicesMultiContainer.PNG)
 
 ## To Do List
