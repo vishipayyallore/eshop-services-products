@@ -80,7 +80,7 @@ volumes:
 **AppSettings** Under **Configuration** of App Service
 ```
 MongoDbSettings_CollectionName = Products
-MongoDbSettings_ConnectionString = mongodb://localhost:27017
+MongoDbSettings_ConnectionString = mongodb://productsdb:27017
 MongoDbSettings_DatabaseName = ProductsDb
 ```
 
