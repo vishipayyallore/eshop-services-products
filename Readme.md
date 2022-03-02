@@ -37,7 +37,7 @@ eshop Product Micro Service
 
 ## Deployment
 
-**Docker Compose** inside Azure **App Service**
+Multi Containers in **App Service** using **Docker Compose**
 
 ```
 version: '3.4'
@@ -56,7 +56,6 @@ services:
     image: vishipayyallore/productsapi:latest
     container_name: products.api
     environment:
-      - ASPNETCORE_ENVIRONMENT=Development
       - "MongoDbSettings__ConnectionString=mongodb://productsdb:27017"
     depends_on:
       - productsdb
@@ -76,7 +75,8 @@ volumes:
 > 1. Serilog
 > 1. DTO
 > 1. Auto Mapper
-> 1. Paging, Filtering, Sorting
+> 1. Model Validations
+> 1. Paging, Filtering, Sorting, and Searching
 > 1. Versioning
 > 1. Unit Testing
 > 1. IaC with ARM/Bicep/Terraform
