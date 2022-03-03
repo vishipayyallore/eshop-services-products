@@ -3,9 +3,11 @@
 eshop Product Micro Service
 
 ## Individual Microservice Architecture
+
 To Be Done
 
 ## Solution Architecture
+
 To Be Done
 
 ## Solution Map Diagram
@@ -43,10 +45,21 @@ To Be Done
 
 ## Deployment
 
-Single Container using Azure **Container Instances**
-To be done
+### Single Container using Azure **`Container Instances`**
 
-Multi Containers in **App Service** using **Docker Compose**
+```
+MongoDbSettings__CollectionName = Products
+MongoDbSettings__ConnectionString = mongodb://productsdb:27017
+MongoDbSettings__DatabaseName = ProductsDb
+```
+
+![ACI's Environment Variables |150x150](./Documentation/Images/ACI_Environment_Variables.PNG)
+
+![ACI Single Container |150x150](./Documentation/Images/ACI_Single_Container.PNG)
+
+---
+
+### `Multi Containers` in **App Service** using **Docker Compose**
 
 ```
 version: '3.4'
@@ -78,6 +91,7 @@ volumes:
 ```
 
 **AppSettings** Under **Configuration** of App Service
+
 ```
 MongoDbSettings_CollectionName = Products
 MongoDbSettings_ConnectionString = mongodb://productsdb:27017
