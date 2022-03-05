@@ -2,6 +2,8 @@
 
 eshop Product Micro Service
 
+[![Products-Api-CI](https://github.com/vishipayyallore/eshop-services-products/actions/workflows/build-products-api.yml/badge.svg)](https://github.com/vishipayyallore/eshop-services-products/actions/workflows/build-products-api.yml)
+
 ## Individual Microservice Architecture
 
 To Be Done
