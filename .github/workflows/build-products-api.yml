@@ -42,5 +42,5 @@ jobs:
         uses: actions/upload-artifact@v2.2.2
         with:
           name: productsapi
-          path: SimpleFeedReader/productsapi/**
+          path: productsapi/**
           if-no-files-found: error
