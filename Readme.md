@@ -2,6 +2,7 @@
 
 eshop Product Micro Service
 
+## Build Status
 [![Products-Api-CI](https://github.com/vishipayyallore/eshop-services-products/actions/workflows/build-products-api.yml/badge.svg)](https://github.com/vishipayyallore/eshop-services-products/actions/workflows/build-products-api.yml)
 
 ## Individual Microservice Architecture
@@ -63,6 +64,10 @@ MongoDbSettings__DatabaseName = ProductsDb
 
 ---
 
+### `Multi Containers` in **Container Instances** using **Container Group**
+
+> 1. To Be Done
+
 ### `Multi Containers` in **App Service** using **Docker Compose**
 
 ```
@@ -103,6 +108,17 @@ MongoDbSettings_DatabaseName = ProductsDb
 ```
 
 ![Deploy To App Services Multi Container |150x150](./Documentation/Images/DeployToAppServicesMultiContainer.PNG)
+
+## CI with GitHub Actions
+
+> 1. Products-Api-CI
+
+[![Products-Api-CI](https://github.com/vishipayyallore/eshop-services-products/actions/workflows/build-products-api.yml/badge.svg)](https://github.com/vishipayyallore/eshop-services-products/actions/workflows/build-products-api.yml)
+
+
+## CD with GitHub Actions
+
+> 1. To Be Done
 
 ## To Do List
 
