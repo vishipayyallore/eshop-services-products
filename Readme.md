@@ -1,9 +1,22 @@
-# eshop-services-products
+# eshop `Products` Microservice `API`
 
-eshop Product Micro Service
+Description: To Be Done
 
 ## Build Status
-[![Products-Api-CI](https://github.com/vishipayyallore/eshop-services-products/actions/workflows/build-products-api.yml/badge.svg)](https://github.com/vishipayyallore/eshop-services-products/actions/workflows/build-products-api.yml)
+
+[![Products-Api-CI](https://github.com/vishipayyallore/eshop-services-products/actions/workflows/Products-Api-CI.yml/badge.svg)](https://github.com/vishipayyallore/eshop-services-products/actions/workflows/Products-Api-CI.yml)
+
+## Solution Map Diagram
+
+![Solution Map Diagram |150x150](./Documentation/Images/eshop-services-products.PNG)
+
+## Pre-Requisites
+
+> 1. Windows 10
+> 1. Visual Studio 2022
+> 1. .NET 6
+> 1. VS Code  (https://code.visualstudio.com/)
+> 1. Docker Desktop (https://docs.docker.com/docker-for-windows/install/)
 
 ## Individual Microservice Architecture
 
@@ -12,10 +25,6 @@ To Be Done
 ## Solution Architecture
 
 To Be Done
-
-## Solution Map Diagram
-
-![Solution Map Diagram |150x150](./Documentation/Images/eshop-services-products.PNG)
 
 ## Current Features
 
@@ -56,13 +65,25 @@ MongoDbSettings__ConnectionString = mongodb://productsdb:27017
 MongoDbSettings__DatabaseName = ProductsDb
 ```
 
+**Using Azure Portal**
 ![ACI's Environment Variables |150x150](./Documentation/Images/ACI_Environment_Variables.PNG)
 
+**Using Azure CLI**
 ![ACI Single Container Using Cli |150x150](./Documentation/Images/ACI_Using_Cli.PNG)
 
 ![ACI Single Container |150x150](./Documentation/Images/ACI_Single_Container.PNG)
 
 ---
+## Session 2
+---
+
+## New Features
+> 1. Serilog
+
+## Executing the solution in Ubuntu 20.04 / Mac OS (???)
+> 1. Discussion and Demo
+
+## Deployment
 
 ### `Multi Containers` in **Container Instances** using **Container Group**
 
@@ -109,11 +130,22 @@ MongoDbSettings_DatabaseName = ProductsDb
 
 ![Deploy To App Services Multi Container |150x150](./Documentation/Images/DeployToAppServicesMultiContainer.PNG)
 
+
+---
+## Session 3
+---
+
+
+---
+## Session 4
+---
+
+
 ## CI with GitHub Actions
 
 > 1. Products-Api-CI
 
-[![Products-Api-CI](https://github.com/vishipayyallore/eshop-services-products/actions/workflows/build-products-api.yml/badge.svg)](https://github.com/vishipayyallore/eshop-services-products/actions/workflows/build-products-api.yml)
+[![Products-Api-CI](https://github.com/vishipayyallore/eshop-services-products/actions/workflows/Products-Api-CI.yml/badge.svg)](https://github.com/vishipayyallore/eshop-services-products/actions/workflows/Products-Api-CI.yml)
 
 
 ## CD with GitHub Actions
@@ -122,7 +154,7 @@ MongoDbSettings_DatabaseName = ProductsDb
 
 ## To Do List
 
-> 1. Serilog
+
 > 1. Model Validations
 > 1. DTO
 > 1. Auto Mapper
