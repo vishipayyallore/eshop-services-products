@@ -36,3 +36,11 @@ jobs:
         run: dotnet build eshop-services-products.sln --no-restore
       - name: Test
         run: dotnet test eshop-services-products.sln --no-build --verbosity normal
+      - name: Publish
+        run: dotnet publish eshop-services-products.sln -c Release -o productsapi
+      - name: Upload a Build Artifact
+        uses: actions/upload-artifact@v2.2.2
+        with:
+          name: productsapi
+          path: SimpleFeedReader/productsapi/**
+          if-no-files-found: error
