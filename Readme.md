@@ -160,6 +160,7 @@ MongoDbSettings_DatabaseName = ProductsDb
 > 1. Auto Mapper
 > 1. Paging, Filtering, Sorting, and Searching
 > 1. Versioning
+> 1. Health Checks
 > 1. Unit Testing
 > 1. IaC with ARM/Bicep/Terraform
 > 1. CI/CD with Azure DevOps/GitHub Actions
