@@ -37,7 +37,7 @@ jobs:
       - name: Test
         run: dotnet test eshop-services-products.sln --no-build --verbosity normal
       - name: Branch name
-        run: echo running on branch ${GITHUB_REF##*/} ${github.head_ref}
+        run: echo running on branch ${GITHUB_REF##*/} ${{github.ref_name}}
       - name: Publish
         if: ${{ github.head_ref == 'main' }}
         run: dotnet publish eshop-services-products.sln -c Release -o productsapi
