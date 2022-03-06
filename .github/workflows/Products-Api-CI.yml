@@ -39,10 +39,10 @@ jobs:
       - name: Branch name
         run: echo running on branch ${GITHUB_REF##*/} ${{github.ref_name}}
       - name: Publish
-        if: ${{ github.head_ref == 'main' }}
+        if: ${{ github.ref_name == 'main' }}
         run: dotnet publish eshop-services-products.sln -c Release -o productsapi
       - name: Upload a Build Artifact
-        if: ${{ github.head_ref == 'main' }}
+        if: ${{ github.ref_name == 'main' }}
         uses: actions/upload-artifact@v2.2.2
         with:
           name: productsapi
