@@ -15,7 +15,7 @@ Description: To Be Done
 > 1. Windows 10
 > 1. Visual Studio 2022
 > 1. .NET 6
-> 1. VS Code  (https://code.visualstudio.com/)
+> 1. VS Code (https://code.visualstudio.com/)
 > 1. Docker Desktop (https://docs.docker.com/docker-for-windows/install/)
 
 ## Individual Microservice Architecture
@@ -26,15 +26,44 @@ To Be Done
 
 To Be Done
 
-## Current Features
+---
+
+## Session 1
+
+---
+
+## Docker Desktop
+
+> 1. Demo and Discussion
+
+## Mongo Db
+
+> 1. Mongo Atlas
+> 1. MongoDB Community Edition
+> 1. MongoDB Docker Container
+> 1. Mongo GUI Docker Container
+
+## Current Features in Web API
 
 > 1. Layered Architecture
 > 1. Strongly typed Configuration
 > 1. Swagger
 > 1. Repository Pattern
-> 1. Dependency Injection
+> 1. Dependency Injection (Demo)
 
-## Local Execution Modes
+## Dockerfile
+
+> 1. Demo and Discussion
+
+## Docker Compose
+
+> 1. Demo and Discussion
+> 1. Docker-Compose.yml
+> 1. Docker-Compose.override.yml
+
+## Local Execution Modes using VS 2022
+
+**Note:** Mongo Db in Atlas and Docker Container
 
 > 1. IIS Express
 > 1. Kestrel
@@ -50,6 +79,29 @@ To Be Done
 ![Products API Docker Logs |150x150](./Documentation/Images/ProductsAPIDockerLogs.PNG)
 
 ![Execute With Docker Compose |150x150](./Documentation/Images/ExecuteWithDockerCompose.PNG)
+
+## Local Execution using VS Code
+
+> 1. Demo and Discussion
+
+## Shell Scripts
+
+> 1. Demo and Discussion
+
+---
+
+## Session 2
+
+---
+
+## New Features
+
+> 1. Serilog
+> 1. Postman Collection
+
+## Executing the solution in Ubuntu 20.04 / Mac OS (???)
+
+> 1. Discussion and Demo
 
 ## Build And Push Image To Docker Hub
 
@@ -71,23 +123,27 @@ MongoDbSettings__DatabaseName = ProductsDb
 **Using Azure CLI**
 ![ACI Single Container Using Cli |150x150](./Documentation/Images/ACI_Using_Cli.PNG)
 
+**Accessing the API from ACI Container**
 ![ACI Single Container |150x150](./Documentation/Images/ACI_Single_Container.PNG)
-
----
-## Session 2
----
-
-## New Features
-> 1. Serilog
-
-## Executing the solution in Ubuntu 20.04 / Mac OS (???)
-> 1. Discussion and Demo
-
-## Deployment
 
 ### `Multi Containers` in **Container Instances** using **Container Group**
 
 > 1. To Be Done
+
+---
+
+## Session 3
+
+---
+
+## New Features
+
+> 1. Model Validations
+> 1. DTO
+> 1. Auto Mapper
+> 1. Health Checks
+
+## Deployment
 
 ### `Multi Containers` in **App Service** using **Docker Compose**
 
@@ -130,16 +186,16 @@ MongoDbSettings_DatabaseName = ProductsDb
 
 ![Deploy To App Services Multi Container |150x150](./Documentation/Images/DeployToAppServicesMultiContainer.PNG)
 
-
----
-## Session 3
 ---
 
-
----
 ## Session 4
+
 ---
 
+## New Features
+
+> 1. Paging, Filtering, Sorting, and Searching
+> 1. Versioning
 
 ## CI with GitHub Actions
 
@@ -147,37 +203,48 @@ MongoDbSettings_DatabaseName = ProductsDb
 
 [![Products-Api-CI](https://github.com/vishipayyallore/eshop-services-products/actions/workflows/Products-Api-CI.yml/badge.svg)](https://github.com/vishipayyallore/eshop-services-products/actions/workflows/Products-Api-CI.yml)
 
-
 ## CD with GitHub Actions
 
 > 1. To Be Done
 
-## To Do List
+## Deployment
 
-
-> 1. Model Validations
-> 1. DTO
-> 1. Auto Mapper
-> 1. Paging, Filtering, Sorting, and Searching
-> 1. Versioning
-> 1. Health Checks
-> 1. Unit Testing
-> 1. IaC with ARM/Bicep/Terraform
-> 1. CI/CD with Azure DevOps/GitHub Actions
-
-## Future Deployment Models
-
-**Container Apps**
+### Container Apps
 
 > 1. GitHub Registry
 > 1. Azure Container Apps
 
-**Kubernetes**
+---
+
+## Session 5
+
+---
+
+## New Features
+
+> 1. Unit Testing
+
+## Deployment
+
+### Kubernetes
 
 > 1. Azure Container Registry
 > 1. Azure Kubernetes Service
 
-**Service Mesh**
+---
+
+## Session 6
+
+---
+
+## New Features
+
+> 1. IaC with ARM/Bicep/Terraform
+> 1. CI/CD with Azure DevOps/GitHub Actions
+
+## Deployment
+
+### Service Mesh
 
 > 1. Azure Container Registry
 > 1. Kubernetes Service Mesh
