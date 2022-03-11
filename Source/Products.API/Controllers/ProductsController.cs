@@ -6,6 +6,9 @@ using System.Net;
 namespace Products.API.Controllers
 {
 
+    /// <summary>
+    /// Description: To be done
+    /// </summary>
     [ApiController]
     [Route("api/v1/[controller]")]
     public class ProductsController : ControllerBase
@@ -13,6 +16,12 @@ namespace Products.API.Controllers
         private readonly IProductRepository _repository;
         private readonly ILogger<ProductsController> _logger;
 
+        /// <summary>
+        /// Description: To be done
+        /// </summary>
+        /// <param name="repository"></param>
+        /// <param name="logger"></param>
+        /// <exception cref="ArgumentNullException"></exception>
         public ProductsController(IProductRepository repository, ILogger<ProductsController> logger)
         {
             _repository = repository ?? throw new ArgumentNullException(nameof(repository));
@@ -33,6 +42,11 @@ namespace Products.API.Controllers
             return Ok(products);
         }
 
+        /// <summary>
+        /// Description: To be done
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpGet("{id:length(24)}", Name = "GetProduct")]
         [ProducesResponseType((int)HttpStatusCode.NotFound)]
         [ProducesResponseType(typeof(Product), (int)HttpStatusCode.OK)]
@@ -49,6 +63,11 @@ namespace Products.API.Controllers
             return Ok(product);
         }
 
+        /// <summary>
+        /// Description: To be done
+        /// </summary>
+        /// <param name="category"></param>
+        /// <returns></returns>
         [Route("[action]/{category}", Name = "GetProductByCategory")]
         [HttpGet]
         [ProducesResponseType(typeof(IEnumerable<Product>), (int)HttpStatusCode.OK)]
@@ -59,6 +78,11 @@ namespace Products.API.Controllers
             return Ok(products);
         }
 
+        /// <summary>
+        /// Description: To be done
+        /// </summary>
+        /// <param name="name"></param>
+        /// <returns></returns>
         [Route("[action]/{name}", Name = "GetProductByName")]
         [HttpGet]
         [ProducesResponseType((int)HttpStatusCode.NotFound)]
@@ -75,6 +99,11 @@ namespace Products.API.Controllers
             return Ok(items);
         }
 
+        /// <summary>
+        /// Description: To be done
+        /// </summary>
+        /// <param name="product"></param>
+        /// <returns></returns>
         [HttpPost]
         [ProducesResponseType(typeof(Product), (int)HttpStatusCode.OK)]
         public async Task<ActionResult<Product>> CreateProduct([FromBody] Product product)
@@ -84,6 +113,11 @@ namespace Products.API.Controllers
             return CreatedAtRoute("GetProduct", new { id = product.Id }, product);
         }
 
+        /// <summary>
+        /// Description: To be done
+        /// </summary>
+        /// <param name="product"></param>
+        /// <returns></returns>
         [HttpPut]
         [ProducesResponseType(typeof(Product), (int)HttpStatusCode.OK)]
         public async Task<IActionResult> UpdateProduct([FromBody] Product product)
@@ -91,6 +125,11 @@ namespace Products.API.Controllers
             return Ok(await _repository.UpdateProduct(product));
         }
 
+        /// <summary>
+        /// Description: To be done
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpDelete("{id:length(24)}", Name = "DeleteProduct")]
         [ProducesResponseType(typeof(Product), (int)HttpStatusCode.OK)]
         public async Task<IActionResult> DeleteProductById(string id)
