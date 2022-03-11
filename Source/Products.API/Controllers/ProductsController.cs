@@ -20,6 +20,10 @@ namespace Products.API.Controllers
             _logger = logger ?? throw new ArgumentNullException(nameof(logger));
         }
 
+        /// <summary>
+        /// Description: Retrieves all the products. Expensive call ;)
+        /// </summary>
+        /// <returns>Returns all the products</returns>
         [HttpGet]
         [ProducesResponseType(typeof(IEnumerable<Product>), (int)HttpStatusCode.OK)]
         public async Task<ActionResult<IEnumerable<Product>>> GetProducts()
