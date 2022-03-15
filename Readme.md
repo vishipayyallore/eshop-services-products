@@ -15,19 +15,11 @@ Description: To Be Done
 
 ## Pre-Requisites
 
-> 1. Windows 10
+> 1. Windows 10 / Ubuntu 20.04 / MacOS ???
 > 1. Visual Studio 2022
 > 1. .NET 6
 > 1. VS Code (https://code.visualstudio.com/)
 > 1. Docker Desktop (https://docs.docker.com/docker-for-windows/install/)
-
-## Individual Microservice Architecture
-
-To Be Done
-
-## Solution Architecture
-
-To Be Done
 
 ---
 

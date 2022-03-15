@@ -7,7 +7,7 @@ namespace Products.API.Controllers
 {
 
     /// <summary>
-    /// Description: Products
+    /// Description: Products Controller to handle all the requests related to products
     /// </summary>
     [ApiController]
     [Route("api/v1/[controller]")]
@@ -19,9 +19,9 @@ namespace Products.API.Controllers
         /// <summary>
         /// Description: To be done
         /// </summary>
-        /// <param name="repository"></param>
-        /// <param name="logger"></param>
-        /// <exception cref="ArgumentNullException"></exception>
+        /// <param name="repository">IProductRepository through dependency injection</param>
+        /// <param name="logger">ILogger<ProductsController> through dependency injection</param>
+        /// <exception cref="ArgumentNullException">Throws the exception, when any of the dependencies are missing</exception>
         public ProductsController(IProductRepository repository, ILogger<ProductsController> logger)
         {
             _repository = repository ?? throw new ArgumentNullException(nameof(repository));
@@ -43,10 +43,10 @@ namespace Products.API.Controllers
         }
 
         /// <summary>
-        /// Description: To be done
+        /// Description: Retrieves a product by id.
         /// </summary>
-        /// <param name="id"></param>
-        /// <returns></returns>
+        /// <param name="id">Product Id to be searched</param>
+        /// <returns>Task<ActionResult<Product>></returns>
         [HttpGet("{id:length(24)}", Name = "GetProduct")]
         [ProducesResponseType((int)HttpStatusCode.NotFound)]
         [ProducesResponseType(typeof(Product), (int)HttpStatusCode.OK)]
@@ -64,10 +64,10 @@ namespace Products.API.Controllers
         }
 
         /// <summary>
-        /// Description: To be done
+        /// Description: Retrieves set of Products by category.
         /// </summary>
-        /// <param name="category"></param>
-        /// <returns></returns>
+        /// <param name="category">Category of products to be retrieved</param>
+        /// <returns>Task<ActionResult<IEnumerable<Product>>></returns>
         [Route("[action]/{category}", Name = "GetProductByCategory")]
         [HttpGet]
         [ProducesResponseType(typeof(IEnumerable<Product>), (int)HttpStatusCode.OK)]
@@ -79,10 +79,10 @@ namespace Products.API.Controllers
         }
 
         /// <summary>
-        /// Description: To be done
+        /// Description: Retrieves set of Products by name.
         /// </summary>
-        /// <param name="name"></param>
-        /// <returns></returns>
+        /// <param name="name">Name to be searched in the projects</param>
+        /// <returns>Task<ActionResult<IEnumerable<Product>>></returns>
         [Route("[action]/{name}", Name = "GetProductByName")]
         [HttpGet]
         [ProducesResponseType((int)HttpStatusCode.NotFound)]
@@ -100,10 +100,10 @@ namespace Products.API.Controllers
         }
 
         /// <summary>
-        /// Description: To be done
+        /// Description: Create a new product.
         /// </summary>
-        /// <param name="product"></param>
-        /// <returns></returns>
+        /// <param name="product">Details of the Product to be created</param>
+        /// <returns>Task<ActionResult<Product>></returns>
         [HttpPost]
         [ProducesResponseType(typeof(Product), (int)HttpStatusCode.OK)]
         public async Task<ActionResult<Product>> CreateProduct([FromBody] Product product)
@@ -114,10 +114,10 @@ namespace Products.API.Controllers
         }
 
         /// <summary>
-        /// Description: To be done
+        /// Description: Update an existing product.
         /// </summary>
-        /// <param name="product"></param>
-        /// <returns></returns>
+        /// <param name="product">Details of the existing Product to be modified</param>
+        /// <returns>Task<IActionResult></returns>
         [HttpPut]
         [ProducesResponseType(typeof(Product), (int)HttpStatusCode.OK)]
         public async Task<IActionResult> UpdateProduct([FromBody] Product product)
@@ -126,10 +126,10 @@ namespace Products.API.Controllers
         }
 
         /// <summary>
-        /// Description: To be done
+        /// Description: Delete an existing product.
         /// </summary>
-        /// <param name="id"></param>
-        /// <returns></returns>
+        /// <param name="id">Id of the existing Product</param>
+        /// <returns>Task<IActionResult></returns>
         [HttpDelete("{id:length(24)}", Name = "DeleteProduct")]
         [ProducesResponseType(typeof(Product), (int)HttpStatusCode.OK)]
         public async Task<IActionResult> DeleteProductById(string id)
