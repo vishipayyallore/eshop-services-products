@@ -10,7 +10,7 @@ namespace Products.Core.Interfaces
 
         Task<Product> GetProduct(string id);
 
-        Task<IEnumerable<Product>> GetProductByName(string name);
+        Task<IEnumerable<Product>> GetProductsByName(string name);
 
         Task<IEnumerable<Product>> GetProductsByCategory(string categoryName);
 
