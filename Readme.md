@@ -51,6 +51,7 @@ To Be Done
 > 1. Layered Architecture
 > 1. Strongly typed Configuration
 > 1. Swagger
+> 1. appsettings.json, and secrets.json
 > 1. Repository Pattern
 > 1. Dependency Injection (Demo)
 

@@ -7,7 +7,7 @@ namespace Products.API.Controllers
 {
 
     /// <summary>
-    /// Description: To be done
+    /// Description: Products
     /// </summary>
     [ApiController]
     [Route("api/v1/[controller]")]
