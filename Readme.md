@@ -15,19 +15,11 @@ Description: To Be Done
 
 ## Pre-Requisites
 
-> 1. Windows 10
+> 1. Windows 10 / Ubuntu 20.04 / MacOS ???
 > 1. Visual Studio 2022
 > 1. .NET 6
 > 1. VS Code (https://code.visualstudio.com/)
 > 1. Docker Desktop (https://docs.docker.com/docker-for-windows/install/)
-
-## Individual Microservice Architecture
-
-To Be Done
-
-## Solution Architecture
-
-To Be Done
 
 ---
 
@@ -51,6 +43,7 @@ To Be Done
 > 1. Layered Architecture
 > 1. Strongly typed Configuration
 > 1. Swagger
+> 1. appsettings.json, and secrets.json
 > 1. Repository Pattern
 > 1. Dependency Injection (Demo)
 
