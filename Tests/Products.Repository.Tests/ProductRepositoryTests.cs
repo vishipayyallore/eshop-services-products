@@ -1,3 +1,4 @@
+using Moq;
 using Products.Core.Interfaces;
 using System;
 using Xunit;
@@ -16,17 +17,16 @@ namespace Products.Repository.Tests
             });
         }
 
-        //[Fact]
-        //public void When_ProductsController_Receives_Valid_Arguments()
-        //{
-        //    // Arrange
-        //    var mockedProductRepository = new Mock<IProductRepository>();
-        //    var mockedILogger = new Mock<ILogger<ProductsController>>();
+        [Fact]
+        public void When_ProductRepository_Receives_Valid_Arguments()
+        {
+            // Arrange
+            var mockedProductContext = new Mock<IProductContext>();
 
-        //    var productsController = new ProductsController(mockedProductRepository.Object, mockedILogger.Object);
+            var productRepository = new ProductRepository(mockedProductContext.Object);
 
-        //    Assert.NotNull(productsController);
-        //}
+            Assert.NotNull(productRepository);
+        }
 
     }
 }
