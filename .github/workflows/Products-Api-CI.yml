@@ -35,7 +35,9 @@ jobs:
       - name: Build
         run: dotnet build eshop-services-products.sln --no-restore
       - name: Test
-        run: dotnet test eshop-services-products.sln --no-build --verbosity normal
+        run: dotnet test eshop-services-products.sln --no-build --verbosity normal --collect:"XPlat Code Coverage"
+      - name: CodeCoverage
+        uses: codecov/codecov-action@v2.1.0
       - name: Branch name
         run: echo running on branch ${GITHUB_REF##*/} ${{github.ref_name}}
       - name: Publish
