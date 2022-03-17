@@ -30,7 +30,8 @@ namespace Products.Core.Tests
 
                 ModifiedDateTime = DateTime.Now
             };
-        
+
+            // TODO: Add more asserts
             Assert.NotNull(product);
         }
 
