@@ -13,10 +13,10 @@ namespace Products.API.Tests.Controllers
         [Fact]
         public void When_ProductsController_Receives_Two_Nulls_Arguments()
         {
-            Assert.Throws<ArgumentNullException>(() =>
-            {
-                new ProductsController(null, null);
-            });
+            _ = Assert.Throws<ArgumentNullException>(() =>
+              {
+                  _ = new ProductsController(repository: null, logger: null);
+              });
         }
 
         [Fact]
@@ -25,10 +25,10 @@ namespace Products.API.Tests.Controllers
             // Arrange
             var mockedProductRepository = new Mock<IProductRepository>();
 
-            Assert.Throws<ArgumentNullException>(() =>
-            {
-                new ProductsController(mockedProductRepository.Object, null);
-            });
+            _ = Assert.Throws<ArgumentNullException>(() =>
+              {
+                  _ = new ProductsController(mockedProductRepository.Object, logger: null);
+              });
         }
 
         [Fact]
