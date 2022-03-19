@@ -55,10 +55,10 @@ namespace Products.Repository.Tests
 
             //Act 
             var mockedProductContext = new Mock<IProductContext>();
-            mockedProductContext.Setup(x => x.Products).Returns(mockIMongoCollection.Object);
+            mockedProductContext.SetupGet(x => x.Products).Returns(mockIMongoCollection.Object);
 
             var productRepository = new ProductRepository(mockedProductContext.Object);
-            // var product = await productRepository.GetProducts();
+            var product = await productRepository.GetProducts();
 
             //Assert 
             // Assert.NotNull(context);
