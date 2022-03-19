@@ -6,6 +6,8 @@ using Products.Core.Interfaces;
 using Products.Data;
 using System;
 using System.Collections.Generic;
+using System.Threading;
+using System.Threading.Tasks;
 using Xunit;
 
 namespace Products.Repository.Tests
@@ -50,11 +52,17 @@ namespace Products.Repository.Tests
             };
 
             // Arrange
+            _mockDB = new Mock<IMongoDatabase>();
+
             var mockIMongoCollection = new Mock<IMongoCollection<Product>>();
+            mockIMongoCollection.Setup(c => c.Database).Returns(_mockDB.Object);
             mockIMongoCollection.Object.InsertMany(_list);
+            mockIMongoCollection.Object.InsertOne(_book, null);
 
             //Act 
             var mockedProductContext = new Mock<IProductContext>();
+            // mockedProductContext.SetupGet(x => x.Products).Returns(() => mockIMongoCollection.Object);
+            // mockedProductContext.SetupGet(x => x.Products).Returns(() => { return (IMongoCollection<Product>)_list;  });
             mockedProductContext.SetupGet(x => x.Products).Returns(mockIMongoCollection.Object);
 
             var productRepository = new ProductRepository(mockedProductContext.Object);
