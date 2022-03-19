@@ -38,8 +38,8 @@ namespace Products.Repository.Tests
 
             var _list = new List<Product>()
             {
-                new Product { Id = "DummyId1", Name = "IPhone" },
-                new Product { Id = "DummyId2", Name = "YourPhone" }
+                new Product { Id = "602d2149e773f2a3990b47f5", Name = "IPhone" },
+                new Product { Id = "602d2149e773f2a3990b47f6", Name = "YourPhone" }
             };
 
             // Arrange
@@ -62,7 +62,7 @@ namespace Products.Repository.Tests
 
             //Act 
             var mockedProductContext = new Mock<IProductContext>();
-            mockedProductContext.SetupGet(x => x.Products).Returns(mockIMongoCollection.Object);
+            //mockedProductContext.SetupGet(x => x.Products).Returns(IDoKnowWhatShouldBeThis);
 
             var productRepository = new ProductRepository(mockedProductContext.Object);
             var result = await productRepository.GetProducts();
