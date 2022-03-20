@@ -5,6 +5,7 @@ using Products.Core.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using Xunit;
 
 namespace Products.Repository.Tests
@@ -43,33 +44,34 @@ namespace Products.Repository.Tests
             };
 
             // Arrange
-            var mockIMongoCollection = new Mock<IMongoCollection<Product>>();
             var asyncCursor = new Mock<IAsyncCursor<Product>>();
-
-            mockIMongoCollection.Setup(_collection => _collection.FindSync(
-                 Builders<Product>.Filter.Empty,
-                 It.IsAny<FindOptions<Product>>(),
-                 default))
-               .Returns(asyncCursor.Object);
-
             asyncCursor.SetupSequence(_async => _async.MoveNext(default))
                 .Returns(true)
                 .Returns(false);
             asyncCursor.SetupGet(_async => _async.Current).Returns(_list);
 
-            //var mockIMongoCollection = new Mock<IMongoCollection<Product>>();
-            //mockIMongoCollection.Object.InsertMany(_list);
+            var mockIMongoCollection = new Mock<IMongoCollection<Product>>();
+            mockIMongoCollection.Setup(_collection => _collection.FindSync(
+                 Builders<Product>.Filter.Empty,
+                 It.IsAny<FindOptions<Product>>(),
+                 default))
+               .Returns(asyncCursor.Object);
+            mockIMongoCollection.Setup(_collection => _collection.FindAsync(
+                 Builders<Product>.Filter.Empty,
+                 It.IsAny<FindOptions<Product>>(),
+                 default))
+               .ReturnsAsync(asyncCursor.Object);
 
             //Act 
             var mockedProductContext = new Mock<IProductContext>();
-            //mockedProductContext.SetupGet(x => x.Products).Returns(IDoKnowWhatShouldBeThis);
+            mockedProductContext.SetupGet(x => x.Products).Returns(mockIMongoCollection.Object);
 
             var productRepository = new ProductRepository(mockedProductContext.Object);
             var result = await productRepository.GetProducts();
 
             //Assert 
-            Assert.True(mockIMongoCollection.Object.Find(Builders<Product>.Filter.Empty).ToList<Product>().Count() > 0);
-            //Assert.True(result.Count() == 2);
+            //Assert.Equal(2, mockIMongoCollection.Object.Find(Builders<Product>.Filter.Empty).ToList<Product>().Count());
+            Assert.Equal(2, result.Count());
         }
 
     }

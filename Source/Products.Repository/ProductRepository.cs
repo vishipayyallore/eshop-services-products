@@ -18,7 +18,7 @@ namespace Products.Repository
         {
             return await _context
                             .Products
-                            .FindSync(Builders<Product>.Filter.Empty)
+                            .Find(Builders<Product>.Filter.Empty)
                             .ToListAsync();
         }
 
