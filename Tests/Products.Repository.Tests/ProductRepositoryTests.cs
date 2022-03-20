@@ -45,17 +45,14 @@ namespace Products.Repository.Tests
 
             // Arrange
             var asyncCursor = new Mock<IAsyncCursor<Product>>();
-            asyncCursor.SetupSequence(_async => _async.MoveNext(default))
-                .Returns(true)
-                .Returns(false);
+
+            asyncCursor.SetupSequence(_async => _async.MoveNextAsync(default))
+                .Returns(Task.FromResult(true))
+                .Returns(Task.FromResult(false));
             asyncCursor.SetupGet(_async => _async.Current).Returns(_list);
 
             var mockIMongoCollection = new Mock<IMongoCollection<Product>>();
-            //mockIMongoCollection.Setup(_collection => _collection.FindSync(
-            //     Builders<Product>.Filter.Empty,
-            //     It.IsAny<FindOptions<Product>>(),
-            //     default))
-            //   .Returns(asyncCursor.Object);
+            
             mockIMongoCollection.Setup(_collection => _collection.FindAsync(
                  Builders<Product>.Filter.Empty,
                  It.IsAny<FindOptions<Product>>(),
@@ -70,7 +67,6 @@ namespace Products.Repository.Tests
             var result = await productRepository.GetProducts();
 
             //Assert 
-            //Assert.Equal(_list.Count, mockIMongoCollection.Object.Find(Builders<Product>.Filter.Empty).ToList<Product>().Count());
             Assert.Equal(_list.Count, result.Count());
         }
 
