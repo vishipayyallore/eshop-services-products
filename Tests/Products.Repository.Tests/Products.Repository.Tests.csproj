@@ -24,6 +24,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Source\Products.Data\Products.Data.csproj" />
     <ProjectReference Include="..\..\Source\Products.Repository\Products.Repository.csproj" />
   </ItemGroup>
 

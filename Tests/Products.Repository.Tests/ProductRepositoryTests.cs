@@ -1,6 +1,11 @@
+using MongoDB.Driver;
 using Moq;
+using Products.Core.Entities;
 using Products.Core.Interfaces;
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using Xunit;
 
 namespace Products.Repository.Tests
@@ -28,41 +33,41 @@ namespace Products.Repository.Tests
             Assert.NotNull(productRepository);
         }
 
-
         [Fact]
         public async void When_ProductRepository_GetProducts_IsCalled_ReturnsData()
         {
-            //Fixture fixture = new Fixture();
-            //var _book = new Product { Id = "DummyId", Name = "IPhone" };
-            //IEnumerable<Product> _list = new List<Product>()
-            //{
-            //    _book
-            //};
 
-            //// Arrange
-            //var mockIMongoCollection = new Mock<IMongoCollection<Product>>();
-            //var asyncCursor = new Mock<IAsyncCursor<Product>>();
+            var _list = new List<Product>()
+            {
+                new Product { Id = "602d2149e773f2a3990b47f5", Name = "IPhone" },
+                new Product { Id = "602d2149e773f2a3990b47f6", Name = "YourPhone" }
+            };
 
-            //var expectedResult = fixture.CreateMany<Product>(5);
+            // Arrange
+            var asyncCursor = new Mock<IAsyncCursor<Product>>();
 
-            //mockIMongoCollection.Setup(_collection => _collection.Find(
-            //    It.IsAny<FilterDefinition<Product>>(),
-            //    It.IsAny<FindOptions>()))
-            //  .Returns((IMongoCollection<Product>)_list);
+            asyncCursor.SetupSequence(_async => _async.MoveNextAsync(default))
+                .Returns(Task.FromResult(true))
+                .Returns(Task.FromResult(false));
+            asyncCursor.SetupGet(_async => _async.Current).Returns(_list);
 
-            //asyncCursor.SetupSequence(_async => _async.MoveNext(default)).Returns(true).Returns(false);
-            //asyncCursor.SetupGet(_async => _async.Current).Returns(expectedResult);
+            var mockIMongoCollection = new Mock<IMongoCollection<Product>>();
+            
+            mockIMongoCollection.Setup(_collection => _collection.FindAsync(
+                 Builders<Product>.Filter.Empty,
+                 It.IsAny<FindOptions<Product>>(),
+                 default))
+               .ReturnsAsync(asyncCursor.Object);
 
-            //var mockedProductContext = new Mock<IProductContext>();
-            //mockedProductContext.Setup(x => x.Products).Returns(mockIMongoCollection.Object);
+            //Act 
+            var mockedProductContext = new Mock<IProductContext>();
+            mockedProductContext.SetupGet(x => x.Products).Returns(mockIMongoCollection.Object);
 
-            //var productRepository = new ProductRepository(mockedProductContext.Object);
+            var productRepository = new ProductRepository(mockedProductContext.Object);
+            var result = await productRepository.GetProducts();
 
-            //Assert.NotNull(productRepository);
-
-            //var products = await productRepository.GetProducts();
-
-            Assert.True(1 == 1);
+            //Assert 
+            Assert.Equal(_list.Count, result.Count());
         }
 
     }
