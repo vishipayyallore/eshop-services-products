@@ -76,13 +76,6 @@ Description: To Be Done
 
 ![Execute With Docker Compose |150x150](./Documentation/Images/ExecuteWithDockerCompose.PNG)
 
-## Local Execution using VS Code
-
-> 1. Demo and Discussion
-
-## Shell Scripts
-
-> 1. Demo and Discussion
 
 ---
 
@@ -94,8 +87,17 @@ Description: To Be Done
 
 > 1. Serilog
 > 1. Postman Collection
+> 1. Show casing the existing Unit Tests
 
-## Executing the solution in Ubuntu 20.04 / Mac OS (???)
+## Shell Scripts
+
+> 1. Demo and Discussion
+
+## Executing the solution in `Ubuntu 20.04` using VS Code
+
+> 1. Demo and Discussion
+
+## Executing the solution in `Mac OS 12.3 (build 21E230)` using VS Code
 
 > 1. Discussion and Demo
 
@@ -122,9 +124,6 @@ MongoDbSettings__DatabaseName = ProductsDb
 **Accessing the API from ACI Container**
 ![ACI Single Container |150x150](./Documentation/Images/ACI_Single_Container.PNG)
 
-### `Multi Containers` in **Container Instances** using **Container Group**
-
-> 1. To Be Done
 
 ---
 
@@ -139,7 +138,12 @@ MongoDbSettings__DatabaseName = ProductsDb
 > 1. Auto Mapper
 > 1. Health Checks
 
+
 ## Deployment
+
+### `Multi Containers` in **Container Instances** using **Container Group**
+
+> 1. To Be Done
 
 ### `Multi Containers` in **App Service** using **Docker Compose**
 
