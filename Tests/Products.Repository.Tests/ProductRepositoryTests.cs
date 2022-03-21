@@ -115,7 +115,7 @@ namespace Products.Repository.Tests
             asyncCursor.SetupGet(_async => _async.Current).Returns(_productsList);
 
             mockIMongoCollection.Setup(_collection => _collection.FindAsync(
-                 Builders<Product>.Filter.Empty,
+                 It.IsAny<FilterDefinition<Product>>(),
                  It.IsAny<FindOptions<Product>>(),
                  default))
                .ReturnsAsync(asyncCursor.Object);
@@ -125,7 +125,7 @@ namespace Products.Repository.Tests
 
             var productRepository = new ProductRepository(mockedProductContext.Object);
             string productId = "602d2149e773f2a3990b47f5";
-            // var productRetrieved = await productRepository.GetProduct(productId);
+            var productRetrieved = await productRepository.GetProduct(productId);
 
             ////Assert 
             //Assert.NotNull(productRetrieved);
