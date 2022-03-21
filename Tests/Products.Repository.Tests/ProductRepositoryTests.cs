@@ -124,11 +124,14 @@ namespace Products.Repository.Tests
             mockedProductContext.SetupGet(x => x.Products).Returns(mockIMongoCollection.Object);
 
             var productRepository = new ProductRepository(mockedProductContext.Object);
-            string productId = "602d2149e773f2a3990b47f5";
-            var productRetrieved = await productRepository.GetProduct(productId);
 
-            ////Assert 
-            //Assert.NotNull(productRetrieved);
+#pragma warning disable CS8604 // Possible null reference argument.
+            var productRetrieved = await productRepository.GetProduct(_productsList[0].Id);
+#pragma warning restore CS8604 // Possible null reference argument.
+
+            //Assert 
+            Assert.NotNull(productRetrieved);
+            Assert.Equal(_productsList[0].Id, productRetrieved.Id);
         }
 
         private static List<Product> GetDummyProducts()
