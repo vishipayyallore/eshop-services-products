@@ -99,6 +99,38 @@ namespace Products.Repository.Tests
             Assert.Equal(_productsList.Count, productsRetrieved.Count());
         }
 
+        [Fact]
+        public async void When_ProductRepository_GetProductById_IsCalled_WithValidId_Returns_Data()
+        {
+            List<Product> _productsList = GetDummyProducts();
+
+            // Arrange
+            asyncCursor = new Mock<IAsyncCursor<Product>>();
+            mockIMongoCollection = new Mock<IMongoCollection<Product>>();
+            mockedProductContext = new Mock<IProductContext>();
+
+            asyncCursor.SetupSequence(_async => _async.MoveNextAsync(default))
+                .Returns(Task.FromResult(true))
+                .Returns(Task.FromResult(false));
+            asyncCursor.SetupGet(_async => _async.Current).Returns(_productsList);
+
+            mockIMongoCollection.Setup(_collection => _collection.FindAsync(
+                 Builders<Product>.Filter.Empty,
+                 It.IsAny<FindOptions<Product>>(),
+                 default))
+               .ReturnsAsync(asyncCursor.Object);
+
+            //Act 
+            mockedProductContext.SetupGet(x => x.Products).Returns(mockIMongoCollection.Object);
+
+            var productRepository = new ProductRepository(mockedProductContext.Object);
+            string productId = "602d2149e773f2a3990b47f5";
+            // var productRetrieved = await productRepository.GetProduct(productId);
+
+            ////Assert 
+            //Assert.NotNull(productRetrieved);
+        }
+
         private static List<Product> GetDummyProducts()
         {
             return new List<Product>()
