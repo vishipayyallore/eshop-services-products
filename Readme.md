@@ -15,7 +15,7 @@ Description: To Be Done
 
 ## Pre-Requisites
 
-> 1. Windows 10 / Ubuntu 20.04 / MacOS ???
+> 1. Windows 10 / Ubuntu 20.04 / Mac OS 12.3 (build 21E230)
 > 1. Visual Studio 2022
 > 1. .NET 6
 > 1. VS Code (https://code.visualstudio.com/)
