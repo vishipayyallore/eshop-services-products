@@ -22,7 +22,9 @@ namespace Products.Repository.Tests
         {
             _ = Assert.Throws<ArgumentNullException>(() =>
               {
+#pragma warning disable CS8625 // Cannot convert null literal to non-nullable reference type.
                   _ = new ProductRepository(null);
+#pragma warning restore CS8625 // Cannot convert null literal to non-nullable reference type.
               });
         }
 
