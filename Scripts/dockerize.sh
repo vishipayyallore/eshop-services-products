@@ -1,7 +1,9 @@
 #!/bin/bash
 TAG=latest
 VERSION_TAG=$(git log -1 --pretty=format:%h)
-DOCKER_USERNAME=YourDockerUsername
+# DOCKER_USERNAME=$1 # 1st Parameter
+
+echo "version tag: $VERSION_TAG"
 
 REPOSITORY=$DOCKER_USERNAME/productsapi
 
