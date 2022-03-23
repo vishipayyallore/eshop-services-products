@@ -13,3 +13,7 @@ docker build -f "./Source/Products.API/Dockerfile" -t $REPOSITORY:$TAG -t $REPOS
 
 docker push $REPOSITORY:$TAG
 docker push $REPOSITORY:$VERSION_TAG
+
+# For ACR
+# docker tag $REPOSITORY:$TAG acrregistry.azurecr.io/$REPOSITORY:$TAG
+# docker push acrregistry.azurecr.io/$REPOSITORY:$TAG
