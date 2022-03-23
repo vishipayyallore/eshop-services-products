@@ -13,12 +13,10 @@ services:
     container_name: products.api
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
-      # - ASPNETCORE_URLS=https://+:443;http://+:80
       - "MongoDbSettings__ConnectionString=mongodb://productsdb:27017"
     depends_on:
       - productsdb
     ports:
       - "8000:80"
-      # - "443"
     volumes:
       - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
