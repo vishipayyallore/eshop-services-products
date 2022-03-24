@@ -171,8 +171,9 @@ namespace Products.Repository.Tests
             //Assert 
             Assert.NotNull(productRetrieved);
 
-            // TODO: Fix the issue. It is returning two Products
             Assert.Equal(_productsList[1].Name, productRetrieved.FirstOrDefault()?.Name);
+
+            // TODO - do a test case where multiple natches occur
         }
 
         private static List<Product> GetDummyProducts()
