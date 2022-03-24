@@ -105,7 +105,8 @@ namespace Products.Repository.Tests
         public async void When_ProductRepository_GetProductById_IsCalled_WithValidId_Returns_Data()
         {
             List<Product> _productsList = GetDummyProducts();
-            List<Product> _expectedResultsList = _productsList.Where(p => p.Id == _productsList[1].Id).ToList();
+            string expectedId = _productsList[1].Id ?? string.Empty;
+            List<Product> _expectedResultsList = _productsList.Where(p => p.Id == expectedId).ToList();
 
             // Arrange
             asyncCursor = new Mock<IAsyncCursor<Product>>();
@@ -129,19 +130,20 @@ namespace Products.Repository.Tests
             var productRepository = new ProductRepository(mockedProductContext.Object);
 
 #pragma warning disable CS8604 // Possible null reference argument.
-            var productRetrieved = await productRepository.GetProduct(_productsList[1].Id);
+            var received = await productRepository.GetProduct(expectedId);
 #pragma warning restore CS8604 // Possible null reference argument.
 
             //Assert 
-            Assert.NotNull(productRetrieved);
-            Assert.Equal(_productsList[1].Id, productRetrieved.Id);
+            Assert.NotNull(received);
+            Assert.Equal(expectedId, received.Id);
         }
 
         [Fact]
         public async void When_ProductRepository_GetProductsByName_IsCalled_WithValid_Name_Returns_Data()
         {
             List<Product> _productsList = GetDummyProducts();
-            List<Product> _expectedResultsList = _productsList.Where(p => p.Name == _productsList[1].Name).ToList();
+            string expectedName = _productsList[1].Name ?? string.Empty;
+            List<Product> _expectedResultsList = _productsList.Where(p => p.Name == expectedName).ToList();
 
             // Arrange
             asyncCursor = new Mock<IAsyncCursor<Product>>();
@@ -151,7 +153,7 @@ namespace Products.Repository.Tests
             asyncCursor.SetupSequence(_async => _async.MoveNextAsync(default))
                 .Returns(Task.FromResult(true))
                 .Returns(Task.FromResult(false));
-            asyncCursor.SetupGet(_async => _async.Current).Returns(_productsList);
+            asyncCursor.SetupGet(_async => _async.Current).Returns(_expectedResultsList);
 
             mockIMongoCollection.Setup(_collection => _collection.FindAsync(
                  It.IsAny<FilterDefinition<Product>>(),
@@ -165,13 +167,13 @@ namespace Products.Repository.Tests
             var productRepository = new ProductRepository(mockedProductContext.Object);
 
 #pragma warning disable CS8604 // Possible null reference argument.
-            var productRetrieved = await productRepository.GetProductsByName(_productsList[1].Name);
+            var received = await productRepository.GetProductsByName(_productsList[1].Name);
 #pragma warning restore CS8604 // Possible null reference argument.
 
             //Assert 
-            Assert.NotNull(productRetrieved);
+            Assert.NotNull(received);
 
-            Assert.Equal(_productsList[1].Name, productRetrieved.FirstOrDefault()?.Name);
+            Assert.Equal(expectedName, received.FirstOrDefault()?.Name);
 
             // TODO - do a test case where multiple natches occur
         }
