@@ -105,7 +105,7 @@ namespace Products.Repository.Tests
         public async void When_ProductRepository_GetProductById_IsCalled_WithValidId_Returns_Data()
         {
             List<Product> _productsList = GetDummyProducts();
-            List<Product> _expectedResultsList = _productsList.Find(p => p.Id == _productsList[1].Id).ToList();
+            List<Product> _expectedResultsList = _productsList.Where(p => p.Id == _productsList[1].Id).ToList();
 
             // Arrange
             asyncCursor = new Mock<IAsyncCursor<Product>>();
@@ -141,7 +141,7 @@ namespace Products.Repository.Tests
         public async void When_ProductRepository_GetProductsByName_IsCalled_WithValid_Name_Returns_Data()
         {
             List<Product> _productsList = GetDummyProducts();
-            List<Product> _expectedResultsList = _productsList.Find(p => p.Name == _productsList[1].Name).ToList();
+            List<Product> _expectedResultsList = _productsList.Where(p => p.Name == _productsList[1].Name).ToList();
 
             // Arrange
             asyncCursor = new Mock<IAsyncCursor<Product>>();
