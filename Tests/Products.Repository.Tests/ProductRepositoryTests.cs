@@ -105,6 +105,7 @@ namespace Products.Repository.Tests
         public async void When_ProductRepository_GetProductById_IsCalled_WithValidId_Returns_Data()
         {
             List<Product> _productsList = GetDummyProducts();
+            List<Product> _expectedResultsList = _productsList.Find(p => p.Id == _productsList[1].Id).ToList();
 
             // Arrange
             asyncCursor = new Mock<IAsyncCursor<Product>>();
@@ -114,7 +115,7 @@ namespace Products.Repository.Tests
             asyncCursor.SetupSequence(_async => _async.MoveNextAsync(default))
                 .Returns(Task.FromResult(true))
                 .Returns(Task.FromResult(false));
-            asyncCursor.SetupGet(_async => _async.Current).Returns(_productsList);
+            asyncCursor.SetupGet(_async => _async.Current).Returns(_expectedResultsList);
 
             mockIMongoCollection.Setup(_collection => _collection.FindAsync(
                  It.IsAny<FilterDefinition<Product>>(),
@@ -128,18 +129,19 @@ namespace Products.Repository.Tests
             var productRepository = new ProductRepository(mockedProductContext.Object);
 
 #pragma warning disable CS8604 // Possible null reference argument.
-            var productRetrieved = await productRepository.GetProduct(_productsList[0].Id);
+            var productRetrieved = await productRepository.GetProduct(_productsList[1].Id);
 #pragma warning restore CS8604 // Possible null reference argument.
 
             //Assert 
             Assert.NotNull(productRetrieved);
-            Assert.Equal(_productsList[0].Id, productRetrieved.Id);
+            Assert.Equal(_productsList[1].Id, productRetrieved.Id);
         }
 
         [Fact]
         public async void When_ProductRepository_GetProductsByName_IsCalled_WithValid_Name_Returns_Data()
         {
             List<Product> _productsList = GetDummyProducts();
+            List<Product> _expectedResultsList = _productsList.Find(p => p.Name == _productsList[1].Name).ToList();
 
             // Arrange
             asyncCursor = new Mock<IAsyncCursor<Product>>();
@@ -170,7 +172,7 @@ namespace Products.Repository.Tests
             Assert.NotNull(productRetrieved);
 
             // TODO: Fix the issue. It is returning two Products
-            // Assert.Equal(_productsList[1].Name, productRetrieved1.FirstOrDefault()?.Name);
+            Assert.Equal(_productsList[1].Name, productRetrieved.FirstOrDefault()?.Name);
         }
 
         private static List<Product> GetDummyProducts()
