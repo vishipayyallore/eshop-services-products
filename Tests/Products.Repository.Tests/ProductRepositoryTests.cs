@@ -129,9 +129,7 @@ namespace Products.Repository.Tests
 
             var productRepository = new ProductRepository(mockedProductContext.Object);
 
-#pragma warning disable CS8604 // Possible null reference argument.
-            var received = await productRepository.GetProduct(expectedId);
-#pragma warning restore CS8604 // Possible null reference argument.
+            var received = await productRepository.GetProduct(expectedId!);
 
             //Assert 
             Assert.NotNull(received);
@@ -142,7 +140,7 @@ namespace Products.Repository.Tests
         public async void When_ProductRepository_GetProductsByName_IsCalled_WithValid_Name_Returns_Data()
         {
             List<Product> _productsList = GetDummyProducts();
-            string expectedName = _productsList[1].Name ?? string.Empty;
+            string expectedName = _productsList[1].Name!;
             List<Product> _expectedResultsList = _productsList.Where(p => p.Name == expectedName).ToList();
 
             // Arrange
@@ -166,16 +164,48 @@ namespace Products.Repository.Tests
 
             var productRepository = new ProductRepository(mockedProductContext.Object);
 
-#pragma warning disable CS8604 // Possible null reference argument.
-            var received = await productRepository.GetProductsByName(_productsList[1].Name);
-#pragma warning restore CS8604 // Possible null reference argument.
+            var received = await productRepository.GetProductsByName(_productsList[1].Name!);
 
             //Assert 
             Assert.NotNull(received);
 
             Assert.Equal(expectedName, received.FirstOrDefault()?.Name);
+        }
 
-            // TODO - do a test case where multiple natches occur
+        [Fact]
+        public async void When_ProductRepository_GetProductsByName_IsCalled_WithValid_Names_Returns_Data()
+        {
+            List<Product> _productsList = GetDummyProducts();
+            string expectedName = _productsList[2].Name!;
+            List<Product> _expectedResultsList = _productsList.Where(p => p.Name!.Contains(expectedName)).ToList();
+
+            // Arrange
+            asyncCursor = new Mock<IAsyncCursor<Product>>();
+            mockIMongoCollection = new Mock<IMongoCollection<Product>>();
+            mockedProductContext = new Mock<IProductContext>();
+
+            asyncCursor.SetupSequence(_async => _async.MoveNextAsync(default))
+                .Returns(Task.FromResult(true))
+                .Returns(Task.FromResult(false));
+            asyncCursor.SetupGet(_async => _async.Current).Returns(_expectedResultsList);
+
+            mockIMongoCollection.Setup(_collection => _collection.FindAsync(
+                 It.IsAny<FilterDefinition<Product>>(),
+                 It.IsAny<FindOptions<Product>>(),
+                 default))
+               .ReturnsAsync(asyncCursor.Object);
+
+            //Act 
+            mockedProductContext.SetupGet(x => x.Products).Returns(mockIMongoCollection.Object);
+
+            var productRepository = new ProductRepository(mockedProductContext.Object);
+
+            var received = await productRepository.GetProductsByName(_productsList[2].Name!);
+
+            //Assert 
+            Assert.NotNull(received);
+
+            Assert.Equal(_expectedResultsList.Count, received.Count());
         }
 
         private static List<Product> GetDummyProducts()
@@ -183,7 +213,8 @@ namespace Products.Repository.Tests
             return new List<Product>()
             {
                 new Product { Id = "602d2149e773f2a3990b47f5", Name = "IPhone" },
-                new Product { Id = "602d2149e773f2a3990b47f6", Name = "YourPhone" }
+                new Product { Id = "602d2149e773f2a3990b47f6", Name = "YourPhone" },
+                new Product { Id = "602d2149e773f2a3990b47f7", Name = "ourPhone" }
             };
         }
 

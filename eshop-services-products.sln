@@ -33,8 +33,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{C7D584C9
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{98988EBA-904E-4989-A087-D3D2D476A7F5}"
 	ProjectSection(SolutionItems) = preProject
+		Scripts\az-acr-create.sh = Scripts\az-acr-create.sh
 		Scripts\build.sh = Scripts\build.sh
-		Scripts\dockerize.sh = Scripts\dockerize.sh
+		Scripts\containerize-acr.sh = Scripts\containerize-acr.sh
+		Scripts\containerize-docker.sh = Scripts\containerize-docker.sh
+		Scripts\deployacrtoaci.sh = Scripts\deployacrtoaci.sh
+		Scripts\deploydockertoaci.sh = Scripts\deploydockertoaci.sh
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Products.API", "Source\Products.API\Products.API.csproj", "{DE060A93-2C22-4636-94B2-D159D52E8562}"
@@ -51,13 +55,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Products.API.Tests", "Tests
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{E308C3F3-0076-461C-AAE3-4B55504F55D3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Products.Core.Tests", "Tests\Products.Core.Tests\Products.Core.Tests.csproj", "{97F45A2A-38FD-40FE-B431-EB5900DCC7CA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Products.Core.Tests", "Tests\Products.Core.Tests\Products.Core.Tests.csproj", "{97F45A2A-38FD-40FE-B431-EB5900DCC7CA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Products.Data.Tests", "Tests\Products.Data.Tests\Products.Data.Tests.csproj", "{1E0032B8-9DBA-4D4C-9A0D-A49AC47D289F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Products.Data.Tests", "Tests\Products.Data.Tests\Products.Data.Tests.csproj", "{1E0032B8-9DBA-4D4C-9A0D-A49AC47D289F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Products.Infrastructure.Tests", "Tests\Products.Infrastructure.Tests\Products.Infrastructure.Tests.csproj", "{8B9F849C-DC7E-46AC-B31D-DED6BFB83C35}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Products.Infrastructure.Tests", "Tests\Products.Infrastructure.Tests\Products.Infrastructure.Tests.csproj", "{8B9F849C-DC7E-46AC-B31D-DED6BFB83C35}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Products.Repository.Tests", "Tests\Products.Repository.Tests\Products.Repository.Tests.csproj", "{691FEC83-C2FA-43D2-929A-18D0EB57BE47}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Products.Repository.Tests", "Tests\Products.Repository.Tests\Products.Repository.Tests.csproj", "{691FEC83-C2FA-43D2-929A-18D0EB57BE47}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

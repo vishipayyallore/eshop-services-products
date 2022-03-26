@@ -30,8 +30,6 @@ namespace Products.Core.Entities
         public string ModifiedBy { get; set; } = "No Name";
 
         public DateTime ModifiedDateTime { get; set; }
-
-
     }
 
 }
