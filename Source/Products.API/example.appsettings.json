@@ -1,0 +1,14 @@
+{
+    "AllowedHosts": "*",
+    "Logging": {
+        "LogLevel": {
+            "Default": "Information",
+            "Microsoft.AspNetCore": "Information"
+        }
+    },
+    "MongoDbSettings": {
+        "CollectionName": "Products",
+        "ConnectionString": "mongodb://localhost:27017",
+        "DatabaseName": "ProductsDb"
+    }
+}
