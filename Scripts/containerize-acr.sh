@@ -6,22 +6,18 @@
 # Date: 24-Mar-2022
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
 
-# az acr show -n eshopsolutiondev001 -g rg-dnlh-12mar-dev
-
 TAG=latest
 VERSION_TAG=$(git log -1 --pretty=format:%h)
+SERVER_NAME=acreshopdev.azurecr.io
 
 echo "version tag: $VERSION_TAG"
 
-REPOSITORY=$DOCKER_USERNAME/productsapi
+REPOSITORY=$SERVER_NAME/productsapi
 
-docker login
+az acr login -n $SERVER_NAME
 
 docker build -f "./Source/Products.API/Dockerfile" -t $REPOSITORY:$TAG -t $REPOSITORY:$VERSION_TAG .
 
 docker push $REPOSITORY:$TAG
 docker push $REPOSITORY:$VERSION_TAG
 
-# For ACR
-# docker tag $REPOSITORY:$TAG acrregistry.azurecr.io/$REPOSITORY:$TAG
-# docker push acrregistry.azurecr.io/$REPOSITORY:$TAG
