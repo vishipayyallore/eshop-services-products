@@ -3,9 +3,7 @@
 RESOURCEGROUPNAME=rg-dnlh-12mar-dev
 ACRNAME=acreshopdev
 
-# az acr list -g rg-dnlh-12mar-dev --query '[].name | length(@)
-
-output=$(az acr list -g rg-dnlh-12mar-dev --query '[].name | length(@)')
+output=$(az acr list -g $RESOURCEGROUPNAME --query "[? name == '$ACRNAME'] | length(@)")
 echo $output
 
 if [ $output == 0 ]
