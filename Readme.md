@@ -9,6 +9,12 @@ Description: To Be Done
 | [![Products-Api-CI](https://github.com/vishipayyallore/eshop-services-products/actions/workflows/Products-Api-CI.yml/badge.svg)](https://github.com/vishipayyallore/eshop-services-products/actions/workflows/Products-Api-CI.yml) | [![CodeQL](https://github.com/vishipayyallore/eshop-services-products/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/vishipayyallore/eshop-services-products/actions/workflows/codeql-analysis.yml) |
 | To Be Done                                                                                                                                                                                                                         | To Be Done                                                                                                                                                                                                                |
 
+```
+notepad ~/.bashrc
+source ~/.bashrc
+echo $Environment_Variable_Name
+```
+
 ## Solution Map Diagram
 
 ![Solution Map Diagram |150x150](./Documentation/Images/eshop-services-products.PNG)
