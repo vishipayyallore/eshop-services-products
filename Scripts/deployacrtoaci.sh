@@ -15,7 +15,7 @@ az container create  --resource-group rg-dnlh-12mar-dev --name $ACI_NAME \
     --environment-variables 'MongoDbSettings__CollectionName'='Products' 'MongoDbSettings__DatabaseName'='ProductsDb' \
     --secure-environment-variables MongoDbSettings__ConnectionString=$MongoDbSettings__ConnectionString \
     --ip-address Public --dns-name-label $ACI_NAME \
-    --registry-username 'acreshopdev' --registry-password $ACR_PASSWORD
+    --registry-username $ACR_USERNAME --registry-password $ACR_PASSWORD
     
 # az container create 
 #   -n aci-demo-app-with-secure-environmentvariables 
