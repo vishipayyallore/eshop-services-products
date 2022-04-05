@@ -10,7 +10,7 @@ if [ $output == 0 ]
 then
     echo $ACRNAME" ACR does not exist ... Creating ACR !"
 
-    az acr create --resource-group $RESOURCEGROUPNAME --name $ACRNAME --sku Basic
+    az acr create --resource-group $RESOURCEGROUPNAME --name $ACRNAME --sku Basic --admin-enabled true
 
 else
 
