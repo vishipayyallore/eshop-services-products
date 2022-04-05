@@ -10,7 +10,7 @@ Description: To Be Done
 | To Be Done                                                                                                                                                                                                                         | To Be Done                                                                                                                                                                                                                |
 
 ```
-code ~/.bashrc
+code ~/.bashrc `Your choice of text editor`
 source ~/.bashrc
 echo $Environment_Variable_Name
 ```
