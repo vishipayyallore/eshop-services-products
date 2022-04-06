@@ -9,11 +9,6 @@ Description: To Be Done
 | [![Products-Api-CI](https://github.com/vishipayyallore/eshop-services-products/actions/workflows/Products-Api-CI.yml/badge.svg)](https://github.com/vishipayyallore/eshop-services-products/actions/workflows/Products-Api-CI.yml) | [![CodeQL](https://github.com/vishipayyallore/eshop-services-products/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/vishipayyallore/eshop-services-products/actions/workflows/codeql-analysis.yml) |
 | To Be Done                                                                                                                                                                                                                         | To Be Done                                                                                                                                                                                                                |
 
-```
-code ~/.bashrc `Your choice of text editor`
-source ~/.bashrc
-echo $Environment_Variable_Name
-```
 
 ## Solution Map Diagram
 
@@ -57,11 +52,6 @@ echo $Environment_Variable_Name
 
 > 1. Demo and Discussion
 
-## Docker Compose
-
-> 1. Demo and Discussion
-> 1. Docker-Compose.yml
-> 1. Docker-Compose.override.yml
 
 ## Local Execution Modes using VS 2022
 
@@ -95,25 +85,30 @@ echo $Environment_Variable_Name
 > 1. Postman Collection
 > 1. Show casing the existing Unit Tests
 
-## Shell Scripts
+## Executing the solution in `Mac OS 12.3 (build 21E230)` using VS 2022
 
-> 1. Demo and Discussion
+> 1. Discussion and Demo
 
 ## Executing the solution in `Ubuntu 20.04` using VS Code
 
 > 1. Demo and Discussion
 
-## Executing the solution in `Mac OS 12.3 (build 21E230)` using VS Code
 
-> 1. Discussion and Demo
+## Shell Scripts
+
+> 1. Demo and Discussion
+
+```
+code ~/.bashrc `Your choice of text editor`
+source ~/.bashrc
+echo $Environment_Variable_Name
+```
 
 ## Build And Push Image To Docker Hub
 
 ![Build And Push Image To Docker Hub |150x150](./Documentation/Images/BuildAndPushImageToDockerHub.PNG)
 
-## Deployment
-
-### Single Container using Azure **`Container Instances`**
+## Deploy Single `Azure Container Instance` from Docker Hub Image
 
 ```
 MongoDbSettings__CollectionName = Products
@@ -131,6 +126,37 @@ MongoDbSettings__DatabaseName = ProductsDb
 ![ACI Single Container |150x150](./Documentation/Images/ACI_Single_Container.PNG)
 
 
+## Build And Push Image To Azure Container Registry
+
+![Build And Push Image To Docker Hub |150x150](./Documentation/Images/BuildAndPushImageToDockerHub.PNG)
+
+
+## Deploy Single `Azure Container Instance` from `Azure Container Registry` Image
+
+```
+MongoDbSettings__CollectionName = Products
+MongoDbSettings__ConnectionString = mongodb://productsdb:27017
+MongoDbSettings__DatabaseName = ProductsDb
+```
+
+**Using Azure CLI**
+![ACI Single Container Using Cli |150x150](./Documentation/Images/ACI_Using_Cli.PNG)
+
+**Accessing the API from ACI Container**
+![ACI Single Container |150x150](./Documentation/Images/ACI_Single_Container.PNG)
+
+## Using Postman to hit the ACI instance. Environments- [ACI 1, ACI 2]
+
+> 1. Demo & Discussion
+
+## Review/Q & A/Panel Discussion
+
+> 1. Discussion
+
+## What is next in `Session 3`?
+
+> 1. Discussion
+
 ---
 
 ## Session 3
@@ -142,7 +168,13 @@ MongoDbSettings__DatabaseName = ProductsDb
 > 1. Model Validations
 > 1. DTO
 > 1. Auto Mapper
-> 1. Health Checks
+
+
+## Docker Compose
+
+> 1. Demo and Discussion
+> 1. Docker-Compose.yml
+> 1. Docker-Compose.override.yml
 
 
 ## Deployment
@@ -200,7 +232,7 @@ MongoDbSettings_DatabaseName = ProductsDb
 
 ## New Features
 
-> 1. Paging, Filtering, Sorting, and Searching
+> 1. Health Checks
 > 1. Versioning
 
 ## CI with GitHub Actions
@@ -229,6 +261,7 @@ MongoDbSettings_DatabaseName = ProductsDb
 ## New Features
 
 > 1. Unit Testing
+> 1. Paging, Filtering, Sorting, and Searching
 
 ## Deployment
 
