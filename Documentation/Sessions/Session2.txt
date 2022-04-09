@@ -2,7 +2,7 @@ Session 2
 Note: Enable the Network Access for Mongo Db
 1. New Features (J, R & S)
 	1.1. Serilog (S) => 5 Minutes
-	1.2. Postman (J & S) => 3 Minutes
+	1.2. Postman (J R & S) => 3 Minutes
 	1.3. Unit Testcases (R & S) => 10 Minutes
 2. Executing the solution in Mac OS 12.3 (build 21E230) using VS 2022 (R) => 5 Minutes
 3. Executing the solution in Ubuntu 20.04 using VS Code (S) => 5 Minutes
