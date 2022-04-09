@@ -28,8 +28,10 @@ builder.Services.AddSwaggerGen(options =>
     options.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, xmlFilename));
 });
 
+// TODO: Replace this with custom Health check endpoints. This is from 3rd Party library.
 builder.Services.AddHealthChecks()
-                    .AddMongoDb(MongoDbConnectionDetails.ConnectionString, "MongoDb Health", HealthStatus.Degraded);
+                    .AddMongoDb(builder.Configuration[MongoDbConnectionDetails.ConnectionString], 
+                    "MongoDb Health", HealthStatus.Degraded);
 
 var app = builder.Build();
 
