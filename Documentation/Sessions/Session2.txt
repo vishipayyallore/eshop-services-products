@@ -1,4 +1,5 @@
 Session 2
+Note: Enable the Network Access for Mongo Db
 1. New Features (J, R & S)
 	1.1. Serilog (S) => 5 Minutes
 	1.2. Postman (J & S) => 3 Minutes
