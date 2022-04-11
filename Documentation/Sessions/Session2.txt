@@ -12,3 +12,8 @@ Highlight => Dot Net Every Where !!
 6. Using Postman to hit the ACI instance. Environments- [ACI 1, ACI 2] => 5 Minutes
 7. Review/Q & A/Panel Discussion => 5 Minutes
 8. What is next ? => 2 Minutes
+
+func kubernetes deploy --name az-func-on-k8s --image-name "vishipayyallore/functionapp1:latest" --dry-run > deploy.yaml
+kubectl get secrets
+https://www.base64decode.org/
+kubectl get deploy
