@@ -86,6 +86,12 @@ Description: To Be Done
 > 1. Postman Collection
 > 1. Show casing the existing Unit Tests
 
+**Default Logging**
+![Default Logging |150x150](./Documentation/Images/S2_DefaultLogging.PNG)
+
+**Serilog Logging**
+![Serilog Logging inside Docker Container |150x150](./Documentation/Images/S2_Serilog_Logging.PNG)
+
 ## Executing the solution in `Mac OS 12.3 (build 21E230)` using VS 2022
 
 > 1. Discussion and Demo
