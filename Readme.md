@@ -81,7 +81,8 @@ Description: To Be Done
 
 ## New Features
 
-> 1. Serilog
+> 1. Configuring the configuration
+> 1. Serilog third-party logger provider
 > 1. Postman Collection
 > 1. Show casing the existing Unit Tests
 
@@ -109,6 +110,8 @@ echo $Environment_Variable_Name
 ![Build And Push Image To Docker Hub |150x150](./Documentation/Images/BuildAndPushImageToDockerHub.PNG)
 
 ## Deploy Single `Azure Container Instance` from Docker Hub Image
+
+**Note:** Enable the Network Access for Mongo Db
 
 ```
 MongoDbSettings__CollectionName = Products
@@ -165,7 +168,8 @@ MongoDbSettings__DatabaseName = ProductsDb
 
 ## New Features
 
-> 1. Model Validations
+
+> 1. Docker Commands with Volume Mounts
 > 1. DTO
 > 1. Auto Mapper
 
@@ -232,6 +236,7 @@ MongoDbSettings_DatabaseName = ProductsDb
 
 ## New Features
 
+> 1. Model Validations
 > 1. Health Checks
 > 1. Versioning
 
