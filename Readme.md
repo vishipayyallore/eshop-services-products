@@ -92,6 +92,9 @@ Description: To Be Done
 **Serilog Logging**
 ![Serilog Logging inside Docker Container |150x150](./Documentation/Images/S2_Serilog_Logging.PNG)
 
+**Postman Collection Local**
+![Postman Collection Local |150x150](./Documentation/Images/S2_PostmanCollection_Local.PNG)
+
 ## Executing the solution in `Mac OS 12.3 (build 21E230)` using VS 2022
 
 > 1. Discussion and Demo
