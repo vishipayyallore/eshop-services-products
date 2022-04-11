@@ -1,9 +1,12 @@
 using Products.Core.Entities;
 using System;
+using System.Diagnostics.CodeAnalysis;
 using Xunit;
 
 namespace Products.Core.Tests
 {
+
+    [ExcludeFromCodeCoverage]
     public class ProductTestCases
     {
 

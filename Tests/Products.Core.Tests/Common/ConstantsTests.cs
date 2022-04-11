@@ -1,8 +1,11 @@
-﻿using Xunit;
+﻿using System.Diagnostics.CodeAnalysis;
+using Xunit;
 using static Products.Core.Common.Constants;
 
 namespace Products.Core.Tests.Common
 {
+
+    [ExcludeFromCodeCoverage]
     public class ConstantsTests
     {
 
