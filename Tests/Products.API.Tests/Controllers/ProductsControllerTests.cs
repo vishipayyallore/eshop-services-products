@@ -6,11 +6,14 @@ using Products.Core.Entities;
 using Products.Core.Interfaces;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using Xunit;
 
 namespace Products.API.Tests.Controllers
 {
+
+    [ExcludeFromCodeCoverage]
     public class ProductsControllerTests
     {
 

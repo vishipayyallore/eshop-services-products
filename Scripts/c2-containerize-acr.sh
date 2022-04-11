@@ -22,3 +22,4 @@ docker build -f "./Source/Products.API/Dockerfile" -t $REPOSITORY:$TAG -t $REPOS
 docker push $REPOSITORY:$TAG
 docker push $REPOSITORY:$VERSION_TAG
 
+echo 'PLEASE UPDATE THE ACR PASSWORD IN THE .BASHRC FILE !!'

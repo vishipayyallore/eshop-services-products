@@ -4,12 +4,15 @@ using Products.Core.Entities;
 using Products.Core.Interfaces;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Threading.Tasks;
 using Xunit;
 
 namespace Products.Repository.Tests
 {
+
+    [ExcludeFromCodeCoverage]
     public class ProductRepositoryTests
     {
 
