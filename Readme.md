@@ -118,7 +118,7 @@ echo $Environment_Variable_Name
 
 ## Build And Push Image To Docker Hub
 
-![Build And Push Image To Docker Hub |150x150](./Documentation/Images/BuildAndPushImageToDockerHub.PNG)
+![Build And Push Image To Docker Hub |150x150](./Documentation/Images/S2_BuildAndPushImageToDockerHub.PNG)
 
 ## Deploy Single `Azure Container Instance` from Docker Hub Image
 
