@@ -108,6 +108,8 @@ Description: To Be Done
 
 > 1. Demo and Discussion
 
+Please refer the [example.bashrc](Scripts\example.bashrc) file for the shell script to be executed in the terminal.
+
 ```
 code ~/.bashrc `Your choice of text editor`
 source ~/.bashrc
