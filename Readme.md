@@ -108,6 +108,8 @@ Description: To Be Done
 
 > 1. Demo and Discussion
 
+Please refer the [example.bashrc](Scripts\example.bashrc) file for the shell script to be executed in the terminal.
+
 ```
 code ~/.bashrc `Your choice of text editor`
 source ~/.bashrc
@@ -116,7 +118,7 @@ echo $Environment_Variable_Name
 
 ## Build And Push Image To Docker Hub
 
-![Build And Push Image To Docker Hub |150x150](./Documentation/Images/BuildAndPushImageToDockerHub.PNG)
+![Build And Push Image To Docker Hub |150x150](./Documentation/Images/S2_BuildAndPushImageToDockerHub.PNG)
 
 ## Deploy Single `Azure Container Instance` from Docker Hub Image
 
