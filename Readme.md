@@ -9,7 +9,6 @@ Description: To Be Done
 | [![Products-Api-CI](https://github.com/vishipayyallore/eshop-services-products/actions/workflows/Products-Api-CI.yml/badge.svg)](https://github.com/vishipayyallore/eshop-services-products/actions/workflows/Products-Api-CI.yml) | [![CodeQL](https://github.com/vishipayyallore/eshop-services-products/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/vishipayyallore/eshop-services-products/actions/workflows/codeql-analysis.yml) |
 | To Be Done                                                                                                                                                                                                                         | To Be Done                                                                                                                                                                                                                |
 
-
 ## Solution Map Diagram
 
 ![Solution Map Diagram |150x150](./Documentation/Images/eshop-services-products.PNG)
@@ -52,7 +51,6 @@ Description: To Be Done
 
 > 1. Demo and Discussion
 
-
 ## Local Execution Modes using VS 2022
 
 **Note:** Mongo Db in Atlas and Docker Container
@@ -71,7 +69,6 @@ Description: To Be Done
 ![Products API Docker Logs |150x150](./Documentation/Images/ProductsAPIDockerLogs.PNG)
 
 ![Execute With Docker Compose |150x150](./Documentation/Images/ExecuteWithDockerCompose.PNG)
-
 
 ---
 
@@ -103,7 +100,6 @@ Description: To Be Done
 
 > 1. Demo and Discussion
 
-
 ## Shell Scripts
 
 > 1. Demo and Discussion
@@ -122,7 +118,8 @@ echo $Environment_Variable_Name
 
 ## Deploy Single `Azure Container Instance` from Docker Hub Image
 
-**Note:** 
+**Note:**
+
 > 1. Enable the Network Access for Mongo Db
 > 1. `MongoDbSettings__ConnectionString` should come from `.bashrc`
 
@@ -134,17 +131,21 @@ MongoDbSettings__ConnectionString = mongodb://productsdb:27017
 MongoDbSettings__DatabaseName = ProductsDb
 ```
 
-**Using Azure CLI**
-![ACI Single Container Using Cli |150x150](./Documentation/Images/S2_ACI_Using_Cli.PNG)
+**ACI Single Container Using Cli from Docker Hub**
+![ACI Single Container Using Cli from Docker Hub |150x150](./Documentation/Images/S2_Docker_to_ACI_using_azcli.PNG)
 
 **Accessing the API from ACI Container**
 ![ACI Single Container |150x150](./Documentation/Images/S2_ACI_Single_Container.PNG)
 
+## Creating Azure Container Registry using Azure CLI
+
+> 1. Demo and Discussion
+
+![Creating ACR Using Azure CLI |150x150](./Documentation/Images/S2_Creating_ACR_Using_AzureCLI.PNG)
 
 ## Build And Push Image To Azure Container Registry
 
-![Build And Push Image To Docker Hub |150x150](./Documentation/Images/BuildAndPushImageToDockerHub.PNG)
-
+![Build And Push Image To ACR |150x150](./Documentation/Images/S2_BuildAndPushImageToACR.PNG)
 
 ## Deploy Single `Azure Container Instance` from `Azure Container Registry` Image
 
@@ -154,15 +155,17 @@ MongoDbSettings__ConnectionString = mongodb://productsdb:27017
 MongoDbSettings__DatabaseName = ProductsDb
 ```
 
-**Using Azure CLI**
-![ACI Single Container Using Cli |150x150](./Documentation/Images/ACI_Using_Cli.PNG)
+**ACI Single Container Using Cli from ACR**
+![ACI Single Container Using Cli from ACR |150x150](./Documentation/Images/S2_ACR_to_ACI_using_azcli.PNG)
 
 **Accessing the API from ACI Container**
-![ACI Single Container |150x150](./Documentation/Images/ACI_Single_Container.PNG)
+![ACI Single Container |150x150](./Documentation/Images/S2_Accessing_ACI.PNG)
 
 ## Using Postman to hit the ACI instance. Environments- [ACI 1, ACI 2]
 
 > 1. Demo & Discussion
+
+![Postman Collection ACI |150x150](./Documentation/Images/S2_PostmanCollection_ACI.PNG)
 
 ## Review/Q & A/Panel Discussion
 
@@ -180,18 +183,15 @@ MongoDbSettings__DatabaseName = ProductsDb
 
 ## New Features
 
-
 > 1. Docker Commands with Volume Mounts
 > 1. DTO
 > 1. Auto Mapper
-
 
 ## Docker Compose
 
 > 1. Demo and Discussion
 > 1. Docker-Compose.yml
 > 1. Docker-Compose.override.yml
-
 
 ## Deployment
 
