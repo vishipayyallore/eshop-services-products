@@ -1,0 +1,85 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: eshop-mongodb
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: eshop-mongodb
+  template:
+    metadata:
+      labels:
+        app: eshop-mongodb
+    spec:
+      containers:
+        - name: eshop-mongodb
+          image: mongo
+          ports:
+            - containerPort: 27017
+              name: mongodb
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: eshop-mongodb
+spec:
+  ports:
+    - port: 27017
+  selector:
+    app: eshop-mongodb
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: eshop-productsapi
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: eshop-productsapi
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+  minReadySeconds: 5
+  template:
+    metadata:
+      labels:
+        app: eshop-productsapi
+    spec:
+      containers:
+        - name: eshop-productsapi
+          image: vishipayyallore/productsapi:latest
+          ports:
+            - containerPort: 80
+          resources:
+            requests:
+              cpu: 250m
+            limits:
+              cpu: 500m
+          env:
+            - name: MongoDbSettings__ConnectionString
+              valueFrom:
+                secretKeyRef:
+                  name: mongo-connection-string
+                  key: MongoDbSettings__ConnectionString
+                  optional: false
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: eshop-productsapi
+spec:
+  type: LoadBalancer
+  ports:
+    - port: 80
+  selector:
+    app: eshop-productsapi
+---
+apiVersion: v1
+data:
+  MongoDbSettings__ConnectionString: bW9uZ29kYjovL2VzaG9wLW1vbmdvZGI6MjcwMTc=
+kind: Secret
+metadata:
+  name: mongo-connection-string
