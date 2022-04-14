@@ -141,6 +141,12 @@ MongoDbSettings__DatabaseName = ProductsDb
 ![ACI Single Container |150x150](./Documentation/Images/S2_ACI_Single_Container.PNG)
 
 
+## Creating Azure Container Registry using Azure CLI
+
+> 1. Demo and Discussion
+
+![Creating ACR Using Azure CLI |150x150](./Documentation/Images/S2_Creating_ACR_Using_AzureCLI.PNG)
+
 ## Build And Push Image To Azure Container Registry
 
 ![Build And Push Image To Docker Hub |150x150](./Documentation/Images/BuildAndPushImageToDockerHub.PNG)
