@@ -108,7 +108,7 @@ Description: To Be Done
 
 > 1. Demo and Discussion
 
-Please refer the [example.bashrc](Scripts\example.bashrc) file for the shell script to be executed in the terminal.
+Please refer the [example.bashrc](./Scripts/example.bashrc) file for the shell script to be executed in the terminal.
 
 ```
 code ~/.bashrc `Your choice of text editor`
@@ -122,7 +122,11 @@ echo $Environment_Variable_Name
 
 ## Deploy Single `Azure Container Instance` from Docker Hub Image
 
-**Note:** Enable the Network Access for Mongo Db
+**Note:** 
+> 1. Enable the Network Access for Mongo Db
+> 1. `MongoDbSettings__ConnectionString` should come from `.bashrc`
+
+**Example MongoDb Settings**
 
 ```
 MongoDbSettings__CollectionName = Products
@@ -130,14 +134,11 @@ MongoDbSettings__ConnectionString = mongodb://productsdb:27017
 MongoDbSettings__DatabaseName = ProductsDb
 ```
 
-**Using Azure Portal**
-![ACI's Environment Variables |150x150](./Documentation/Images/ACI_Environment_Variables.PNG)
-
 **Using Azure CLI**
-![ACI Single Container Using Cli |150x150](./Documentation/Images/ACI_Using_Cli.PNG)
+![ACI Single Container Using Cli |150x150](./Documentation/Images/S2_ACI_Using_Cli.PNG)
 
 **Accessing the API from ACI Container**
-![ACI Single Container |150x150](./Documentation/Images/ACI_Single_Container.PNG)
+![ACI Single Container |150x150](./Documentation/Images/S2_ACI_Single_Container.PNG)
 
 
 ## Build And Push Image To Azure Container Registry
