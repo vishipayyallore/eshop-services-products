@@ -100,6 +100,8 @@ Description: To Be Done
 
 > 1. Demo and Discussion
 
+![Executing API In Ubuntu 20.04 Swagger |150x150](./Documentation/Images/S2_Executing_API_In_Ubuntu_Swagger.PNG)
+
 
 ![Executing API In Ubuntu 20.04 |150x150](./Documentation/Images/S2_Executing_API_In_Ubuntu_2004.PNG)
 
