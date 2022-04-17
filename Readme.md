@@ -1,4 +1,4 @@
-# eshop `Products` Microservice `API`
+# eShop `Products` Microservice `API`
 
 Description: To Be Done
 
@@ -7,7 +7,7 @@ Description: To Be Done
 | PR, and CI Builds                                                                                                                                                                                                                  | Code QL                                                                                                                                                                                                                   |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [![Products-Api-CI](https://github.com/vishipayyallore/eshop-services-products/actions/workflows/Products-Api-CI.yml/badge.svg)](https://github.com/vishipayyallore/eshop-services-products/actions/workflows/Products-Api-CI.yml) | [![CodeQL](https://github.com/vishipayyallore/eshop-services-products/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/vishipayyallore/eshop-services-products/actions/workflows/codeql-analysis.yml) |
-| To Be Done                                                                                                                                                                                                                         | To Be Done                                                                                                                                                                                                                |
+
 
 ## Solution Map Diagram
 
@@ -20,6 +20,16 @@ Description: To Be Done
 > 1. .NET 6
 > 1. VS Code (https://code.visualstudio.com/)
 > 1. Docker Desktop (https://docs.docker.com/docker-for-windows/install/)
+
+---
+
+## Links to Documentation
+
+> 1. Please refer [Session 1](./Documentation/Sessions/Session1.md) for more details.
+> 1. Please refer [Session 1 Video](https://www.youtube.com/watch?v=wQ0Xf4pKZaQ) for more details.
+> 1. Please refer [Session 2](./Documentation/Sessions/Session2.md) for more details.
+> 1. Please refer [Session 2 Video](https://www.youtube.com/watch?v=R8QIrph-rCI) for more details.
+
 
 ---
 
