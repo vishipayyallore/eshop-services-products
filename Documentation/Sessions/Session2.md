@@ -25,7 +25,6 @@
 
 ![Executing API In Ubuntu 20.04 Swagger |150x150](../Images/S2_Executing_API_In_Ubuntu_Swagger.PNG)
 
-
 ![Executing API In Ubuntu 20.04 |150x150](../Images/S2_Executing_API_In_Ubuntu_2004.PNG)
 
 ## Shell Scripts
