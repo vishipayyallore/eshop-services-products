@@ -18,6 +18,12 @@ spec:
           ports:
             - containerPort: 27017
               name: mongodb
+          resources:
+            requests:
+              cpu: 250m
+            limits:
+              cpu: 500m
+              memory: 512Mi
 ---
 apiVersion: v1
 kind: Service
@@ -58,6 +64,7 @@ spec:
               cpu: 250m
             limits:
               cpu: 500m
+              memory: 512Mi
           env:
             - name: MongoDbSettings__ConnectionString
               valueFrom:
