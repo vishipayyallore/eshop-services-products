@@ -48,14 +48,9 @@ Description: To Be Done
 > 1. Docker-Compose.yml
 > 1. Docker-Compose.override.yml
 
-## Deployment
+## Deploying `Multi Containers` in **App Service** using **Docker Compose**
 
-### `Multi Containers` in **Container Instances** using **Container Group**
-
-> 1. To Be Done
-
-### `Multi Containers` in **App Service** using **Docker Compose**
-
+**Docker Compose File**
 ```
 version: '3.4'
 
