@@ -6,8 +6,10 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{38B6694D-C0C6-422B-A2F9-9290597F5679}"
 	ProjectSection(SolutionItems) = preProject
 		.gitignore = .gitignore
+		CHANGELOG.md = CHANGELOG.md
 		LICENSE = LICENSE
 		README.md = README.md
+		SECURITY.md = SECURITY.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentation", "{2A976898-71B8-4802-B034-46C2F8B47EC9}"
@@ -17,14 +19,30 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentat
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Images", "Images", "{F6102B47-7AC8-49FD-BE8A-A0F51404455E}"
 	ProjectSection(SolutionItems) = preProject
+		Documentation\Images\ACI_Environment_Variables.PNG = Documentation\Images\ACI_Environment_Variables.PNG
 		Documentation\Images\BuildAndPushImageToDockerHub.PNG = Documentation\Images\BuildAndPushImageToDockerHub.PNG
 		Documentation\Images\DeployToAppServicesMultiContainer.PNG = Documentation\Images\DeployToAppServicesMultiContainer.PNG
+		Documentation\Images\Dockerize_Image.PNG = Documentation\Images\Dockerize_Image.PNG
 		Documentation\Images\eshop-services-products.PNG = Documentation\Images\eshop-services-products.PNG
 		Documentation\Images\ExecuteWithDocker.PNG = Documentation\Images\ExecuteWithDocker.PNG
 		Documentation\Images\ExecuteWithDockerCompose.PNG = Documentation\Images\ExecuteWithDockerCompose.PNG
 		Documentation\Images\ExecuteWithIISExpress.PNG = Documentation\Images\ExecuteWithIISExpress.PNG
 		Documentation\Images\ExecuteWithKestrel.PNG = Documentation\Images\ExecuteWithKestrel.PNG
 		Documentation\Images\ProductsAPIDockerLogs.PNG = Documentation\Images\ProductsAPIDockerLogs.PNG
+		Documentation\Images\S2_Accessing_ACI.PNG = Documentation\Images\S2_Accessing_ACI.PNG
+		Documentation\Images\S2_ACI_Single_Container.PNG = Documentation\Images\S2_ACI_Single_Container.PNG
+		Documentation\Images\S2_ACR_to_ACI_using_azcli.PNG = Documentation\Images\S2_ACR_to_ACI_using_azcli.PNG
+		Documentation\Images\S2_BuildAndPushImageToACR.PNG = Documentation\Images\S2_BuildAndPushImageToACR.PNG
+		Documentation\Images\S2_BuildAndPushImageToDockerHub.PNG = Documentation\Images\S2_BuildAndPushImageToDockerHub.PNG
+		Documentation\Images\S2_BuildAndRunLocally..PNG = Documentation\Images\S2_BuildAndRunLocally..PNG
+		Documentation\Images\S2_Creating_ACR_Using_AzureCLI.PNG = Documentation\Images\S2_Creating_ACR_Using_AzureCLI.PNG
+		Documentation\Images\S2_DefaultLogging.PNG = Documentation\Images\S2_DefaultLogging.PNG
+		Documentation\Images\S2_Docker_to_ACI_using_azcli.PNG = Documentation\Images\S2_Docker_to_ACI_using_azcli.PNG
+		Documentation\Images\S2_Executing_API_In_Ubuntu_2004.PNG = Documentation\Images\S2_Executing_API_In_Ubuntu_2004.PNG
+		Documentation\Images\S2_Executing_API_In_Ubuntu_Swagger.PNG = Documentation\Images\S2_Executing_API_In_Ubuntu_Swagger.PNG
+		Documentation\Images\S2_PostmanCollection_ACI.PNG = Documentation\Images\S2_PostmanCollection_ACI.PNG
+		Documentation\Images\S2_PostmanCollection_Local.PNG = Documentation\Images\S2_PostmanCollection_Local.PNG
+		Documentation\Images\S2_Serilog_Logging.PNG = Documentation\Images\S2_Serilog_Logging.PNG
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source", "Source", "{11B66EC7-A252-4466-931E-047C6D529F69}"
@@ -33,12 +51,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{C7D584C9
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{98988EBA-904E-4989-A087-D3D2D476A7F5}"
 	ProjectSection(SolutionItems) = preProject
-		Scripts\az-acr-create.sh = Scripts\az-acr-create.sh
-		Scripts\build.sh = Scripts\build.sh
-		Scripts\containerize-acr.sh = Scripts\containerize-acr.sh
-		Scripts\containerize-docker.sh = Scripts\containerize-docker.sh
-		Scripts\deployacrtoaci.sh = Scripts\deployacrtoaci.sh
-		Scripts\deploydockertoaci.sh = Scripts\deploydockertoaci.sh
+		Scripts\a1-build-and-run.sh = Scripts\a1-build-and-run.sh
+		Scripts\b1-containerize-docker.sh = Scripts\b1-containerize-docker.sh
+		Scripts\b2-deploydockertoaci.sh = Scripts\b2-deploydockertoaci.sh
+		Scripts\c1-az-acr-create.sh = Scripts\c1-az-acr-create.sh
+		Scripts\c2-containerize-acr.sh = Scripts\c2-containerize-acr.sh
+		Scripts\c3-deployacrtoaci.sh = Scripts\c3-deployacrtoaci.sh
+		Scripts\example.bashrc = Scripts\example.bashrc
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Products.API", "Source\Products.API\Products.API.csproj", "{DE060A93-2C22-4636-94B2-D159D52E8562}"
@@ -62,6 +81,20 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Products.Infrastructure.Tests", "Tests\Products.Infrastructure.Tests\Products.Infrastructure.Tests.csproj", "{8B9F849C-DC7E-46AC-B31D-DED6BFB83C35}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Products.Repository.Tests", "Tests\Products.Repository.Tests\Products.Repository.Tests.csproj", "{691FEC83-C2FA-43D2-929A-18D0EB57BE47}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Deploy", "Deploy", "{21FED0F0-DE2E-4E4E-8688-44A15472AC5F}"
+	ProjectSection(SolutionItems) = preProject
+		Deploy\eshop-products-api-k8s.yml = Deploy\eshop-products-api-k8s.yml
+		Deploy\WebAppDockerCompose.yml = Deploy\WebAppDockerCompose.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sessions", "Sessions", "{3368FD1B-2CCE-4A99-BFA1-0F84DE7A7120}"
+	ProjectSection(SolutionItems) = preProject
+		Documentation\Sessions\Session1.md = Documentation\Sessions\Session1.md
+		Documentation\Sessions\Session1.txt = Documentation\Sessions\Session1.txt
+		Documentation\Sessions\Session2.md = Documentation\Sessions\Session2.md
+		Documentation\Sessions\Session2.txt = Documentation\Sessions\Session2.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -129,6 +162,7 @@ Global
 		{1E0032B8-9DBA-4D4C-9A0D-A49AC47D289F} = {C7D584C9-05CA-415D-A9DC-41523FC98F82}
 		{8B9F849C-DC7E-46AC-B31D-DED6BFB83C35} = {C7D584C9-05CA-415D-A9DC-41523FC98F82}
 		{691FEC83-C2FA-43D2-929A-18D0EB57BE47} = {C7D584C9-05CA-415D-A9DC-41523FC98F82}
+		{3368FD1B-2CCE-4A99-BFA1-0F84DE7A7120} = {2A976898-71B8-4802-B034-46C2F8B47EC9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AD59F0F3-ED3C-43CF-A8F1-F0432BA11483}
