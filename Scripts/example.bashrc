@@ -6,7 +6,8 @@ export DOCKER_IMAGE_NAME='eshop-services-products'
 export AZ_RESOURCE_GROUP='rg-womd-dev-001'
 
 # Azure Container Instances
-export AZ_ACI_NAME_DOCKER='aci-productsapi-docker'
+export AZ_ACI_FROM_DOCKER='aci-productsapi-from-docker'
+export AZ_ACI_FROM_ACR='aci-productsapi-from-acr'
 
 # Azure Container Registry
 export AZ_ACRNAME='acreshopdev'
