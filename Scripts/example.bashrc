@@ -1,11 +1,12 @@
-export DOCKER_USERNAME=YourDockerUsername
+export DOCKER_USERNAME='YourDockerUsername'
 export DOCKER_IMAGE_NAME='eshop-services-products'
 export ACR_NAME_DOCKER='aci-productsapi-docker'
 
+export AZ_RESOURCE_GROUP='rg-womd-dev-001'
+
 export ACR_USERNAME='acreshopdev'
 export ACR_PASSWORD='ACRsPASSWORD'
-
-export AZ_RESOURCE_GROUP='rg-womd-dev-001'
+export AZ_ACRNAME='acreshopdev'
 
 export MongoDbSettings__CollectionName='Products'
 export MongoDbSettings__DatabaseName='ProductsDb'
