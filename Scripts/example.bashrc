@@ -1,12 +1,28 @@
-export DOCKER_USERNAME=YourDockerUsername
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
+# Description: .bashrc file for exporting environment variables
+# Author: Robbie, Swamy
+# Date: 25-Apr-2022
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
+
+# Docker Related 
+export DOCKER_USERNAME='YourDockerUsername'
 export DOCKER_IMAGE_NAME='eshop-services-products'
-export ACR_NAME_DOCKER='aci-productsapi-docker'
 
-export ACR_USERNAME='acreshopdev'
-export ACR_PASSWORD='ACRsPASSWORD'
-
+# Azure Related
 export AZ_RESOURCE_GROUP='rg-womd-dev-001'
 
+# Azure Container Instances
+export AZ_ACI_FROM_DOCKER='aci-productsapi-from-docker'
+export AZ_ACI_FROM_ACR='aci-productsapi-from-acr'
+
+# Azure Container Registry
+export AZ_ACRNAME='acreshopdev'
+export AZ_ACR_USERNAME='acreshopdev'
+export AZ_ACR_PASSWORD='ACRsPASSWORD'
+export AZ_ACR_SERVER_NAME=$AZ_ACRNAME.azurecr.io
+
+# mongo Db
 export MongoDbSettings__CollectionName='Products'
 export MongoDbSettings__DatabaseName='ProductsDb'
 export MongoDbSettings__ConnectionString='mongodb+srv://YourUser:YourPassword@YourServer.azure.mongodb.net/proshop?retryWrites=true&w=majority'

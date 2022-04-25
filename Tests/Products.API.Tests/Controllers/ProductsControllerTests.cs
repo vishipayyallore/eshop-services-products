@@ -123,7 +123,54 @@ namespace Products.API.Tests.Controllers
             Assert.Equal("No Name", productRetrieved?.CreatedBy);
         }
 
-        private static List<Product> GetDummyProducts()
+        [Fact]
+        public async void When_ProductsController_GetProductsByCategory_IsCalled_Returns_DataNotFound()
+        {
+            // Arrange
+            var mockedProductRepository = new Mock<IProductRepository>();
+            var mockedILogger = new Mock<ILogger<ProductsController>>();
+
+            IEnumerable<Product> products = new List<Product>();
+
+            mockedProductRepository.Setup(repo => repo.GetProductsByCategory(It.IsAny<string>()))
+                .ReturnsAsync(products);
+
+            var productsController = new ProductsController(mockedProductRepository.Object, mockedILogger.Object);
+
+            Assert.NotNull(productsController);
+
+            var apiReturnedValue = await productsController.GetProductsByCategory("iPhone");
+            Assert.NotNull(apiReturnedValue);
+
+            _ = Assert.IsType<NotFoundResult>(apiReturnedValue.Result as NotFoundResult);
+        }
+
+        [Fact]
+        public async void When_ProductsController_GetProductsByCategory_IsCalled_Returns_Data()
+        {
+            // Arrange
+            var mockedProductRepository = new Mock<IProductRepository>();
+            var mockedILogger = new Mock<ILogger<ProductsController>>();
+
+            mockedProductRepository.Setup(repo => repo.GetProductsByCategory(It.IsAny<string>()))
+                .ReturnsAsync(GetDummyProducts());
+
+            var productsController = new ProductsController(mockedProductRepository.Object, mockedILogger.Object);
+
+            Assert.NotNull(productsController);
+
+            var apiReturnedValue = await productsController.GetProductsByCategory("602d2149e773f2a3990b47f5");
+            Assert.NotNull(apiReturnedValue);
+
+            _ = Assert.IsType<OkObjectResult>(apiReturnedValue.Result as OkObjectResult);
+            var productResults = apiReturnedValue.Result as OkObjectResult;
+
+            var productsRetrieved = productResults?.Value as IEnumerable<Product>;
+            _ = Assert.IsType<List<Product>>(productsRetrieved);
+            Assert.Equal(2, productsRetrieved?.Count());
+        }
+
+        private static IEnumerable<Product> GetDummyProducts()
         {
             return new List<Product>()
             {

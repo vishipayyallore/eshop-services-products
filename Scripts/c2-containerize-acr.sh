@@ -9,13 +9,12 @@
 
 TAG=latest
 VERSION_TAG=$(git log -1 --pretty=format:%h)
-ACR_SERVER_NAME=acreshopdev.azurecr.io
 
 echo "version tag: $VERSION_TAG"
 
-REPOSITORY=$ACR_SERVER_NAME/productsapi
+REPOSITORY=$AZ_ACR_SERVER_NAME/$DOCKER_IMAGE_NAME
 
-az acr login -n $ACR_SERVER_NAME
+az acr login -n $AZ_ACR_SERVER_NAME
 
 docker build -f "./Source/Products.API/Dockerfile" -t $REPOSITORY:$TAG -t $REPOSITORY:$VERSION_TAG .
 
