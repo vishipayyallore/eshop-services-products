@@ -1,3 +1,10 @@
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
+# Description: .bashrc file for exporting environment variables
+# Author: Swamy
+# Date: 24-Mar-2022
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
+
 # Docker Related 
 export DOCKER_USERNAME='YourDockerUsername'
 export DOCKER_IMAGE_NAME='eshop-services-products'
