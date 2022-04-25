@@ -12,6 +12,7 @@ export AZ_ACI_NAME_DOCKER='aci-productsapi-docker'
 export AZ_ACRNAME='acreshopdev'
 export AZ_ACR_USERNAME='acreshopdev'
 export AZ_ACR_PASSWORD='ACRsPASSWORD'
+export AZ_ACR_SERVER_NAME=$AZ_ACRNAME.azurecr.io
 
 # mongo Db
 export MongoDbSettings__CollectionName='Products'
