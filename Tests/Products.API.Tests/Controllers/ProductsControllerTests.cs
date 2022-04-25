@@ -148,7 +148,26 @@ namespace Products.API.Tests.Controllers
         [Fact]
         public async void When_ProductsController_GetProductsByCategory_IsCalled_Returns_Data()
         {
+            // Arrange
+            var mockedProductRepository = new Mock<IProductRepository>();
+            var mockedILogger = new Mock<ILogger<ProductsController>>();
 
+            mockedProductRepository.Setup(repo => repo.GetProductsByCategory(It.IsAny<string>()))
+                .ReturnsAsync(GetDummyProducts());
+
+            var productsController = new ProductsController(mockedProductRepository.Object, mockedILogger.Object);
+
+            Assert.NotNull(productsController);
+
+            var apiReturnedValue = await productsController.GetProductsByCategory("602d2149e773f2a3990b47f5");
+            Assert.NotNull(apiReturnedValue);
+
+            _ = Assert.IsType<OkObjectResult>(apiReturnedValue.Result as OkObjectResult);
+            var productResults = apiReturnedValue.Result as OkObjectResult;
+
+            var productRetrieved = productResults?.Value as Product;
+            // _ = Assert.IsType<Product>(productRetrieved);
+            Assert.Equal("No Name", productRetrieved?.CreatedBy);
         }
 
         private static List<Product> GetDummyProducts()
