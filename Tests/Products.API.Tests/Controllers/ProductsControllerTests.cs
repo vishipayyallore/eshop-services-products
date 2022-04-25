@@ -130,7 +130,7 @@ namespace Products.API.Tests.Controllers
             var mockedProductRepository = new Mock<IProductRepository>();
             var mockedILogger = new Mock<ILogger<ProductsController>>();
 
-            IEnumerable<Product> products = null;
+            IEnumerable<Product> products = new List<Product>();
 
             mockedProductRepository.Setup(repo => repo.GetProductsByCategory(It.IsAny<string>()))
                 .ReturnsAsync(products);
@@ -165,12 +165,12 @@ namespace Products.API.Tests.Controllers
             _ = Assert.IsType<OkObjectResult>(apiReturnedValue.Result as OkObjectResult);
             var productResults = apiReturnedValue.Result as OkObjectResult;
 
-            var productRetrieved = productResults?.Value as Product;
-            // _ = Assert.IsType<Product>(productRetrieved);
-            Assert.Equal("No Name", productRetrieved?.CreatedBy);
+            var productsRetrieved = productResults?.Value as IEnumerable<Product>;
+            _ = Assert.IsType<List<Product>>(productsRetrieved);
+            Assert.Equal(2, productsRetrieved?.Count());
         }
 
-        private static List<Product> GetDummyProducts()
+        private static IEnumerable<Product> GetDummyProducts()
         {
             return new List<Product>()
             {

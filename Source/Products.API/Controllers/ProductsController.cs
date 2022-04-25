@@ -22,7 +22,7 @@ namespace Products.API.Controllers
         /// <param name="repository">IProductRepository through dependency injection</param>
         /// <param name="logger">logger through dependency injection</param>
         /// <exception cref="ArgumentNullException">Throws the exception, when any of the dependencies are missing</exception>
-        public ProductsController(IProductRepository repository, ILogger<ProductsController> logger)
+        public ProductsController(IProductRepository? repository, ILogger<ProductsController>? logger)
         {
             _repository = repository ?? throw new ArgumentNullException(nameof(repository));
 
@@ -56,7 +56,7 @@ namespace Products.API.Controllers
 
             if (product == null)
             {
-                _logger.LogError($"Product with id: {id}, not found.");
+                _logger.LogWarning($"Product with id: {id}, not found.");
                 return NotFound();
             }
 
@@ -70,10 +70,17 @@ namespace Products.API.Controllers
         /// <returns>Set of Products for the given Category</returns>
         [Route("[action]/{category}", Name = nameof(GetProductsByCategory))]
         [HttpGet]
+        [ProducesResponseType((int)HttpStatusCode.NotFound)]
         [ProducesResponseType(typeof(IEnumerable<Product>), (int)HttpStatusCode.OK)]
         public async Task<ActionResult<IEnumerable<Product>>> GetProductsByCategory(string category)
         {
             var products = await _repository.GetProductsByCategory(category);
+
+            if (!products.Any())
+            {
+                _logger.LogWarning($"Products with category - {category}, not found.");
+                return NotFound();
+            }
 
             return Ok(products);
         }
