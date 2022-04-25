@@ -123,6 +123,34 @@ namespace Products.API.Tests.Controllers
             Assert.Equal("No Name", productRetrieved?.CreatedBy);
         }
 
+        [Fact]
+        public async void When_ProductsController_GetProductsByCategory_IsCalled_Returns_DataNotFound()
+        {
+            // Arrange
+            var mockedProductRepository = new Mock<IProductRepository>();
+            var mockedILogger = new Mock<ILogger<ProductsController>>();
+
+            IEnumerable<Product> products = null;
+
+            mockedProductRepository.Setup(repo => repo.GetProductsByCategory(It.IsAny<string>()))
+                .ReturnsAsync(products);
+
+            var productsController = new ProductsController(mockedProductRepository.Object, mockedILogger.Object);
+
+            Assert.NotNull(productsController);
+
+            var apiReturnedValue = await productsController.GetProductsByCategory("iPhone");
+            Assert.NotNull(apiReturnedValue);
+
+            _ = Assert.IsType<NotFoundResult>(apiReturnedValue.Result as NotFoundResult);
+        }
+
+        [Fact]
+        public async void When_ProductsController_GetProductsByCategory_IsCalled_Returns_Data()
+        {
+
+        }
+
         private static List<Product> GetDummyProducts()
         {
             return new List<Product>()
