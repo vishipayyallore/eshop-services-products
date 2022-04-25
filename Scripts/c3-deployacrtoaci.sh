@@ -7,13 +7,16 @@
 # Modified: 05-Apr-2022
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
 
-ACI_NAME=aci-productsapiv2
-ACR_SERVER_NAME=acreshopdev.azurecr.io
-AZ_ACR_PASSWORD=W0BAgPtC3wcQ0Op+tHwj481U7o51VJ01
+# ACI_NAME=aci-productsapiv2
+# ACR_SERVER_NAME=acreshopdev.azurecr.io
 
-az container create  --resource-group rg-dnlh-12mar-dev --name $ACI_NAME \
-    --image $ACR_SERVER_NAME/productsapi:latest --restart-policy OnFailure \
-    --environment-variables 'MongoDbSettings__CollectionName'='Products' 'MongoDbSettings__DatabaseName'='ProductsDb' \
+# TODO: You should modify the .bashrc file. This is Temporary to showcase the demo
+# AZ_ACR_PASSWORD=W0BAgPtC3wcQ0Op+tHwj481U7o51VJ01
+
+az container create  --resource-group $AZ_RESOURCE_GROUP --name $AZ_ACI_FROM_ACR \
+    --image $AZ_ACR_SERVER_NAME/$DOCKER_IMAGE_NAME:latest --restart-policy OnFailure \
+    --environment-variables MongoDbSettings__CollectionName=$MongoDbSettings__CollectionName \
+      MongoDbSettings__DatabaseName=$MongoDbSettings__DatabaseName \
     --secure-environment-variables MongoDbSettings__ConnectionString=$MongoDbSettings__ConnectionString \
-    --ip-address Public --dns-name-label $ACI_NAME \
+    --ip-address Public --dns-name-label $AZ_ACI_FROM_ACR \
     --registry-username $AZ_ACR_USERNAME --registry-password $AZ_ACR_PASSWORD
