@@ -9,7 +9,6 @@
 
 TAG=latest
 VERSION_TAG=$(git log -1 --pretty=format:%h)
-# AZ_ACR_SERVER_NAME=acreshopdev.azurecr.io
 
 echo "version tag: $VERSION_TAG"
 

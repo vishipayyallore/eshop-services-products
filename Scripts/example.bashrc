@@ -1,8 +1,8 @@
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
 # Description: .bashrc file for exporting environment variables
-# Author: Swamy
-# Date: 24-Mar-2022
+# Author: Robbie, Swamy
+# Date: 25-Apr-2022
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
 
 # Docker Related 

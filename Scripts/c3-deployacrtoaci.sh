@@ -7,9 +7,6 @@
 # Modified: 05-Apr-2022
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
 
-# ACI_NAME=aci-productsapiv2
-# ACR_SERVER_NAME=acreshopdev.azurecr.io
-
 # TODO: You should modify the .bashrc file. This is Temporary to showcase the demo
 # AZ_ACR_PASSWORD=W0BAgPtC3wcQ0Op+tHwj481U7o51VJ01
 
