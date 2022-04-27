@@ -238,6 +238,18 @@ namespace Products.API.Tests.Controllers
 
             _ = Assert.IsType<CreatedAtRouteResult>(apiReturnedValue.Result as CreatedAtRouteResult);
             var productResults = apiReturnedValue.Result as CreatedAtRouteResult;
+
+            mockedProductRepository.Setup(repo => repo.UpdateProduct(It.IsAny<Product>()))
+                .Returns(Task.FromResult(true));
+
+            var updateProductResults = await productsController.UpdateProduct(product);
+            Assert.NotNull(updateProductResults);
+
+            mockedProductRepository.Setup(repo => repo.DeleteProduct(It.IsAny<string>()))
+                .Returns(Task.FromResult(true));
+
+            var deleteProductResults = await productsController.DeleteProductById("DummyId");
+            Assert.NotNull(deleteProductResults);
         }
 
         private static IEnumerable<Product> GetDummyProducts()
