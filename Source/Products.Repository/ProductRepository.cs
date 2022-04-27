@@ -52,6 +52,7 @@ namespace Products.Repository
 
         public async Task CreateProduct(Product product)
         {
+            // TODO: Verify Auto Generation on Id. Also, Return the Product
             await _context.Products.InsertOneAsync(product);
         }
 

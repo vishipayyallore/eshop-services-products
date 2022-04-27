@@ -37,8 +37,8 @@ Description: To Be Done
 
 ## New Features
 
-> 1. Docker Commands with Volume Mounts
-> 1. Configuring the configuration
+> 1. [Docker Commands](./Documentation/Sessions/DockerCommandsForMongo.md) for MongoDb Container with Volume Mounts
+> 1. Configuring the configuration with a Demo
 > 1. DTO
 > 1. Auto Mapper
 
@@ -48,7 +48,13 @@ Description: To Be Done
 > 1. Docker-Compose.yml
 > 1. Docker-Compose.override.yml
 
+## Deploying `Web Application` in **App Service**
+
+## Deploying `Single Container` in **ACI** using **Docker Image**
+
 ## Deploying `Multi Containers` in **App Service** using **Docker Compose**
+
+## Deploying `Multi Containers` in **AKS** using **YML**
 
 **Docker Compose File**
 ```

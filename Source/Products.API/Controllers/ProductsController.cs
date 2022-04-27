@@ -79,6 +79,7 @@ namespace Products.API.Controllers
             if (!products.Any())
             {
                 _logger.LogWarning($"Products with category - {category}, not found.");
+
                 return NotFound();
             }
 
@@ -96,14 +97,16 @@ namespace Products.API.Controllers
         [ProducesResponseType(typeof(IEnumerable<Product>), (int)HttpStatusCode.OK)]
         public async Task<ActionResult<IEnumerable<Product>>> GetProductsByName(string name)
         {
-            var items = await _repository.GetProductsByName(name);
-            if (items == null)
+            var products = await _repository.GetProductsByName(name);
+
+            if (!products.Any())
             {
-                _logger.LogError($"Products with name: {name} not found.");
+                _logger.LogWarning($"Products with name: {name} not found.");
+
                 return NotFound();
             }
 
-            return Ok(items);
+            return Ok(products);
         }
 
         /// <summary>
