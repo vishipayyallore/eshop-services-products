@@ -37,8 +37,8 @@ Description: To Be Done
 
 ## New Features
 
-> 1. Docker Commands with Volume Mounts
-> 1. Configuring the configuration
+> 1. [Docker Commands](./Documentation/Sessions/DockerCommandsForMongo.md) for MongoDb Container with Volume Mounts
+> 1. Configuring the configuration with a Demo
 > 1. DTO
 > 1. Auto Mapper
 

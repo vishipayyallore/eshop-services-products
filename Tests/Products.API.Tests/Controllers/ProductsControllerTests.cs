@@ -8,6 +8,7 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
+using System.Threading.Tasks;
 using Xunit;
 
 namespace Products.API.Tests.Controllers
@@ -215,6 +216,28 @@ namespace Products.API.Tests.Controllers
             var productsRetrieved = productResults?.Value as IEnumerable<Product>;
             _ = Assert.IsType<List<Product>>(productsRetrieved);
             Assert.Equal(2, productsRetrieved?.Count());
+        }
+
+        [Fact]
+        public async void When_ProductsController_CreateProduct_IsCalled_Creates_Product()
+        {
+            // Arrange
+            var mockedProductRepository = new Mock<IProductRepository>();
+            var mockedILogger = new Mock<ILogger<ProductsController>>();
+            var product = new Product() { };
+
+            mockedProductRepository.Setup(repo => repo.CreateProduct(It.IsAny<Product>()))
+                .Returns(Task.CompletedTask);
+
+            var productsController = new ProductsController(mockedProductRepository.Object, mockedILogger.Object);
+
+            Assert.NotNull(productsController);
+
+            var apiReturnedValue = await productsController.CreateProduct(product);
+            Assert.NotNull(apiReturnedValue);
+
+            _ = Assert.IsType<CreatedAtRouteResult>(apiReturnedValue.Result as CreatedAtRouteResult);
+            var productResults = apiReturnedValue.Result as CreatedAtRouteResult;
         }
 
         private static IEnumerable<Product> GetDummyProducts()
