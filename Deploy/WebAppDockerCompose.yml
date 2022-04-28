@@ -11,7 +11,7 @@ services:
       - mongo_data:/data/db
 
   products.api:
-    image: vishipayyallore/productsapi:latest
+    image: vishipayyallore/eshop-services-products:latest
     container_name: products.api
     environment:
       - "MongoDbSettings__ConnectionString=mongodb://productsdb:27017"

@@ -48,8 +48,6 @@ Description: To Be Done
 > 1. Docker-Compose.yml
 > 1. Docker-Compose.override.yml
 
-## Deploying `Web Application` in **App Service**
-
 ## Deploying `Single Container` in **ACI** using **Docker Image**
 
 ## Deploying `Multi Containers` in **App Service** using **Docker Compose**
