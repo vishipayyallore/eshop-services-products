@@ -215,18 +215,43 @@ namespace Products.API.Tests.Controllers
 
             _ = Assert.IsType<CreatedAtRouteResult>(apiReturnedValue.Result as CreatedAtRouteResult);
             var productResults = apiReturnedValue.Result as CreatedAtRouteResult;
+        }
+
+        [Fact]
+        public async void When_ProductsController_UpdateProduct_IsCalled_Updates_Product()
+        {
+            var product = new Product() { };
 
             _mockedProductRepository.Setup(repo => repo.UpdateProduct(It.IsAny<Product>()))
                 .Returns(Task.FromResult(true));
 
+            var productsController = new ProductsController(_mockedProductRepository.Object, _mockedILogger.Object);
+
+            Assert.NotNull(productsController);
+
             var updateProductResults = await productsController.UpdateProduct(product);
             Assert.NotNull(updateProductResults);
 
+            _ = Assert.IsType<OkObjectResult>(updateProductResults as OkObjectResult);
+            var productResults = updateProductResults as OkObjectResult;
+            Assert.True(productResults?.Value is bool);
+        }
+
+        [Fact]
+        public async void When_ProductsController_DeleteProductById_IsCalled_Deletes_Product()
+        {
             _mockedProductRepository.Setup(repo => repo.DeleteProduct(It.IsAny<string>()))
                 .Returns(Task.FromResult(true));
 
+            var productsController = new ProductsController(_mockedProductRepository.Object, _mockedILogger.Object);
+            Assert.NotNull(productsController);
+
             var deleteProductResults = await productsController.DeleteProductById("DummyId");
             Assert.NotNull(deleteProductResults);
+
+            _ = Assert.IsType<OkObjectResult>(deleteProductResults as OkObjectResult);
+            var productResults = deleteProductResults as OkObjectResult;
+            Assert.True(productResults?.Value is bool);
         }
 
         private static IEnumerable<Product> GetDummyProducts()
@@ -237,7 +262,7 @@ namespace Products.API.Tests.Controllers
                 new Product { Id = "602d2149e773f2a3990b47f6", Name = "YourPhone", CreatedBy = "No Name", ModifiedBy = "No Name" }
             };
         }
-        
+
     }
 
 }
