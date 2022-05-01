@@ -39,8 +39,11 @@ Description: To Be Done
 
 > 1. [Docker Commands](./Documentation/Sessions/DockerCommandsForMongo.md) for MongoDb Container with Volume Mounts
 > 1. Configuring the configuration with a Demo
-> 1. DTO
 > 1. Auto Mapper
+> 1. DTO
+
+### Mongo Db Container Creation
+![Deploy Mongo Db as Container |150x150](./Documentation/Images/S3_CreateMongoContainer.PNG)
 
 ## Docker Compose
 
