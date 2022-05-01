@@ -51,11 +51,13 @@ Description: To Be Done
 > 1. Docker-Compose.yml
 > 1. Docker-Compose.override.yml
 
-## Deploying `Single Container` in **ACI** using **Docker Image**
+## Deployment to Azure `ACI`, `App Service Docker`, and `AKS`
 
-## Deploying `Multi Containers` in **App Service** using **Docker Compose**
+### Deploying `Single Container` in **ACI** using **Docker Image**
 
-## Deploying `Multi Containers` in **AKS** using **YML**
+### Deploying `Multi Containers` in **App Service** using **Docker Compose**
+
+### Deploying `Multi Containers` in **AKS** using **YML**
 
 **Docker Compose File**
 ```
@@ -96,6 +98,10 @@ MongoDbSettings_DatabaseName = ProductsDb
 ```
 
 ![Deploy To App Services Multi Container |150x150](./Documentation/Images/DeployToAppServicesMultiContainer.PNG)
+
+## Verify the Deployments using
+
+> 1. Demo and Discussion
 
 ## Review/Q & A/Panel Discussion
 
