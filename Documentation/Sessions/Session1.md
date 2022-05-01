@@ -33,15 +33,15 @@
 > 1. Docker
 > 1. Docker Compose
 
-![Execute With IIS Express |150x150](../Images/ExecuteWithIISExpress.PNG)
+![Execute With IIS Express |150x150](../Images/S1_ExecuteWithIISExpress.PNG)
 
-![Execute With Kestrel |150x150](../Images/ExecuteWithKestrel.PNG)
+![Execute With Kestrel |150x150](../Images/S1_ExecuteWithKestrel.PNG)
 
-![Execute With Docker |150x150](../Images/ExecuteWithDocker.PNG)
+![Execute With Docker |150x150](../Images/S1_ExecuteWithDocker.PNG)
 
-![Products API Docker Logs |150x150](../Images/ProductsAPIDockerLogs.PNG)
+![Products API Docker Logs |150x150](../Images/S1_ProductsAPIDockerLogs.PNG)
 
-![Execute With Docker Compose |150x150](../Images/ExecuteWithDockerCompose.PNG)
+![Execute With Docker Compose |150x150](../Images/S1_ExecuteWithDockerCompose.PNG)
 
 ## Review/Q & A/Panel Discussion
 
