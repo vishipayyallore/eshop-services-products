@@ -12,7 +12,7 @@ namespace Products.Repository
         private readonly IProductContext _productContext;
         private readonly IMapper _mapper;
 
-        public ProductRepository(IProductContext context, IMapper mapper)
+        public ProductRepository(IProductContext? context, IMapper? mapper)
         {
             _productContext = context ?? throw new ArgumentNullException(nameof(context));
 
@@ -21,9 +21,6 @@ namespace Products.Repository
 
         public async Task<IEnumerable<ProductDto>> GetProducts()
         {
-            //List<Product> productList = await _db.Products.ToListAsync();
-            //return _mapper.Map<List<ProductDto>>(productList);
-
             var products = await _productContext.Products
                                     .Find(Builders<Product>.Filter.Empty)
                                     .ToListAsync();

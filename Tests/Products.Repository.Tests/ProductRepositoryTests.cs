@@ -1,3 +1,4 @@
+using AutoMapper;
 using MongoDB.Driver;
 using Moq;
 using Products.Core.Entities;
@@ -13,31 +14,47 @@ namespace Products.Repository.Tests
 {
 
     [ExcludeFromCodeCoverage]
-    public class ProductRepositoryTests
+    public class ProductRepositoryTests : IDisposable
     {
 
         private Mock<IAsyncCursor<Product>>? asyncCursor;
         private Mock<IMongoCollection<Product>>? mockIMongoCollection;
         private Mock<IProductContext>? mockedProductContext;
+        private Mock<IMapper>? mockedMapper;
+
+        public ProductRepositoryTests()
+        {
+            mockedProductContext = new Mock<IProductContext>();
+            mockedMapper = new Mock<IMapper>();
+        }
+
+        public void Dispose()
+        {
+            GC.SuppressFinalize(this);
+        }
+
+        [Fact]
+        public void When_ProductRepository_Receives_Two_Null_Argument()
+        {
+            _ = Assert.Throws<ArgumentNullException>(() =>
+              {
+                  _ = new ProductRepository(default, default);
+              });
+        }
 
         [Fact]
         public void When_ProductRepository_Receives_Null_Argument()
         {
             _ = Assert.Throws<ArgumentNullException>(() =>
-              {
-#pragma warning disable CS8625 // Cannot convert null literal to non-nullable reference type.
-                  _ = new ProductRepository(null);
-#pragma warning restore CS8625 // Cannot convert null literal to non-nullable reference type.
-              });
+            {
+                _ = new ProductRepository(mockedProductContext?.Object, default);
+            });
         }
 
         [Fact]
         public void When_ProductRepository_Receives_Valid_Arguments()
         {
-            // Arrange
-            var mockedProductContext = new Mock<IProductContext>();
-
-            var productRepository = new ProductRepository(mockedProductContext.Object);
+            var productRepository = new ProductRepository(mockedProductContext?.Object, mockedMapper?.Object);
 
             Assert.NotNull(productRepository);
         }
@@ -66,7 +83,7 @@ namespace Products.Repository.Tests
             //Act 
             mockedProductContext.SetupGet(x => x.Products).Returns(mockIMongoCollection.Object);
 
-            var productRepository = new ProductRepository(mockedProductContext.Object);
+            var productRepository = new ProductRepository(mockedProductContext?.Object, mockedMapper?.Object);
             var productsRetrieved = await productRepository.GetProducts();
 
             //Assert 
@@ -97,7 +114,7 @@ namespace Products.Repository.Tests
             //Act 
             mockedProductContext.SetupGet(x => x.Products).Returns(mockIMongoCollection.Object);
 
-            var productRepository = new ProductRepository(mockedProductContext.Object);
+            var productRepository = new ProductRepository(mockedProductContext?.Object, mockedMapper?.Object);
             var productsRetrieved = await productRepository.GetProducts();
 
             //Assert 
@@ -130,8 +147,7 @@ namespace Products.Repository.Tests
             //Act 
             mockedProductContext.SetupGet(x => x.Products).Returns(mockIMongoCollection.Object);
 
-            var productRepository = new ProductRepository(mockedProductContext.Object);
-
+            var productRepository = new ProductRepository(mockedProductContext?.Object, mockedMapper?.Object);
             var received = await productRepository.GetProduct(expectedId!);
 
             //Assert 
@@ -165,8 +181,7 @@ namespace Products.Repository.Tests
             //Act 
             mockedProductContext.SetupGet(x => x.Products).Returns(mockIMongoCollection.Object);
 
-            var productRepository = new ProductRepository(mockedProductContext.Object);
-
+            var productRepository = new ProductRepository(mockedProductContext?.Object, mockedMapper?.Object);
             var received = await productRepository.GetProductsByName(_productsList[1].Name!);
 
             //Assert 
@@ -201,8 +216,7 @@ namespace Products.Repository.Tests
             //Act 
             mockedProductContext.SetupGet(x => x.Products).Returns(mockIMongoCollection.Object);
 
-            var productRepository = new ProductRepository(mockedProductContext.Object);
-
+            var productRepository = new ProductRepository(mockedProductContext?.Object, mockedMapper?.Object);
             var received = await productRepository.GetProductsByName(_productsList[2].Name!);
 
             //Assert 
