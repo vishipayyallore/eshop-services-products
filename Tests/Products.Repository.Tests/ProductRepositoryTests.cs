@@ -1,6 +1,7 @@
 using AutoMapper;
 using MongoDB.Driver;
 using Moq;
+using Products.Core.Dtos;
 using Products.Core.Entities;
 using Products.Core.Interfaces;
 using System;
@@ -63,6 +64,7 @@ namespace Products.Repository.Tests
         public async void When_ProductRepository_GetProducts_IsCalled_ReturnsData()
         {
             List<Product> _productsList = GetDummyProducts();
+            List<ProductDto> _productsListDto = GetDummyProductsDto();
 
             // Arrange
             asyncCursor = new Mock<IAsyncCursor<Product>>();
@@ -82,6 +84,7 @@ namespace Products.Repository.Tests
 
             //Act 
             mockedProductContext.SetupGet(x => x.Products).Returns(mockIMongoCollection.Object);
+            mockedMapper?.Setup(x => x.Map<List<ProductDto>>(It.IsAny<List<Product>>())).Returns(_productsListDto);
 
             var productRepository = new ProductRepository(mockedProductContext?.Object, mockedMapper?.Object);
             var productsRetrieved = await productRepository.GetProducts();
@@ -94,6 +97,7 @@ namespace Products.Repository.Tests
         public async void When_ProductRepository_GetProducts_IsCalled_Returns_EmptyList()
         {
             List<Product> _productsList = GetEmptyProductsList();
+            List<ProductDto> _productsListDto = GetEmptyProductsDtoList();
 
             // Arrange
             asyncCursor = new Mock<IAsyncCursor<Product>>();
@@ -113,6 +117,7 @@ namespace Products.Repository.Tests
 
             //Act 
             mockedProductContext.SetupGet(x => x.Products).Returns(mockIMongoCollection.Object);
+            mockedMapper?.Setup(x => x.Map<List<ProductDto>>(It.IsAny<List<Product>>())).Returns(_productsListDto);
 
             var productRepository = new ProductRepository(mockedProductContext?.Object, mockedMapper?.Object);
             var productsRetrieved = await productRepository.GetProducts();
@@ -235,9 +240,26 @@ namespace Products.Repository.Tests
             };
         }
 
+        private static List<ProductDto> GetDummyProductsDto()
+        {
+            return new List<ProductDto>()
+            {
+                new ProductDto { Id = "602d2149e773f2a3990b47f5", Name = "IPhone" },
+                new ProductDto { Id = "602d2149e773f2a3990b47f6", Name = "YourPhone" },
+                new ProductDto { Id = "602d2149e773f2a3990b47f7", Name = "ourPhone" }
+            };
+        }
+
         private static List<Product> GetEmptyProductsList()
         {
             return new List<Product>()
+            {
+            };
+        }
+
+        private static List<ProductDto> GetEmptyProductsDtoList()
+        {
+            return new List<ProductDto>()
             {
             };
         }

@@ -72,9 +72,9 @@ namespace Products.API.Tests.Controllers
             Assert.NotNull(apiReturnedValue);
 
             var productsResults = apiReturnedValue.Result as OkObjectResult;
-            var productsList = productsResults?.Value as IEnumerable<Product>;
+            var productsList = productsResults?.Value as IEnumerable<ProductDto>;
 
-            _ = Assert.IsType<List<Product>>(productsList);
+            _ = Assert.IsType<List<ProductDto>>(productsList);
             Assert.Equal(2, productsList?.Count());
         }
 
