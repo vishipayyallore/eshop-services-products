@@ -45,6 +45,8 @@ Reference: [MongoDb CLI](https://www.mongodb.com/docs/v4.4/mongo/)
 mongo
 db
 show dbs
+show databases
+show collections
 ```
 
 ![Mongo Db Container Logs |150x150](../Images/S3_MongoCli.PNG)
@@ -62,8 +64,9 @@ db.createCollection('Products');
 
 ## Delete existing Container and re-create
 
-> 1. In this demo, we will delete the existing container and re-create it.
-> 1. Also, the previously create database and collection will be deleted.
+> 1. In this demo, we will delete the existing container and re-create it
+> 1. Also, the previously create database and collection will be deleted
+> 1. Execute `mongo` command and verify the `Products` is unavailable
 
 ```
 docker container rm -f shop-mongo
@@ -74,3 +77,20 @@ docker exec -it shop-mongo /bin/bash
 
 ![Re-creating Docker Container |150x150](../Images/S3_Recreating_MongoDbContainer.PNG)
 
+## Creating Mongo Db Container with Volumes
+
+```
+docker container run -d -p 27017:27017 --name shop-mongo -v /var/lib/docker/volumes/mongo-db-persistance-store/_data:/data/db -v /var/lib/docker/volumes/mongo-db-persistance-store/_data:/data/configdb mongo
+```
+
+## Creating Mongo Db Container with Volumes
+
+```
+db.Products.insertMany([{ 'Name':'Laptop 1','Category':'Computers', 'Summary':'Summary', 'Description':'Description', 'ImageFile':'ImageFile', 'Price':54.93 }, { 'Name':'HP Laptop','Category':'Computers', 'Summary':'Summary', 'Description':'Description', 'ImageFile':'ImageFile', 'Price':88.93 } ])
+
+db.Products.find({}).pretty()
+
+db.Products.remove({})
+```
+
+![Re-creating Docker Container With Volume |150x150](../Images/S3_Docker_MongoDb_WithVolume.PNG)
