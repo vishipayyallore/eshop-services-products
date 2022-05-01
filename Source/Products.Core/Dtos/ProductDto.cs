@@ -1,4 +1,4 @@
-﻿namespace Products.API.Dtos
+﻿namespace Products.Core.Dtos
 {
     /// <summary>
     /// 

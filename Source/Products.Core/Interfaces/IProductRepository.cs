@@ -1,11 +1,14 @@
-﻿using Products.Core.Entities;
+﻿using Products.Core.Dtos;
+using Products.Core.Entities;
 
 namespace Products.Core.Interfaces
 {
 
     public interface IProductRepository
     {
-        Task<IEnumerable<Product>> GetProducts();
+        // Task<IEnumerable<Product>> GetProducts();
+
+        Task<IEnumerable<ProductDto>> GetProducts();
 
         Task<Product> GetProduct(string id);
 
