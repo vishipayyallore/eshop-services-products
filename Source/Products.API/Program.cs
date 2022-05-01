@@ -1,7 +1,9 @@
+using AutoMapper;
 using HealthChecks.UI.Client;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.Extensions.Diagnostics.HealthChecks;
 using Microsoft.Extensions.Options;
+using Products.API.Configuration;
 using Products.Core.Configuration;
 using Products.Core.Interfaces;
 using Products.Infrastructure;
@@ -24,6 +26,11 @@ builder.Logging.AddSerilog(logger);
 
 builder.Services.Configure<MongoDbSettings>(builder.Configuration.GetSection(nameof(MongoDbSettings)));
 builder.Services.AddSingleton<IMongoDbSettings>(sp => sp.GetRequiredService<IOptions<MongoDbSettings>>().Value);
+
+// TODO: Move this to Infrastructure Library
+IMapper mapper = MappingConfig.RegisterMaps().CreateMapper();
+builder.Services.AddSingleton(mapper);
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
 builder.Services.ConfigureProductContextServices();
 builder.Services.ConfigureProductRepositoryServices();

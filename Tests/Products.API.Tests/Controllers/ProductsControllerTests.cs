@@ -2,6 +2,7 @@
 using Microsoft.Extensions.Logging;
 using Moq;
 using Products.API.Controllers;
+using Products.Core.Dtos;
 using Products.Core.Entities;
 using Products.Core.Interfaces;
 using System;
@@ -55,27 +56,25 @@ namespace Products.API.Tests.Controllers
         public void When_ProductsController_Receives_Valid_Arguments()
         {
             var productsController = new ProductsController(_mockedProductRepository.Object, _mockedILogger.Object);
-
             Assert.NotNull(productsController);
         }
 
         [Fact]
         public async void When_ProductsController_GetProducts_IsCalled_Returns_Data()
         {
-            _mockedProductRepository.Setup(repo => repo.GetProducts())
-                .ReturnsAsync(GetDummyProducts());
+            _ = _mockedProductRepository.Setup(repo => repo.GetProducts())
+                .ReturnsAsync(GetDummyProductsDto());
 
             var productsController = new ProductsController(_mockedProductRepository.Object, _mockedILogger.Object);
-
             Assert.NotNull(productsController);
 
             var apiReturnedValue = await productsController.GetProducts();
             Assert.NotNull(apiReturnedValue);
 
             var productsResults = apiReturnedValue.Result as OkObjectResult;
-            var productsList = productsResults?.Value as IEnumerable<Product>;
+            var productsList = productsResults?.Value as IEnumerable<ProductDto>;
 
-            _ = Assert.IsType<List<Product>>(productsList);
+            _ = Assert.IsType<List<ProductDto>>(productsList);
             Assert.Equal(2, productsList?.Count());
         }
 
@@ -85,12 +84,11 @@ namespace Products.API.Tests.Controllers
             Product? product = default;
 
 #pragma warning disable CS8620 // Argument cannot be used for parameter due to differences in the nullability of reference types.
-            _mockedProductRepository.Setup(repo => repo.GetProduct(It.IsAny<string>()))
+            _ = _mockedProductRepository.Setup(repo => repo.GetProduct(It.IsAny<string>()))
                 .ReturnsAsync(product);
 #pragma warning restore CS8620 // Argument cannot be used for parameter due to differences in the nullability of reference types.
 
             var productsController = new ProductsController(_mockedProductRepository.Object, _mockedILogger.Object);
-
             Assert.NotNull(productsController);
 
             var apiReturnedValue = await productsController.GetProduct("602d2149e773f2a3990b47f5");
@@ -102,11 +100,10 @@ namespace Products.API.Tests.Controllers
         [Fact]
         public async void When_ProductsController_GetProductById_IsCalled_Returns_Data()
         {
-            _mockedProductRepository.Setup(repo => repo.GetProduct(It.IsAny<string>()))
+            _ = _mockedProductRepository.Setup(repo => repo.GetProduct(It.IsAny<string>()))
                 .ReturnsAsync(new Product());
 
             var productsController = new ProductsController(_mockedProductRepository.Object, _mockedILogger.Object);
-
             Assert.NotNull(productsController);
 
             var apiReturnedValue = await productsController.GetProduct("602d2149e773f2a3990b47f5");
@@ -125,11 +122,10 @@ namespace Products.API.Tests.Controllers
         {
             IEnumerable<Product> products = new List<Product>();
 
-            _mockedProductRepository.Setup(repo => repo.GetProductsByCategory(It.IsAny<string>()))
+            _ = _mockedProductRepository.Setup(repo => repo.GetProductsByCategory(It.IsAny<string>()))
                 .ReturnsAsync(products);
 
             var productsController = new ProductsController(_mockedProductRepository.Object, _mockedILogger.Object);
-
             Assert.NotNull(productsController);
 
             var apiReturnedValue = await productsController.GetProductsByCategory("DummyCategory");
@@ -141,11 +137,10 @@ namespace Products.API.Tests.Controllers
         [Fact]
         public async void When_ProductsController_GetProductsByCategory_IsCalled_Returns_Data()
         {
-            _mockedProductRepository.Setup(repo => repo.GetProductsByCategory(It.IsAny<string>()))
+            _ = _mockedProductRepository.Setup(repo => repo.GetProductsByCategory(It.IsAny<string>()))
                 .ReturnsAsync(GetDummyProducts());
 
             var productsController = new ProductsController(_mockedProductRepository.Object, _mockedILogger.Object);
-
             Assert.NotNull(productsController);
 
             var apiReturnedValue = await productsController.GetProductsByCategory("DummyCategory");
@@ -164,11 +159,10 @@ namespace Products.API.Tests.Controllers
         {
             IEnumerable<Product> products = new List<Product>();
 
-            _mockedProductRepository.Setup(repo => repo.GetProductsByName(It.IsAny<string>()))
+            _ = _mockedProductRepository.Setup(repo => repo.GetProductsByName(It.IsAny<string>()))
                 .ReturnsAsync(products);
 
             var productsController = new ProductsController(_mockedProductRepository.Object, _mockedILogger.Object);
-
             Assert.NotNull(productsController);
 
             var apiReturnedValue = await productsController.GetProductsByName("DummyProductName");
@@ -180,11 +174,10 @@ namespace Products.API.Tests.Controllers
         [Fact]
         public async void When_ProductsController_GetProductsByName_IsCalled_Returns_Data()
         {
-            _mockedProductRepository.Setup(repo => repo.GetProductsByName(It.IsAny<string>()))
+            _ = _mockedProductRepository.Setup(repo => repo.GetProductsByName(It.IsAny<string>()))
                 .ReturnsAsync(GetDummyProducts());
 
             var productsController = new ProductsController(_mockedProductRepository.Object, _mockedILogger.Object);
-
             Assert.NotNull(productsController);
 
             var apiReturnedValue = await productsController.GetProductsByName("DummyProductName");
@@ -207,7 +200,6 @@ namespace Products.API.Tests.Controllers
                 .Returns(Task.CompletedTask);
 
             var productsController = new ProductsController(_mockedProductRepository.Object, _mockedILogger.Object);
-
             Assert.NotNull(productsController);
 
             var apiReturnedValue = await productsController.CreateProduct(product);
@@ -226,7 +218,6 @@ namespace Products.API.Tests.Controllers
                 .Returns(Task.FromResult(true));
 
             var productsController = new ProductsController(_mockedProductRepository.Object, _mockedILogger.Object);
-
             Assert.NotNull(productsController);
 
             var updateProductResults = await productsController.UpdateProduct(product);
@@ -260,6 +251,15 @@ namespace Products.API.Tests.Controllers
             {
                 new Product { Id = "602d2149e773f2a3990b47f5", Name = "IPhone", CreatedBy = "No Name", ModifiedBy = "No Name" },
                 new Product { Id = "602d2149e773f2a3990b47f6", Name = "YourPhone", CreatedBy = "No Name", ModifiedBy = "No Name" }
+            };
+        }
+
+        private static IEnumerable<ProductDto> GetDummyProductsDto()
+        {
+            return new List<ProductDto>()
+            {
+                new ProductDto { Id = "602d2149e773f2a3990b47f5", Name = "IPhone" },
+                new ProductDto { Id = "602d2149e773f2a3990b47f6", Name = "YourPhone" }
             };
         }
 

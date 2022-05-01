@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Products.Core.Dtos;
 using Products.Core.Entities;
 using Products.Core.Interfaces;
 using System.Net;
@@ -34,8 +35,8 @@ namespace Products.API.Controllers
         /// </summary>
         /// <returns>Returns all the products</returns>
         [HttpGet]
-        [ProducesResponseType(typeof(IEnumerable<Product>), (int)HttpStatusCode.OK)]
-        public async Task<ActionResult<IEnumerable<Product>>> GetProducts()
+        [ProducesResponseType(typeof(IEnumerable<ProductDto>), (int)HttpStatusCode.OK)]
+        public async Task<ActionResult<IEnumerable<ProductDto>>> GetProducts()
         {
             var products = await _repository.GetProducts();
 

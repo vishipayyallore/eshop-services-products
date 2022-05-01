@@ -7,6 +7,7 @@ Reference: [Mongo Db on Docker Hub](https://hub.docker.com/_/mongo?tab=descripti
 ```
 docker image pull mongo
 docker container run -d -p 27017:27017 --name shop-mongo mongo
+docker sbom mongo
 ```
 
 ## Verify the IP Address of the Container
@@ -24,6 +25,8 @@ docker container inspect --format "{{ .NetworkSettings.IPAddress }}" <ContainerN
 
 ```
 docker container ps
+docker container ps -a
+docker container ps -q
 docker container logs -f shop-mongo
 ```
 
@@ -53,6 +56,8 @@ show collections
 
 ## Creating a Database and Collection
 
+Note: **productsDb** CamelCase is the name of the database.
+
 ```
 use productsDb;
 db.createCollection('Products');
@@ -80,7 +85,7 @@ docker exec -it shop-mongo /bin/bash
 ## Creating Mongo Db Container with Volumes
 
 ```
-docker container run -d -p 27017:27017 --name shop-mongo -v /var/lib/docker/volumes/mongo-db-persistance-store/_data:/data/db -v /var/lib/docker/volumes/mongo-db-persistance-store/_data:/data/configdb mongo
+docker container run -d -p 27017:27017 --name shop-mongo -v /var/lib/docker/volumes/mongo-db-persistance-store/_data:/data/db -v /var/lib/docker/volumes/mongo-db-config-store/_data:/data/configdb mongo
 ```
 
 ## Creating Mongo Db Container with Volumes

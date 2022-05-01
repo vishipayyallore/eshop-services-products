@@ -38,12 +38,17 @@ Description: To Be Done
 ## New Features
 
 > 1. [Docker Commands](./Documentation/Sessions/DockerCommandsForMongo.md) for MongoDb Container with Volume Mounts
-> 1. Configuring the configuration with a Demo
 > 1. Auto Mapper
+> 1. Configuring the configuration with a Demo
 > 1. DTO
 
 ### Mongo Db Container Creation
+
 ![Deploy Mongo Db as Container |150x150](./Documentation/Images/S3_CreateMongoContainer.PNG)
+
+### Output of GetAllProducts() from API is List of Dtos
+
+![Output from API List Of Dtos |150x150](./Documentation/Images/S3_OutputListOfDtos.PNG)
 
 ## Docker Compose
 
@@ -51,13 +56,8 @@ Description: To Be Done
 > 1. Docker-Compose.yml
 > 1. Docker-Compose.override.yml
 
-## Deploying `Single Container` in **ACI** using **Docker Image**
-
-## Deploying `Multi Containers` in **App Service** using **Docker Compose**
-
-## Deploying `Multi Containers` in **AKS** using **YML**
-
 **Docker Compose File**
+
 ```
 version: '3.4'
 
@@ -72,7 +72,7 @@ services:
       - mongo_data:/data/db
 
   products.api:
-    image: vishipayyallore/productsapi:latest
+    image: vishipayyallore/eshop-services-products:latest
     container_name: products.api
     environment:
       - "MongoDbSettings__ConnectionString=mongodb://productsdb:27017"
@@ -87,6 +87,12 @@ volumes:
   mongo_data:
 ```
 
+## Deployment to Azure `ACI`, `App Service Docker`, and `AKS`
+
+### Deploying `Single Container` in **ACI** using **Docker Image**
+
+### Deploying `Multi Containers` in **App Service** using **Docker Compose**
+
 **AppSettings** Under **Configuration** of App Service
 
 ```
@@ -96,6 +102,28 @@ MongoDbSettings_DatabaseName = ProductsDb
 ```
 
 ![Deploy To App Services Multi Container |150x150](./Documentation/Images/DeployToAppServicesMultiContainer.PNG)
+
+### Deploying `Multi Containers` in **AKS** using **YML**
+
+## Verify the Deployments using Postman
+
+> 1. Demo and Discussion
+
+### Verify the end points `locally`
+
+> 1. Demo and Discussion
+
+### Verify the end points from `Azure Container Instances`
+
+> 1. Demo and Discussion
+
+### Verify the end points `Docker Instances from App Service`
+
+> 1. Demo and Discussion
+
+### Verify the end points `Azure Kubernetes Service`
+
+> 1. Demo and Discussion
 
 ## Review/Q & A/Panel Discussion
 
