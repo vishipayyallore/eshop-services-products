@@ -126,11 +126,9 @@ MongoDbSettings__DatabaseName = ProductsDb
 **Accessing the API from ACI Container**
 ![ACI Single Container |150x150](./Documentation/Images/S3_ACI_Single_Container.PNG)
 
+---
 
-## Deployment to Azure `ACI`, `App Service Docker`, and `AKS`
-### Deploying `Single Container` in **ACI** using **Docker Image**
-
-### Deploying `Multi Containers` in **App Service** using **Docker Compose**
+## Deploying `Multi Containers` in **App Service** using **Docker Compose**
 
 [**Docker Compose File**](./Deploy/eshop-products-api-web-docker.yml)
 
@@ -171,9 +169,15 @@ MongoDbSettings_ConnectionString = mongodb://productsdb:27017
 MongoDbSettings_DatabaseName = ProductsDb
 ```
 
-![Deploy To App Services Multi Container |150x150](./Documentation/Images/DeployToAppServicesMultiContainer.PNG)
+**Deploy Multi Containers To App Services**
+![Deploy Multi Containers To App Services |150x150](./Documentation/Images/S3_DeployToAppServicesMultiContainer.PNG)
 
-### Deploying `Multi Containers` in **AKS** using **YML**
+**Access API From App Services Multi Container**
+![Access API From App Services Multi Container |150x150](./Documentation/Images/S3_AccessAPIFromAppServicesMultiContainer.PNG)
+
+---
+
+## Deploying `Multi Containers` in **AKS** using **YML**
 
 ## Verify the Deployments using Postman
 
