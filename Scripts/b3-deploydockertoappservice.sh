@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
-# Description: Script to create ACI single instance using docker image from docker registry
+# Description: Script to create Multi Containers inside App Service using docker image from docker registry
 # Author: Apaar, and Swamy
 # Date: 28-Apr-2022
 # Modified: 28-Apr-2022
