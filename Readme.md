@@ -56,6 +56,57 @@ Description: To Be Done
 > 1. Docker-Compose.yml
 > 1. Docker-Compose.override.yml
 
+**docker-compose.yml**
+
+```yaml
+version: "3.4"
+
+services:
+  productsdb:
+    image: mongo
+
+  products.api:
+    image: ${DOCKER_REGISTRY-}productsapi
+    build:
+      context: .
+      dockerfile: Source/Products.API/Dockerfile
+
+volumes:
+  mongo_data:
+```
+
+**docker-compose.override.yml**
+
+```yaml
+version: "3.4"
+
+services:
+  productsdb:
+    container_name: productsdb
+    restart: always
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+
+  products.api:
+    container_name: products.api
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=https://+:443;http://+:80
+      - ASPNETCORE_HTTPS_PORT=8001
+      - "MongoDbSettings__ConnectionString=mongodb://productsdb:27017"
+    depends_on:
+      - productsdb
+    ports:
+      - "8000:80"
+      - "8001:443"
+    volumes:
+      - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
+```
+
+## Deployment to Azure `ACI`, `App Service Docker`, and `AKS`
+
 **Docker Compose File**
 
 ```
@@ -86,8 +137,6 @@ services:
 volumes:
   mongo_data:
 ```
-
-## Deployment to Azure `ACI`, `App Service Docker`, and `AKS`
 
 ### Deploying `Single Container` in **ACI** using **Docker Image**
 
