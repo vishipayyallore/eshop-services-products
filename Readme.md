@@ -105,9 +105,34 @@ services:
       - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
 ```
 
-## Deployment to Azure `ACI`, `App Service Docker`, and `AKS`
+## Deploy Single `Azure Container Instance` from Docker Hub Image
 
-**Docker Compose File**
+**Note:**
+
+> 1. Enable the Network Access for Mongo Db
+> 1. `MongoDbSettings__ConnectionString` should come from [`.bashrc`](./Scripts/example.bashrc)
+
+**Example MongoDb Settings**
+
+```
+MongoDbSettings__CollectionName = Products
+MongoDbSettings__ConnectionString = mongodb+srv://YourUser:YourPassword@YourServer.azure.mongodb.net/proshop?retryWrites=true&w=majority
+MongoDbSettings__DatabaseName = ProductsDb
+```
+
+**ACI Single Container Using Cli from Docker Hub**
+![ACI Single Container Using Cli from Docker Hub |150x150](./Documentation/Images/S3_Docker_to_ACI_using_azcli.PNG)
+
+**Accessing the API from ACI Container**
+![ACI Single Container |150x150](./Documentation/Images/S3_ACI_Single_Container.PNG)
+
+
+## Deployment to Azure `ACI`, `App Service Docker`, and `AKS`
+### Deploying `Single Container` in **ACI** using **Docker Image**
+
+### Deploying `Multi Containers` in **App Service** using **Docker Compose**
+
+[**Docker Compose File**](./Deploy/eshop-products-api-web-docker.yml)
 
 ```
 version: '3.4'
@@ -137,10 +162,6 @@ services:
 volumes:
   mongo_data:
 ```
-
-### Deploying `Single Container` in **ACI** using **Docker Image**
-
-### Deploying `Multi Containers` in **App Service** using **Docker Compose**
 
 **AppSettings** Under **Configuration** of App Service
 
