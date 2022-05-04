@@ -38,9 +38,9 @@ Description: To Be Done
 ## New Features
 
 > 1. [Docker Commands](./Documentation/Sessions/DockerCommandsForMongo.md) for MongoDb Container with Volume Mounts
-> 1. Auto Mapper
 > 1. Configuring the configuration with a Demo
-> 1. DTO
+> 1. Auto Mapper
+> 1. Data Transfer Objects for Product
 
 ### Mongo Db Container Creation
 
@@ -179,6 +179,8 @@ MongoDbSettings_DatabaseName = ProductsDb
 
 ## Deploying `Multi Containers` in **AKS** using **YML**
 
+---
+
 ## Verify the Deployments using Postman
 
 > 1. Demo and Discussion
@@ -215,9 +217,11 @@ MongoDbSettings_DatabaseName = ProductsDb
 
 ## New Features
 
+> 1. Using `Record` for `Product` Dto
+> 1. Using `ResponseDto` for sending Unified Response
 > 1. Model Validations
-> 1. Health Checks
 > 1. Versioning
+
 
 ## CI with GitHub Actions
 
@@ -244,8 +248,9 @@ MongoDbSettings_DatabaseName = ProductsDb
 
 ## New Features
 
-> 1. Unit Testing
+> 1. Health Checks
 > 1. Paging, Filtering, Sorting, and Searching
+> 1. Unit Testing
 
 ## Deployment
 
