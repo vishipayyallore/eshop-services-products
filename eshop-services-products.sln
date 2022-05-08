@@ -86,7 +86,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Deploy", "Deploy", "{21FED0
 	ProjectSection(SolutionItems) = preProject
 		Deploy\eshop-products-api-k8s.yml = Deploy\eshop-products-api-k8s.yml
 		Deploy\eshop-products-api-web-docker.yml = Deploy\eshop-products-api-web-docker.yml
-		Deploy\WebAppDockerCompose.yml = Deploy\WebAppDockerCompose.yml
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sessions", "Sessions", "{3368FD1B-2CCE-4A99-BFA1-0F84DE7A7120}"
