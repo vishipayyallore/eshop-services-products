@@ -85,6 +85,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Deploy", "Deploy", "{21FED0F0-DE2E-4E4E-8688-44A15472AC5F}"
 	ProjectSection(SolutionItems) = preProject
 		Deploy\eshop-products-api-k8s.yml = Deploy\eshop-products-api-k8s.yml
+		Deploy\eshop-products-api-web-docker.yml = Deploy\eshop-products-api-web-docker.yml
 		Deploy\WebAppDockerCompose.yml = Deploy\WebAppDockerCompose.yml
 	EndProjectSection
 EndProject
