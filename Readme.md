@@ -130,7 +130,7 @@ MongoDbSettings__DatabaseName = ProductsDb
 
 ## Deploying `Multi Containers` in **App Service** using **Docker Compose**
 
-[**Docker Compose File**](./Deploy/eshop-products-api-web-docker.yml)
+[**Docker Compose File**](./Deploy/eshop-products-api-az-webapp.yml)
 
 ```
 version: '3.4'
