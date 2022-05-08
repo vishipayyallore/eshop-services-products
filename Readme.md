@@ -42,11 +42,25 @@ Description: To Be Done
 > 1. Auto Mapper
 > 1. Data Transfer Objects for Product
 
-### Mongo Db Container Creation
+### 1. [Docker Commands](./Documentation/Sessions/DockerCommandsForMongo.md) for MongoDb Container with Volume Mounts
+> 1. Discussion and Demo
 
 ![Deploy Mongo Db as Container |150x150](./Documentation/Images/S3_CreateMongoContainer.PNG)
 
-### Output of GetAllProducts() from API is List of Dtos
+### 2. Configuring the configuration with a Demo
+> 1. Discussion and Demo
+
+![Configure The Configuration |150x150](./Documentation/Images/S3_ConfigureTheConfiguration.PNG)
+
+### 3. Auto Mapper
+> 1. Discussion and Demo
+
+![Auto Mapper |150x150](./Documentation/Images/S3_AutoMapper_1.PNG)
+
+![Auto Mapper |150x150](./Documentation/Images/S3_AutoMapper_2.PNG)
+
+### 4. Data Transfer Objects for Product
+> 1. Discussion and Demo
 
 ![Output from API List Of Dtos |150x150](./Documentation/Images/S3_OutputListOfDtos.PNG)
 
@@ -130,7 +144,7 @@ MongoDbSettings__DatabaseName = ProductsDb
 
 ## Deploying `Multi Containers` in **App Service** using **Docker Compose**
 
-[**Docker Compose File**](./Deploy/eshop-products-api-web-docker.yml)
+[**Docker Compose File**](./Deploy/eshop-products-api-az-webapp.yml)
 
 ```
 version: '3.4'
@@ -178,6 +192,8 @@ MongoDbSettings_DatabaseName = ProductsDb
 ---
 
 ## Deploying `Multi Containers` in **AKS** using **YML**
+
+> 1. To be done
 
 ---
 
