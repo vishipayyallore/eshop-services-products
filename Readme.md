@@ -30,7 +30,7 @@ Description: To Be Done
 > 1. Please refer Session 2's [Video](https://www.youtube.com/watch?v=R8QIrph-rCI) for more details.
 > 1. Please refer [Session3.md](./Documentation/Sessions/Session3.md) for more details.
 > 1. Please refer Session 3's [Video](https://www.youtube.com/watch?v=xst1bjb54JM) for more details.
-                                      
+
 ---
 
 ## Session 4
@@ -42,10 +42,10 @@ Description: To Be Done
 > 1. [Docker Commands](./Documentation/Sessions/DockerCommandsForMongo.md) for MongoDb Container with Volume Mounts
 
 ### 1. [Docker Commands](./Documentation/Sessions/DockerCommandsForMongo.md) for MongoDb Container with Volume Mounts
+
 > 1. Discussion and Demo
 
-**Note:** Path to the Docker Volume Mounts 
-[\\wsl$\docker-desktop-data\version-pack-data\community\docker\volumes](\\\\wsl$\docker-desktop-data\version-pack-data\community\docker\volumes)
+**Note:** Path to the Docker Volume Mounts \\wsl$\docker-desktop-data\version-pack-data\community\docker\volumes
 
 ![Deploy Mongo Db as Container |150x150](./Documentation/Images/S3_Docker_MongoDb_WithVolume.PNG)
 
@@ -178,7 +178,18 @@ MongoDbSettings_DatabaseName = ProductsDb
 
 ## Deploying `Multi Containers` in **AKS** using **YML**
 
-> 1. To be done
+**Note:**
+Kubernetes and YAML files will be discussed in the next session.
+
+> 1. Kubernetes Cluster has been deployed using Github Actions
+> 1. Please refer [eshop-products-api-k8s.yml](./Deploy/eshop-products-api-k8s.yml) file
+> 1. Deployment of Products API Micro Service Multi Containers using `kubectl apply -f` command
+
+**Kubernetes Cluster has been deployed using Github Actions**
+![Deploy Multi Containers To App Services |150x150](./Documentation/Images/S4/K8s_Image1.PNG)
+
+**Deployment of Products API Micro Service Multi Containers in K8s**
+![Deploy Multi Containers To App Services |150x150](./Documentation/Images/S4/Deploy_Products_into_K8s.PNG)
 
 ---
 
@@ -221,8 +232,6 @@ MongoDbSettings_DatabaseName = ProductsDb
 > 1. Using `Record` for `Product` Dto
 > 1. Using `ResponseDto` for sending Unified Response
 > 1. Model Validations
-
-
 
 ## CI with GitHub Actions
 
