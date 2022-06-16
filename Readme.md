@@ -28,41 +28,26 @@ Description: To Be Done
 > 1. Please refer Session 1's [Video](https://www.youtube.com/watch?v=wQ0Xf4pKZaQ) for more details.
 > 1. Please refer [Session2.md](./Documentation/Sessions/Session2.md) for more details.
 > 1. Please refer Session 2's [Video](https://www.youtube.com/watch?v=R8QIrph-rCI) for more details.
+> 1. Please refer [Session3.md](./Documentation/Sessions/Session3.md) for more details.
+> 1. Please refer Session 3's [Video](https://www.youtube.com/watch?v=xst1bjb54JM) for more details.
 
 ---
 
-## Session 3
+## Session 4
 
 ---
 
 ## New Features
 
 > 1. [Docker Commands](./Documentation/Sessions/DockerCommandsForMongo.md) for MongoDb Container with Volume Mounts
-> 1. Configuring the configuration with a Demo
-> 1. Auto Mapper
-> 1. Data Transfer Objects for Product
 
 ### 1. [Docker Commands](./Documentation/Sessions/DockerCommandsForMongo.md) for MongoDb Container with Volume Mounts
+
 > 1. Discussion and Demo
 
-![Deploy Mongo Db as Container |150x150](./Documentation/Images/S3_CreateMongoContainer.PNG)
+**Note:** Path to the Docker Volume Mounts \\wsl$\docker-desktop-data\version-pack-data\community\docker\volumes
 
-### 2. Configuring the configuration with a Demo
-> 1. Discussion and Demo
-
-![Configure The Configuration |150x150](./Documentation/Images/S3_ConfigureTheConfiguration.PNG)
-
-### 3. Auto Mapper
-> 1. Discussion and Demo
-
-![Auto Mapper |150x150](./Documentation/Images/S3_AutoMapper_1.PNG)
-
-![Auto Mapper |150x150](./Documentation/Images/S3_AutoMapper_2.PNG)
-
-### 4. Data Transfer Objects for Product
-> 1. Discussion and Demo
-
-![Output from API List Of Dtos |150x150](./Documentation/Images/S3_OutputListOfDtos.PNG)
+![Deploy Mongo Db as Container |150x150](./Documentation/Images/S3_Docker_MongoDb_WithVolume.PNG)
 
 ## Docker Compose
 
@@ -193,7 +178,22 @@ MongoDbSettings_DatabaseName = ProductsDb
 
 ## Deploying `Multi Containers` in **AKS** using **YML**
 
-> 1. To be done
+**Note:**
+Kubernetes and YAML files will be discussed in the next session.
+
+> 1. Kubernetes Cluster has been deployed using Github Actions
+> 1. Please refer [eshop-products-api-k8s.yml](./Deploy/eshop-products-api-k8s.yml) file
+> 1. Deployment of Products API Micro Service Multi Containers using `kubectl apply -f` command
+> 1. Accessing the Products API from AKS Multi Containers
+
+**Kubernetes Cluster has been deployed using Github Actions**
+![Deploy Kubernetes Cluster to AKS |150x150](./Documentation/Images/S4/K8s_Image1.PNG)
+
+**Deployment of Products API Micro Service Multi Containers in K8s**
+![Deployment of Products API |150x150](./Documentation/Images/S4/Deploy_Products_into_K8s.PNG)
+
+**Accessing the Products API from AKS Multi Containers**
+![Deploy Kubernetes Cluster to AKS |150x150](./Documentation/Images/S4/Accessing_Products_API_K8s.PNG)
 
 ---
 
@@ -221,13 +221,13 @@ MongoDbSettings_DatabaseName = ProductsDb
 
 > 1. Discussion
 
-## What is next in `Session 4`?
+## What is next in `Session 5`?
 
 > 1. Discussion
 
 ---
 
-## Session 4
+## Session 5
 
 ---
 
@@ -236,8 +236,6 @@ MongoDbSettings_DatabaseName = ProductsDb
 > 1. Using `Record` for `Product` Dto
 > 1. Using `ResponseDto` for sending Unified Response
 > 1. Model Validations
-> 1. Versioning
-
 
 ## CI with GitHub Actions
 
@@ -258,15 +256,16 @@ MongoDbSettings_DatabaseName = ProductsDb
 
 ---
 
-## Session 5
+## Session 6
 
 ---
 
 ## New Features
 
 > 1. Health Checks
-> 1. Paging, Filtering, Sorting, and Searching
+> 1. Versioning
 > 1. Unit Testing
+> 1. Paging, Filtering, Sorting, and Searching
 
 ## Deployment
 
