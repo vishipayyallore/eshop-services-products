@@ -44,6 +44,9 @@ Description: To Be Done
 ### 1. [Docker Commands](./Documentation/Sessions/DockerCommandsForMongo.md) for MongoDb Container with Volume Mounts
 > 1. Discussion and Demo
 
+**Note:** Path to the Docker Volume Mounts 
+[\\wsl$\docker-desktop-data\version-pack-data\community\docker\volumes](\\\\wsl$\docker-desktop-data\version-pack-data\community\docker\volumes)
+
 ![Deploy Mongo Db as Container |150x150](./Documentation/Images/S3_Docker_MongoDb_WithVolume.PNG)
 
 ## Docker Compose
