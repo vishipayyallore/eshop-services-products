@@ -184,12 +184,16 @@ Kubernetes and YAML files will be discussed in the next session.
 > 1. Kubernetes Cluster has been deployed using Github Actions
 > 1. Please refer [eshop-products-api-k8s.yml](./Deploy/eshop-products-api-k8s.yml) file
 > 1. Deployment of Products API Micro Service Multi Containers using `kubectl apply -f` command
+> 1. Accessing the Products API from AKS Multi Containers
 
 **Kubernetes Cluster has been deployed using Github Actions**
-![Deploy Multi Containers To App Services |150x150](./Documentation/Images/S4/K8s_Image1.PNG)
+![Deploy Kubernetes Cluster to AKS |150x150](./Documentation/Images/S4/K8s_Image1.PNG)
 
 **Deployment of Products API Micro Service Multi Containers in K8s**
-![Deploy Multi Containers To App Services |150x150](./Documentation/Images/S4/Deploy_Products_into_K8s.PNG)
+![Deployment of Products API |150x150](./Documentation/Images/S4/Deploy_Products_into_K8s.PNG)
+
+**Accessing the Products API from AKS Multi Containers**
+![Deploy Kubernetes Cluster to AKS |150x150](./Documentation/Images/S4/Accessing_Products_API_K8s.PNG)
 
 ---
 
