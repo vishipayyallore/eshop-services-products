@@ -28,7 +28,9 @@ Description: To Be Done
 > 1. Please refer Session 1's [Video](https://www.youtube.com/watch?v=wQ0Xf4pKZaQ) for more details.
 > 1. Please refer [Session2.md](./Documentation/Sessions/Session2.md) for more details.
 > 1. Please refer Session 2's [Video](https://www.youtube.com/watch?v=R8QIrph-rCI) for more details.
-
+> 1. Please refer [Session3.md](./Documentation/Sessions/Session3.md) for more details.
+> 1. Please refer Session 3's [Video](https://www.youtube.com/watch?v=xst1bjb54JM) for more details.
+                                      
 ---
 
 ## Session 3
