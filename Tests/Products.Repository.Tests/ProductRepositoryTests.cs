@@ -230,6 +230,58 @@ namespace Products.Repository.Tests
             Assert.Equal(_expectedResultsList.Count, received.Count());
         }
 
+        [Fact]
+        public async void Create_Product_And_Inserts_It() {
+            var productRepository = new ProductRepository(mockedProductContext?.Object, mockedMapper?.Object);
+
+            //precondition
+            // Assert productRepository does not contain product with name MyPhone
+            var precondition = (await productRepository.GetProductsByName("MyPhone")).Count();
+            Assert.Equal(0, precondition);
+
+            Product product = new Product
+            {
+                Id = "602d2149e773f2a3990b47f8",
+                Name = "MyPhone"
+            };
+            await productRepository.CreateProduct(product);
+
+
+            // validation
+            // Assert productRepository does contain product with name MyPhon
+            var received = (await productRepository.GetProductsByName("MyPhone")).Count();
+            Assert.Equal(1, received);
+        }
+
+        [Fact]
+        public async void Delete_Product_Deletes_It() {
+            var productRepository = new ProductRepository(mockedProductContext?.Object, mockedMapper?.Object);
+
+            //precondition
+            // Assert productRepository does not contain product with name MyPhone
+            var precondition1 = (await productRepository.GetProductsByName("MyPhone")).Count();
+            Assert.Equal(0, precondition1);
+
+            Product product = new Product
+            {
+                Id = "602d2149e773f2a3990b47f8",
+                Name = "MyPhone"
+            };
+            await productRepository.CreateProduct(product);
+
+            //precondition
+            // Assert productRepository does contain product with name MyPhone
+            var precondition2 = (await productRepository.GetProductsByName("MyPhone")).Count();
+            Assert.Equal(1, precondition2);
+
+            await productRepository.DeleteProduct(product.Id);
+
+            // validation
+            // Assert productRepository does not contain product with name MyPhone
+            var received = (await productRepository.GetProductsByName("MyPhone")).Count();
+            Assert.Equal(0, received);
+        }
+
         private static List<Product> GetDummyProducts()
         {
             return new List<Product>()
