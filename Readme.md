@@ -39,13 +39,16 @@ Description: To Be Done
 
 ## New Features (`10 Minutes`)
 
-> 1. Demo and Discussion
+> 1. Using Record for Product Dto
+> 1. Using ResponseDto for sending Unified Response
 
 ### Using Record for Product Dto
 
 > 1. Demo and Discussion
 
 ### Using ResponseDto for sending Unified Response
+
+> 1. Demo and Discussion
 
 ---
 
