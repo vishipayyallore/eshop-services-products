@@ -30,153 +30,61 @@ Description: To Be Done
 > 1. Please refer Session 2's [Video](https://www.youtube.com/watch?v=R8QIrph-rCI) for more details.
 > 1. Please refer [Session3.md](./Documentation/Sessions/Session3.md) for more details.
 > 1. Please refer Session 3's [Video](https://www.youtube.com/watch?v=xst1bjb54JM) for more details.
+> 1. Please refer [Session4.md](./Documentation/Sessions/Session4.md) for more details.
+> 1. Please refer Session 4's [Video](https://www.youtube.com/watch?v=G6dPdySKzbs) for more details.
 
 ---
 
-## Session 4
+## Session 5
 
----
-
-## New Features
-
-> 1. [Docker Commands](./Documentation/Sessions/DockerCommandsForMongo.md) for MongoDb Container with Volume Mounts
-
-### 1. [Docker Commands](./Documentation/Sessions/DockerCommandsForMongo.md) for MongoDb Container with Volume Mounts
-
-> 1. Discussion and Demo
-
-**Note:** Path to the Docker Volume Mounts \\wsl$\docker-desktop-data\version-pack-data\community\docker\volumes
-
-![Deploy Mongo Db as Container |150x150](./Documentation/Images/S3_Docker_MongoDb_WithVolume.PNG)
-
-## Docker Compose
+## New Features (`10 Minutes`)
 
 > 1. Demo and Discussion
-> 1. Docker-Compose.yml
-> 1. Docker-Compose.override.yml
 
-**docker-compose.yml**
+### Using Record for Product Dto
 
-```yaml
-version: "3.4"
+> 1. Demo and Discussion
 
-services:
-  productsdb:
-    image: mongo
-
-  products.api:
-    image: ${DOCKER_REGISTRY-}productsapi
-    build:
-      context: .
-      dockerfile: Source/Products.API/Dockerfile
-
-volumes:
-  mongo_data:
-```
-
-**docker-compose.override.yml**
-
-```yaml
-version: "3.4"
-
-services:
-  productsdb:
-    container_name: productsdb
-    restart: always
-    ports:
-      - "27017:27017"
-    volumes:
-      - mongo_data:/data/db
-
-  products.api:
-    container_name: products.api
-    environment:
-      - ASPNETCORE_ENVIRONMENT=Development
-      - ASPNETCORE_URLS=https://+:443;http://+:80
-      - ASPNETCORE_HTTPS_PORT=8001
-      - "MongoDbSettings__ConnectionString=mongodb://productsdb:27017"
-    depends_on:
-      - productsdb
-    ports:
-      - "8000:80"
-      - "8001:443"
-    volumes:
-      - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
-```
-
-## Deploy Single `Azure Container Instance` from Docker Hub Image
-
-**Note:**
-
-> 1. Enable the Network Access for Mongo Db
-> 1. `MongoDbSettings__ConnectionString` should come from [`.bashrc`](./Scripts/example.bashrc)
-
-**Example MongoDb Settings**
-
-```
-MongoDbSettings__CollectionName = Products
-MongoDbSettings__ConnectionString = mongodb+srv://YourUser:YourPassword@YourServer.azure.mongodb.net/proshop?retryWrites=true&w=majority
-MongoDbSettings__DatabaseName = ProductsDb
-```
-
-**ACI Single Container Using Cli from Docker Hub**
-![ACI Single Container Using Cli from Docker Hub |150x150](./Documentation/Images/S3_Docker_to_ACI_using_azcli.PNG)
-
-**Accessing the API from ACI Container**
-![ACI Single Container |150x150](./Documentation/Images/S3_ACI_Single_Container.PNG)
+### Using ResponseDto for sending Unified Response
 
 ---
 
-## Deploying `Multi Containers` in **App Service** using **Docker Compose**
+## Introduction to K8s. What and Why of K8s (`5 Minutes`)
 
-[**Docker Compose File**](./Deploy/eshop-products-api-az-webapp.yml)
-
-```
-version: '3.4'
-
-services:
-  productsdb:
-    image: mongo
-    container_name: productsdb
-    restart: always
-    ports:
-      - "27017:27017"
-    volumes:
-      - mongo_data:/data/db
-
-  products.api:
-    image: vishipayyallore/eshop-services-products:latest
-    container_name: products.api
-    environment:
-      - "MongoDbSettings__ConnectionString=mongodb://productsdb:27017"
-    depends_on:
-      - productsdb
-    ports:
-      - "8000:80"
-    volumes:
-      - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
-
-volumes:
-  mongo_data:
-```
-
-**AppSettings** Under **Configuration** of App Service
-
-```
-MongoDbSettings_CollectionName = Products
-MongoDbSettings_ConnectionString = mongodb://productsdb:27017
-MongoDbSettings_DatabaseName = ProductsDb
-```
-
-**Deploy Multi Containers To App Services**
-![Deploy Multi Containers To App Services |150x150](./Documentation/Images/S3_DeployToAppServicesMultiContainer.PNG)
-
-**Access API From App Services Multi Container**
-![Access API From App Services Multi Container |150x150](./Documentation/Images/S3_AccessAPIFromAppServicesMultiContainer.PNG)
+> 1. Demo and Discussion
 
 ---
 
-## Deploying `Multi Containers` in **AKS** using **YML**
+## Hands on K8s & Hands on Minikube locally (`25 Minutes`)
+
+> 1. Demo and Discussion
+
+### K8s Terms
+
+> 1. K8s cluster
+> 1. K8s namespace
+> 1. K8s pod
+> 1. K8s service
+> 1. K8s deployment
+
+### Minikube Terms
+
+> 1. Demo and Discussion
+> 1. Install Minikube
+> 1. Start Minikube
+> 1. Stop Minikube
+> 1. Minikube dashboard
+> 1. Accessing the **Minikube** dashboard
+
+### Deploying `Multi Containers` in **Minikube** using **YML**
+
+> 1. Demo and Discussion
+> 1. Port Forwarding
+> 1. Accessing the Products API
+
+---
+
+## Deploying `Multi Containers` in **AKS** using **YML** (`10 Minutes`)
 
 **Note:**
 Kubernetes and YAML files will be discussed in the next session.
@@ -197,11 +105,11 @@ Kubernetes and YAML files will be discussed in the next session.
 
 ---
 
-## Verify the Deployments using Postman
+## Verify the Deployments using Postman (`10 Minutes`)
 
 > 1. Demo and Discussion
 
-### Verify the end points `locally`
+### Verify the end points `locally` (Kestrel, IIS Express, Docker, Docker-Compose, and K8s)
 
 > 1. Demo and Discussion
 
@@ -221,20 +129,18 @@ Kubernetes and YAML files will be discussed in the next session.
 
 > 1. Discussion
 
-## What is next in `Session 5`?
+## What is next in `Session 6`?
 
 > 1. Discussion
 
 ---
 
-## Session 5
+## Session 6
 
 ---
 
 ## New Features
 
-> 1. Using `Record` for `Product` Dto
-> 1. Using `ResponseDto` for sending Unified Response
 > 1. Model Validations
 
 ## CI with GitHub Actions
@@ -256,7 +162,7 @@ Kubernetes and YAML files will be discussed in the next session.
 
 ---
 
-## Session 6
+## Session 7
 
 ---
 
@@ -276,7 +182,7 @@ Kubernetes and YAML files will be discussed in the next session.
 
 ---
 
-## Session 6
+## Session 8
 
 ---
 
