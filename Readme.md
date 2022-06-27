@@ -56,6 +56,12 @@ Description: To Be Done
 
 > 1. Demo and Discussion
 
+**Reference:**
+
+[K8s Components](https://kubernetes.io/docs/concepts/overview/components/)
+
+![Components of a Kubernetes cluster |150x150](./Documentation/Images/S5/Components_K8s_Cluster.PNG)
+
 ---
 
 ## Hands on K8s & Hands on Minikube locally (`25 Minutes`)
