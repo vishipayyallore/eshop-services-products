@@ -362,6 +362,7 @@ namespace Products.Repository.Tests
 
             //Act
             bool transientDeleted = false;
+            DeleteResult? transientDeleteResult = new DeleteResult.Acknowledged(0);
             mockedProductContext.SetupGet(_context => _context.Products).Returns(mockIMongoCollection.Object);
             mockedProductContext.Setup(_context => _context.Products.DeleteOneAsync(
                 It.IsAny<FilterDefinition<Product>>(),
@@ -374,12 +375,13 @@ namespace Products.Repository.Tests
                       if (matches)
                       {
                           transientDeleted = true;
+                          transientDeleteResult = new DeleteResult.Acknowledged(1);
                           return true;
                       }
                       return false;
                   });
               })
-              .Returns(Task.FromResult((DeleteResult)new DeleteResult.Acknowledged(transientDeleted ? 1 : 0)));
+              .Returns(Task.FromResult(transientDeleteResult));
 
             var productRepository = new ProductRepository(mockedProductContext?.Object, mockedMapper?.Object);
 
