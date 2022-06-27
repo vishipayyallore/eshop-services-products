@@ -60,6 +60,8 @@ Description: To Be Done
 
 [K8s Components](https://kubernetes.io/docs/concepts/overview/components/)
 
+**Image:** From Official K8s Documentation
+
 ![Components of a Kubernetes cluster |150x150](./Documentation/Images/S5/Components_K8s_Cluster.PNG)
 
 ---
