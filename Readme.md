@@ -55,14 +55,9 @@ Description: To Be Done
 ## Introduction to K8s. What and Why of K8s (`5 Minutes`)
 
 > 1. Demo and Discussion
-
-**Reference:**
-
-[K8s Components](https://kubernetes.io/docs/concepts/overview/components/)
-
-**Image:** From Official K8s Documentation
-
-![Components of a Kubernetes cluster |150x150](./Documentation/Images/S5/Components_K8s_Cluster.PNG)
+> 1. K8s container runtime agnostic
+> 1. [DC/OS](https://dcos.io/), [Kubernetes](https://kubernetes.io/docs/home/), and [Docker Swarm](https://docs.docker.com/engine/swarm/)
+> 1. AKS, EKS, and GKE
 
 ---
 
@@ -70,13 +65,31 @@ Description: To Be Done
 
 > 1. Demo and Discussion
 
+**Reference:** [K8s Components](https://kubernetes.io/docs/concepts/overview/components/)
+
+![Components of a Kubernetes cluster |150x150](./Documentation/Images/S5/Components_K8s_Cluster.PNG)
+**Image:** From Official K8s Documentation
+
+### Single Node K8s Cluster
+
+> 1. Docker Desktop, minikube, and kubeadm (Linux Machines)
+
+### Multi Node K8s Cluster
+
+> 1. AKS, EKS, GKE, kubespray/kubeadm (Full Control)
+
 ### K8s Terms
 
-> 1. K8s cluster
-> 1. K8s namespace
-> 1. K8s pod
-> 1. K8s service
-> 1. K8s deployment
+> 1. Clusters
+> 1. Nodes (Master, and Worker)
+> 1. Namespace
+> 1. Pods (One or more containers)
+> 1. Service
+> 1. Deployment
+
+### K8s CLI (kubectl)
+
+> 1. Demo and Discussion
 
 ### Minikube Terms
 
@@ -84,8 +97,7 @@ Description: To Be Done
 > 1. Install Minikube
 > 1. Start Minikube
 > 1. Stop Minikube
-> 1. Minikube dashboard
-> 1. Accessing the **Minikube** dashboard
+> 1. Minikube dashboard and Accessing the **Minikube** dashboard
 
 ### Deploying `Multi Containers` in **Minikube** using **YML**
 
