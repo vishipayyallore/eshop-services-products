@@ -88,6 +88,7 @@ Description: To Be Done
 > 1. Deployment
 
 ### K8s CLI (kubectl)
+
 > 1. Demo and Discussion
 
 ### Minikube Terms
