@@ -62,6 +62,7 @@ Description: To Be Done
 > 1. Service
 > 1. Deployment
 > 1. Replica Set
+> 1. kubectl
 
 ### Single Node K8s Cluster
 
