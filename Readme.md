@@ -50,10 +50,8 @@ Description: To Be Done
 
 > 1. Demo and Discussion
 
-**Reference:** [K8s Components](https://kubernetes.io/docs/concepts/overview/components/)
-
 ![Components of a Kubernetes cluster |150x150](./Documentation/Images/S5/Components_K8s_Cluster.PNG)
-**Image:** From Official K8s Documentation
+**Image:** From [Official K8s Documentation](https://kubernetes.io/docs/concepts/overview/components/)
 
 ### Single Node K8s Cluster
 
