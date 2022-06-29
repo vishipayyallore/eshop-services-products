@@ -53,14 +53,6 @@ Description: To Be Done
 ![Components of a Kubernetes cluster |150x150](./Documentation/Images/S5/Components_K8s_Cluster.PNG)
 **Image:** From [Official K8s Documentation](https://kubernetes.io/docs/concepts/overview/components/)
 
-### Single Node K8s Cluster
-
-> 1. Docker Desktop, minikube, and kubeadm (Linux Machines)
-
-### Multi Node K8s Cluster
-
-> 1. AKS, EKS, GKE, kubespray/kubeadm (Full Control)
-
 ### K8s Terms
 
 > 1. Clusters
@@ -70,6 +62,14 @@ Description: To Be Done
 > 1. Service
 > 1. Deployment
 > 1. Replica Set
+
+### Single Node K8s Cluster
+
+> 1. Docker Desktop, minikube, and kubeadm (Linux Machines)
+
+### Multi Node K8s Cluster
+
+> 1. AKS, EKS, GKE, kubespray/kubeadm (Full Control)
 
 ### Minikube
 
