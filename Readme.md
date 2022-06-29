@@ -71,18 +71,43 @@ Description: To Be Done
 > 1. Pods (One or more containers)
 > 1. Service
 > 1. Deployment
+> 1. Replica Set
 
-### K8s CLI (kubectl)
-
-> 1. Demo and Discussion
-
-### Minikube Terms
+### Minikube
 
 > 1. Demo and Discussion
 > 1. Install Minikube
 > 1. Start Minikube
 > 1. Stop Minikube
 > 1. Minikube dashboard and Accessing the **Minikube** dashboard
+
+```
+minikube start --kubernetes-version=v1.24.1
+```
+
+![Minikube Start |150x150](./Documentation/Images/S5/Minikube_Start.PNG)
+
+```
+minikube status
+```
+
+![Minikube Status |150x150](./Documentation/Images/S5/Minikube_Status.PNG)
+
+```
+minikube dashboard
+```
+
+![Minikube Dashboard |150x150](./Documentation/Images/S5/Minikube_Dashboard.PNG)
+
+```
+minikube stop
+```
+
+![Minikube Stop |150x150](./Documentation/Images/S5/Minikube_Stop.PNG)
+
+### K8s CLI (kubectl)
+
+> 1. Demo and Discussion
 
 ### Deploying `Multi Containers` in **Minikube** using **YML**
 
@@ -161,11 +186,12 @@ Kubernetes and YAML files will be discussed in the next session.
 ---
 
 ## IaC using Terraform (`15 Minutes`)
+
 > 1. Demo and Discussion
 
 ---
 
-## Deployment into Container Apps  (`15 Minutes`)
+## Deployment into Container Apps (`15 Minutes`)
 
 > 1. Demo and Discussion
 
@@ -178,7 +204,6 @@ Kubernetes and YAML files will be discussed in the next session.
 ## Deployment into K8s using ACR (`5 Minutes`)
 
 ---
-
 
 ## Verify the Deployments using Postman (`10 Minutes`)
 
@@ -210,7 +235,6 @@ Kubernetes and YAML files will be discussed in the next session.
 
 ---
 
-
 ## Session 7
 
 ---
@@ -229,6 +253,7 @@ Kubernetes and YAML files will be discussed in the next session.
 > 1. Paging, Filtering, Sorting, and Searching
 
 ## Deployment
+
 > 1. GitHub Registry
 
 ### Kubernetes
