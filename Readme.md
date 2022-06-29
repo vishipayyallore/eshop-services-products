@@ -37,21 +37,6 @@ Description: To Be Done
 
 ## Session 5
 
-## New Features (`10 Minutes`)
-
-> 1. Using Record for Product Dto
-> 1. Using ResponseDto for sending Unified Response
-
-### Using Record for Product Dto
-
-> 1. Demo and Discussion
-
-### Using ResponseDto for sending Unified Response
-
-> 1. Demo and Discussion
-
----
-
 ## Introduction to K8s. What and Why of K8s (`5 Minutes`)
 
 > 1. Demo and Discussion
@@ -61,7 +46,7 @@ Description: To Be Done
 
 ---
 
-## Hands on K8s & Hands on Minikube locally (`25 Minutes`)
+## Hands on K8s & Hands on Minikube locally (`30 Minutes`)
 
 > 1. Demo and Discussion
 
@@ -86,12 +71,9 @@ Description: To Be Done
 > 1. Pods (One or more containers)
 > 1. Service
 > 1. Deployment
+> 1. Replica Set
 
-### K8s CLI (kubectl)
-
-> 1. Demo and Discussion
-
-### Minikube Terms
+### Minikube
 
 > 1. Demo and Discussion
 > 1. Install Minikube
@@ -99,11 +81,46 @@ Description: To Be Done
 > 1. Stop Minikube
 > 1. Minikube dashboard and Accessing the **Minikube** dashboard
 
+```
+minikube start --kubernetes-version=v1.24.1
+```
+
+![Minikube Start |150x150](./Documentation/Images/S5/Minikube_Start.PNG)
+
+```
+minikube status
+```
+
+![Minikube Status |150x150](./Documentation/Images/S5/Minikube_Status.PNG)
+
+```
+minikube dashboard
+```
+
+![Minikube Dashboard |150x150](./Documentation/Images/S5/Minikube_Dashboard.PNG)
+
+```
+minikube stop
+```
+
+![Minikube Stop |150x150](./Documentation/Images/S5/Minikube_Stop.PNG)
+
+### K8s CLI (kubectl)
+
+> 1. Demo and Discussion
+
 ### Deploying `Multi Containers` in **Minikube** using **YML**
 
 > 1. Demo and Discussion
+> 1. Deploying Multi Containers in `Minikube` using `YML`
 > 1. Port Forwarding
-> 1. Accessing the Products API
+> 1. Accessing the Products API deployed inside K8s
+
+**Port Forwarding**
+![Minikube Port Forwarding |150x150](./Documentation/Images/S5/Minikube_PortForwarding.PNG)
+
+**Accessing the Products API deployed inside K8s**
+![Products API deployed inside K8s |150x150](./Documentation/Images/S5/Accessing_Api_K8s.PNG)
 
 ---
 
@@ -148,6 +165,8 @@ Kubernetes and YAML files will be discussed in the next session.
 
 > 1. Demo and Discussion
 
+![Postman Collections for 8 environments |150x150](./Documentation/Images/S5/Postman_Collections.PNG)
+
 ## Review/Q & A/Panel Discussion
 
 > 1. Discussion
@@ -160,34 +179,80 @@ Kubernetes and YAML files will be discussed in the next session.
 
 ## Session 6
 
+## New Features (`10 Minutes`)
+
+> 1. Using Record for Product Dto
+> 1. Using ResponseDto for sending Unified Response
+
+### Using Record for Product Dto
+
+> 1. Demo and Discussion
+
+### Using ResponseDto for sending Unified Response
+
+> 1. Demo and Discussion
+
 ---
 
-## New Features
+## IaC using Terraform (`15 Minutes`)
 
-> 1. Model Validations
+> 1. Demo and Discussion
 
-## CI with GitHub Actions
+---
 
-> 1. Products-Api-CI
+## Deployment into Container Apps (`15 Minutes`)
 
-[![Products-Api-CI](https://github.com/vishipayyallore/eshop-services-products/actions/workflows/Products-Api-CI.yml/badge.svg)](https://github.com/vishipayyallore/eshop-services-products/actions/workflows/Products-Api-CI.yml)
+> 1. Demo and Discussion
 
-## CD with GitHub Actions
+---
 
-> 1. To Be Done
+## Deployment into K8s using Docker Image (`5 Minutes`)
 
-## Deployment
+> 1. Demo and Discussion
 
-### Container Apps
+## Deployment into K8s using ACR (`5 Minutes`)
 
-> 1. GitHub Registry
-> 1. Azure Container Apps
+---
+
+## Verify the Deployments using Postman (`10 Minutes`)
+
+> 1. Demo and Discussion
+
+### Verify the end points `locally` (Kestrel, IIS Express, Docker, Docker-Compose, and K8s)
+
+> 1. Demo and Discussion
+
+### Verify the end points from `Azure Container Instances`
+
+> 1. Demo and Discussion
+
+### Verify the end points `Docker Instances from App Service`
+
+> 1. Demo and Discussion
+
+### Verify the end points `Azure Kubernetes Service`
+
+> 1. Demo and Discussion
+
+## Review/Q & A/Panel Discussion
+
+> 1. Discussion
+
+## What is next in `Session 7`?
+
+> 1. Discussion
 
 ---
 
 ## Session 7
 
 ---
+
+---
+
+## New Features
+
+> 1. Model Validations
 
 ## New Features
 
@@ -198,10 +263,22 @@ Kubernetes and YAML files will be discussed in the next session.
 
 ## Deployment
 
+> 1. GitHub Registry
+
 ### Kubernetes
 
 > 1. Azure Container Registry
 > 1. Azure Kubernetes Service
+
+## CI with GitHub Actions
+
+> 1. Products-Api-CI
+
+[![Products-Api-CI](https://github.com/vishipayyallore/eshop-services-products/actions/workflows/Products-Api-CI.yml/badge.svg)](https://github.com/vishipayyallore/eshop-services-products/actions/workflows/Products-Api-CI.yml)
+
+## CD with GitHub Actions
+
+> 1. To Be Done
 
 ---
 
