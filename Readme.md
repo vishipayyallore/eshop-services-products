@@ -112,8 +112,15 @@ minikube stop
 ### Deploying `Multi Containers` in **Minikube** using **YML**
 
 > 1. Demo and Discussion
+> 1. Deploying Multi Containers in `Minikube` using `YML`
 > 1. Port Forwarding
-> 1. Accessing the Products API
+> 1. Accessing the Products API deployed inside K8s
+
+**Port Forwarding**
+![Minikube Port Forwarding |150x150](./Documentation/Images/S5/Minikube_PortForwarding.PNG)
+
+**Accessing the Products API deployed inside K8s**
+![Products API deployed inside K8s |150x150](./Documentation/Images/S5/Accessing_Api_K8s.PNG)
 
 ---
 
@@ -157,6 +164,8 @@ Kubernetes and YAML files will be discussed in the next session.
 ### Verify the end points `Azure Kubernetes Service`
 
 > 1. Demo and Discussion
+
+![Postman Collections for 8 environments |150x150](./Documentation/Images/S5/Postman_Collections.PNG)
 
 ## Review/Q & A/Panel Discussion
 
