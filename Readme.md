@@ -103,6 +103,10 @@ minikube stop
 
 ![Minikube Stop |150x150](./Documentation/Images/S5/Minikube_Stop.PNG)
 
+### Accessing the Minikube Dashboard
+
+![Minikube Dashboard |150x150](./Documentation/Images/S5/K8s_Dashboard.PNG)
+
 ### K8s CLI (kubectl)
 
 > 1. Demo and Discussion
