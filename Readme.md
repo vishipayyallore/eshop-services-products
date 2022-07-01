@@ -72,6 +72,26 @@ Description: To Be Done
 
 > 1. AKS, EKS, GKE, kubespray/kubeadm (Full Control)
 
+### K8s CLI (kubectl)
+
+> 1. Demo and Discussion
+
+```
+kubectl cluster-info
+```
+
+```
+kubectl get nodes
+```
+
+```
+kubectl get namespaces
+```
+
+```
+kubectl get pods --namespace=kube-system
+```
+
 ### Minikube
 
 > 1. Demo and Discussion
@@ -107,10 +127,6 @@ minikube stop
 ### Accessing the Minikube Dashboard
 
 ![Minikube Dashboard |150x150](./Documentation/Images/S5/K8s_Dashboard.PNG)
-
-### K8s CLI (kubectl)
-
-> 1. Demo and Discussion
 
 ### Deploying `Multi Containers` in **Minikube** using **YML**
 
