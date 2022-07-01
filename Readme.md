@@ -119,6 +119,8 @@ minikube start --driver=docker --kubernetes-version=v1.24.1
 
 ```
 minikube status
+
+docker container inspect minikube --format={{.State.Status}}"
 ```
 
 ![Minikube Status |150x150](./Documentation/Images/S5/Minikube_Status.PNG)
