@@ -92,6 +92,14 @@ kubectl get namespaces
 kubectl get pods --namespace=kube-system
 ```
 
+```
+kubectl create -f .\Deploy\eshop-products-api-az-webapp.yml
+
+kubectl apply -f .\Deploy\eshop-products-api-az-webapp.yml
+
+kubectl delete -f .\Deploy\eshop-products-api-az-webapp.yml
+```
+
 ### Minikube
 
 > 1. Demo and Discussion
@@ -100,8 +108,11 @@ kubectl get pods --namespace=kube-system
 > 1. Stop Minikube
 > 1. Minikube dashboard and Accessing the **Minikube** dashboard
 
+References:
+[Official Minikube Documentation](https://minikube.sigs.k8s.io/docs/handbook/accessing/)
+
 ```
-minikube start --kubernetes-version=v1.24.1
+minikube start --kubernetes-version=v1.24.1 --driver=docker
 ```
 
 ![Minikube Start |150x150](./Documentation/Images/S5/Minikube_Start.PNG)
@@ -134,12 +145,16 @@ minikube stop
 > 1. Deploying Multi Containers in `Minikube` using `YML`
 > 1. Port Forwarding
 > 1. Accessing the Products API deployed inside K8s
+> 1. `Minikube tunnel` and accessing the Products API deployed inside K8s
 
 **Port Forwarding**
 ![Minikube Port Forwarding |150x150](./Documentation/Images/S5/Minikube_PortForwarding.PNG)
 
 **Accessing the Products API deployed inside K8s**
 ![Products API deployed inside K8s |150x150](./Documentation/Images/S5/Accessing_Api_K8s.PNG)
+
+**Minikube Tunneling**
+![Products API deployed inside K8s |150x150](./Documentation/Images/S5/Minikube_Tunnel.PNG)
 
 ---
 
