@@ -72,6 +72,34 @@ Description: To Be Done
 
 > 1. AKS, EKS, GKE, kubespray/kubeadm (Full Control)
 
+### K8s CLI (kubectl)
+
+> 1. Demo and Discussion
+
+```
+kubectl cluster-info
+```
+
+```
+kubectl get nodes
+```
+
+```
+kubectl get namespaces
+```
+
+```
+kubectl get pods --namespace=kube-system
+```
+
+```
+kubectl create -f .\Deploy\eshop-products-api-az-webapp.yml
+
+kubectl apply -f .\Deploy\eshop-products-api-az-webapp.yml
+
+kubectl delete -f .\Deploy\eshop-products-api-az-webapp.yml
+```
+
 ### Minikube
 
 > 1. Demo and Discussion
@@ -80,8 +108,11 @@ Description: To Be Done
 > 1. Stop Minikube
 > 1. Minikube dashboard and Accessing the **Minikube** dashboard
 
+References:
+[Official Minikube Documentation](https://minikube.sigs.k8s.io/docs/handbook/accessing/)
+
 ```
-minikube start --kubernetes-version=v1.24.1
+minikube start --driver=docker --kubernetes-version=v1.24.1
 ```
 
 ![Minikube Start |150x150](./Documentation/Images/S5/Minikube_Start.PNG)
@@ -108,22 +139,22 @@ minikube stop
 
 ![Minikube Dashboard |150x150](./Documentation/Images/S5/K8s_Dashboard.PNG)
 
-### K8s CLI (kubectl)
-
-> 1. Demo and Discussion
-
 ### Deploying `Multi Containers` in **Minikube** using **YML**
 
 > 1. Demo and Discussion
 > 1. Deploying Multi Containers in `Minikube` using `YML`
 > 1. Port Forwarding
 > 1. Accessing the Products API deployed inside K8s
+> 1. `Minikube tunnel` and accessing the Products API deployed inside K8s
 
 **Port Forwarding**
 ![Minikube Port Forwarding |150x150](./Documentation/Images/S5/Minikube_PortForwarding.PNG)
 
 **Accessing the Products API deployed inside K8s**
 ![Products API deployed inside K8s |150x150](./Documentation/Images/S5/Accessing_Api_K8s.PNG)
+
+**Minikube Tunneling**
+![Products API deployed inside K8s |150x150](./Documentation/Images/S5/Minikube_Tunnel.PNG)
 
 ---
 
