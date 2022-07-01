@@ -37,6 +37,17 @@ Description: To Be Done
 
 ## Session 5
 
+## What are we going to do today?
+
+> 1. Introduction to K8s. What and Why of K8s (`5 Minutes`)
+> 1. Hands on K8s & Hands on Minikube locally (`30 Minutes`)
+> 1. Deploying `Multi Containers` in **AKS** using **YML** (`10 Minutes`)
+> 1. Verify the Deployments using Postman (`10 Minutes`)
+> 1. Review/Q & A/Panel Discussion (`3 Minutes`)
+> 1. What is next in `Session 6`? (`2 Minutes`)
+
+![Faster Your Seat Belt |150x150](./Documentation/Images/SeatBelt.PNG)
+
 ## Introduction to K8s. What and Why of K8s (`5 Minutes`)
 
 > 1. Demo and Discussion
@@ -49,6 +60,7 @@ Description: To Be Done
 ## Hands on K8s & Hands on Minikube locally (`30 Minutes`)
 
 > 1. Demo and Discussion
+> 1. Few of the supported container runtimes - Docker, Containerd, and CRI-O
 
 ![Components of a Kubernetes cluster |150x150](./Documentation/Images/S5/Components_K8s_Cluster.PNG)
 **Image:** From [Official K8s Documentation](https://kubernetes.io/docs/concepts/overview/components/)
@@ -63,6 +75,8 @@ Description: To Be Done
 > 1. Deployment
 > 1. Replica Set
 > 1. kubectl
+
+![Kubernetes Under Standing |150x150](./Documentation/Images/S5/K8s_JustForUnderstanding.PNG)
 
 ### Single Node K8s Cluster
 
@@ -119,6 +133,8 @@ minikube start --driver=docker --kubernetes-version=v1.24.1
 
 ```
 minikube status
+
+docker container inspect minikube --format={{.State.Status}}"
 ```
 
 ![Minikube Status |150x150](./Documentation/Images/S5/Minikube_Status.PNG)
