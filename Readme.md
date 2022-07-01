@@ -112,7 +112,7 @@ References:
 [Official Minikube Documentation](https://minikube.sigs.k8s.io/docs/handbook/accessing/)
 
 ```
-minikube start --kubernetes-version=v1.24.1 --driver=docker
+minikube start --driver=docker --kubernetes-version=v1.24.1
 ```
 
 ![Minikube Start |150x150](./Documentation/Images/S5/Minikube_Start.PNG)
