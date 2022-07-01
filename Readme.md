@@ -76,7 +76,7 @@ Description: To Be Done
 > 1. Replica Set
 > 1. kubectl
 
-![Kubernetes Under Standing |150x150](./Documentation/Images/S5/K8s_JustForUnderstanding.PNG)
+![Kubernetes Under Standing |150x150](./Documentation/Images/S5/K8s_JustFor_Understanding.PNG)
 
 ### Single Node K8s Cluster
 
