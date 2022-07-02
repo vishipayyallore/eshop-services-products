@@ -230,14 +230,41 @@ Kubernetes and YAML files will be discussed in the next session.
 
 > 1. Using Record for Product Dto
 > 1. Using ResponseDto for sending Unified Response
+> 1. Model Validations
+> 1. Health Checks
+> 1. Versioning
+> 1. Paging, Filtering, Sorting, and Searching
 
-### Using Record for Product Dto
+## Registries
+> 1. Azure Container Registry
+> 1. GitHub Registry
 
-> 1. Demo and Discussion
+## DevOps
+> 1. IaC with ARM/Bicep/Terraform
+> 1. CI/CD with Azure DevOps/GitHub Actions
 
-### Using ResponseDto for sending Unified Response
+## Deployments
+> 1. Deployment into Container Apps
+> 1. Kubernetes Service Mesh
 
-> 1. Demo and Discussion
+## Alerts and Monitoring
+> 1. Prometheus
+> 1. Grafana
+
+## Security
+> 1. Static Analysis
+> 1. Vulnerability Scanning
+> 1. Supply Chain Security
+> 1. Software Composition
+> 1. Use Network Security Policies to Restrict Cluster Level Access
+> 1. Cluster Hardening - RBAC
+> 1. Properly Set Up Ingress Objects with Security Control
+> 1. Protect Node Metadata and Endpoints
+
+## Testing
+> 1. Unit Testing
+> 1. Integration Testing
+> 1. Performance Testing
 
 ---
 
@@ -255,86 +282,3 @@ Kubernetes and YAML files will be discussed in the next session.
 
 ---
 
-## Verify the Deployments using Postman (`10 Minutes`)
-
-> 1. Demo and Discussion
-
-### Verify the end points `locally` (Kestrel, IIS Express, Docker, Docker-Compose, and K8s)
-
-> 1. Demo and Discussion
-
-### Verify the end points from `Azure Container Instances`
-
-> 1. Demo and Discussion
-
-### Verify the end points `Docker Instances from App Service`
-
-> 1. Demo and Discussion
-
-### Verify the end points `Azure Kubernetes Service`
-
-> 1. Demo and Discussion
-
-## Review/Q & A/Panel Discussion
-
-> 1. Discussion
-
-## What is next in `Session 7`?
-
-> 1. Discussion
-
----
-
-## Session 7
-
----
-
----
-
-## New Features
-
-> 1. Model Validations
-
-## New Features
-
-> 1. Health Checks
-> 1. Versioning
-> 1. Unit Testing
-> 1. Paging, Filtering, Sorting, and Searching
-
-## Deployment
-
-> 1. GitHub Registry
-
-### Kubernetes
-
-> 1. Azure Container Registry
-> 1. Azure Kubernetes Service
-
-## CI with GitHub Actions
-
-> 1. Products-Api-CI
-
-[![Products-Api-CI](https://github.com/vishipayyallore/eshop-services-products/actions/workflows/Products-Api-CI.yml/badge.svg)](https://github.com/vishipayyallore/eshop-services-products/actions/workflows/Products-Api-CI.yml)
-
-## CD with GitHub Actions
-
-> 1. To Be Done
-
----
-
-## Session 8
-
----
-
-## New Features
-
-> 1. IaC with ARM/Bicep/Terraform
-> 1. CI/CD with Azure DevOps/GitHub Actions
-
-## Deployment
-
-### Service Mesh
-
-> 1. Azure Container Registry
-> 1. Kubernetes Service Mesh
