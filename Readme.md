@@ -1,6 +1,6 @@
 # eShop `Products` Microservice `API`
 
-Description: To Be Done
+Description: **`To Be Done`**
 
 ## Status Badges
 
