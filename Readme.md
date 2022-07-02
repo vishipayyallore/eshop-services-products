@@ -224,7 +224,7 @@ Kubernetes and YAML files will be discussed in the next session.
 
 ---
 
-## Session 6
+## **Wish List**
 
 ## New Features (`10 Minutes`)
 
@@ -252,12 +252,6 @@ Kubernetes and YAML files will be discussed in the next session.
 > 1. Demo and Discussion
 
 ---
-
-## Deployment into K8s using Docker Image (`5 Minutes`)
-
-> 1. Demo and Discussion
-
-## Deployment into K8s using ACR (`5 Minutes`)
 
 ---
 
