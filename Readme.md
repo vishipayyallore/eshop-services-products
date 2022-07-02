@@ -22,16 +22,13 @@ Description: To Be Done
 
 ---
 
-## Links to Documentation
+## Links to individual sessions Documentation and its Videos
 
-> 1. Please refer [Session1.md](./Documentation/Sessions/Session1.md) for more details.
-> 1. Please refer Session 1's [Video](https://www.youtube.com/watch?v=wQ0Xf4pKZaQ) for more details.
-> 1. Please refer [Session2.md](./Documentation/Sessions/Session2.md) for more details.
-> 1. Please refer Session 2's [Video](https://www.youtube.com/watch?v=R8QIrph-rCI) for more details.
-> 1. Please refer [Session3.md](./Documentation/Sessions/Session3.md) for more details.
-> 1. Please refer Session 3's [Video](https://www.youtube.com/watch?v=xst1bjb54JM) for more details.
-> 1. Please refer [Session4.md](./Documentation/Sessions/Session4.md) for more details.
-> 1. Please refer Session 4's [Video](https://www.youtube.com/watch?v=G6dPdySKzbs) for more details.
+> 1. Please refer [Session1.md](./Documentation/Sessions/Session1.md) and [Video](https://www.youtube.com/watch?v=wQ0Xf4pKZaQ)for more details.
+> 1. Please refer [Session2.md](./Documentation/Sessions/Session2.md) and [Video](https://www.youtube.com/watch?v=R8QIrph-rCI) for more details.
+> 1. Please refer [Session3.md](./Documentation/Sessions/Session3.md) and [Video](https://www.youtube.com/watch?v=xst1bjb54JM) for more details.
+> 1. Please refer [Session4.md](./Documentation/Sessions/Session4.md) and [Video](https://www.youtube.com/watch?v=G6dPdySKzbs) for more details.
+> 1. Please refer [Session5.md](./Documentation/Sessions/Session5.md) and [Video](https://www.youtube.com/watch?v=LPI0VVM24KI) for more details.
 
 ---
 
