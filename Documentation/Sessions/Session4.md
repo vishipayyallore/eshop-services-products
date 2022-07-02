@@ -10,7 +10,7 @@
 
 **Note:** Path to the Docker Volume Mounts \\wsl$\docker-desktop-data\version-pack-data\community\docker\volumes
 
-![Deploy Mongo Db as Container |150x150](../Images/S3_Docker_MongoDb_WithVolume.PNG)
+![Deploy Mongo Db as Container |150x150](../Images/S3/Docker_MongoDb_WithVolume.PNG)
 
 ## Docker Compose
 
@@ -83,10 +83,10 @@ MongoDbSettings__DatabaseName = ProductsDb
 ```
 
 **ACI Single Container Using Cli from Docker Hub**
-![ACI Single Container Using Cli from Docker Hub |150x150](../Images/S3_Docker_to_ACI_using_azcli.PNG)
+![ACI Single Container Using Cli from Docker Hub |150x150](../Images/S3/Docker_to_ACI_using_azcli.PNG)
 
 **Accessing the API from ACI Container**
-![ACI Single Container |150x150](../Images/S3_ACI_Single_Container.PNG)
+![ACI Single Container |150x150](../Images/S3/ACI_Single_Container.PNG)
 
 ---
 
@@ -132,10 +132,10 @@ MongoDbSettings_DatabaseName = ProductsDb
 ```
 
 **Deploy Multi Containers To App Services**
-![Deploy Multi Containers To App Services |150x150](../Images/S3_DeployToAppServicesMultiContainer.PNG)
+![Deploy Multi Containers To App Services |150x150](../Images/S3/DeployToAppServicesMultiContainer.PNG)
 
 **Access API From App Services Multi Container**
-![Access API From App Services Multi Container |150x150](../Images/S3_AccessAPIFromAppServicesMultiContainer.PNG)
+![Access API From App Services Multi Container |150x150](../Images/S3/AccessAPIFromAppServicesMultiContainer.PNG)
 
 ---
 
