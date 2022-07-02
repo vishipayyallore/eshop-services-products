@@ -36,159 +36,125 @@ Description: **`To Be Done`**
 
 ## What are we going to do today?
 
-> 1. Introduction to K8s. What and Why of K8s (`5 Minutes`)
-> 1. Hands on K8s & Hands on Minikube locally (`30 Minutes`)
-> 1. Deploying `Multi Containers` in **AKS** using **YML** (`10 Minutes`)
-> 1. Verify the Deployments using Postman (`10 Minutes`)
-> 1. Review/Q & A/Panel Discussion (`3 Minutes`)
-> 1. What is next in `Session 6`? (`2 Minutes`)
+> 1. Azure Resource Creation - Manual (`3 Minutes`)
+> 1. Introduction to PowerShell and Az Module (`3 Minutes`)
+> 1. Create a Web App in using .PS1 (`4 Minutes`)
+> 1. Introduction to PowerShell, Azure CLI (`3 Minutes`)
+> 1. Create a Web App in using Azure CLI (`4 Minutes`)
+> 1. What is IaC? (`3 Minutes`)
+> 1. Introduction to ARM (`5 Minutes`)
+> 1. Deploy SQL Server, Database using ARM + .PS1 (`5 Minutes`)
+> 1. Deplopy App Service, Web App using ARM + AZ CLI .sh (`5 Minutes`)
+> 1. Introduction to Terraform (`5 Minutes`)
+> 1. Deploy Virtual Network, and AKS using Terraform (`10 Minutes`)
+> 1. Review/Q & A/Panel Discussion (`5 Minutes`)
+> 1. What is next in `Session 6`? (`5 Minutes`)
 
 ![Faster Your Seat Belt |150x150](./Documentation/Images/SeatBelt.PNG)
 
-## Introduction to K8s. What and Why of K8s (`5 Minutes`)
+## Azure Resource Creation - Manual (`3 Minutes`)
 
 > 1. Demo and Discussion
-> 1. K8s container runtime agnostic
-> 1. [DC/OS](https://dcos.io/), [Kubernetes](https://kubernetes.io/docs/home/), and [Docker Swarm](https://docs.docker.com/engine/swarm/)
-> 1. AKS, EKS, and GKE
+
+## Introduction to PowerShell and Az Module (`3 Minutes`)
+
+> 1. Demo and Discussion
+
+## Create a Web App in using .PS1 (`4 Minutes`)
+
+> 1. Demo and Discussion
+
+## Introduction to PowerShell, Azure CLI (`3 Minutes`)
+
+> 1. Demo and Discussion
+
+## Create a Web App in using Azure CLI (`4 Minutes`)
+
+> 1. Demo and Discussion
+
+## What is IaC? (`3 Minutes`)
+
+> 1. Demo and Discussion
+
+**Reference:** [What is infrastructure as code](https://docs.microsoft.com/en-us/devops/deliver/what-is-infrastructure-as-code)
+
+## Introduction to ARM (`5 Minutes`)
+
+> 1. Demo and Discussion
+
+## Deploy SQL Server, Database using ARM + .PS1 (`5 Minutes`)
+
+> 1. Demo and Discussion
+
+## Deplopy App Service, Web App using ARM + AZ CLI .sh (`5 Minutes`)
+
+> 1. Demo and Discussion
+
+## Introduction to Terraform (`5 Minutes`)
+
+> 1. Demo and Discussion
+
+## Deploy Virtual Network, and AKS using Terraform (`10 Minutes`)
+
+> 1. Demo and Discussion
+
+## Review/Q & A/Panel Discussion (`5 Minutes`)
+
+> 1. Discussion
+
+## What is next in `Session 7`? (`5 Minutes`)
+
+> 1. Discussion
 
 ---
 
-## Hands on K8s & Hands on Minikube locally (`30 Minutes`)
+## `**Wish List**`
 
-> 1. Demo and Discussion
-> 1. Few of the supported container runtimes - Docker, Containerd, and CRI-O
+## New Features (`10 Minutes`)
 
-![Components of a Kubernetes cluster |150x150](./Documentation/Images/S5/Components_K8s_Cluster.PNG)
-**Image:** From [Official K8s Documentation](https://kubernetes.io/docs/concepts/overview/components/)
+> 1. Using Record for Product Dto
+> 1. Using ResponseDto for sending Unified Response
+> 1. Model Validations
+> 1. Health Checks
+> 1. Versioning
+> 1. Paging, Filtering, Sorting, and Searching
 
-### K8s Terms
+## Registries
 
-> 1. Clusters
-> 1. Nodes (Master, and Worker)
-> 1. Namespace
-> 1. Pods (One or more containers)
-> 1. Service
-> 1. Deployment
-> 1. Replica Set
-> 1. kubectl
+> 1. Azure Container Registry
+> 1. GitHub Registry
 
-![Kubernetes Under Standing |150x150](./Documentation/Images/S5/K8s_JustFor_Understanding.PNG)
+## DevOps
 
-### Single Node K8s Cluster
+> 1. IaC with ARM/Bicep/Terraform
+> 1. CI/CD with Azure DevOps/GitHub Actions
 
-> 1. Docker Desktop, minikube, and kubeadm (Linux Machines)
+## Deployments
 
-### Multi Node K8s Cluster
+> 1. Deployment into Container Apps
+> 1. Kubernetes Service Mesh
 
-> 1. AKS, EKS, GKE, kubespray/kubeadm (Full Control)
+## Alerts and Monitoring
 
-### K8s CLI (kubectl)
+> 1. Prometheus
+> 1. Grafana
 
-> 1. Demo and Discussion
+## Security
 
-```
-kubectl cluster-info
-```
+> 1. Static Analysis
+> 1. Vulnerability Scanning
+> 1. Supply Chain Security
+> 1. Software Composition
+> 1. Use Network Security Policies to Restrict Cluster Level Access
+> 1. Cluster Hardening - RBAC
+> 1. Properly Set Up Ingress Objects with Security Control
+> 1. Protect Node Metadata and Endpoints
 
-```
-kubectl get nodes
-```
+## Testing
 
-```
-kubectl get namespaces
-```
-
-```
-kubectl get pods --namespace=kube-system
-```
-
-```
-kubectl create -f .\Deploy\eshop-products-api-az-webapp.yml
-
-kubectl apply -f .\Deploy\eshop-products-api-az-webapp.yml
-
-kubectl delete -f .\Deploy\eshop-products-api-az-webapp.yml
-```
-
-### Minikube
-
-> 1. Demo and Discussion
-> 1. Install Minikube
-> 1. Start Minikube
-> 1. Stop Minikube
-> 1. Minikube dashboard and Accessing the **Minikube** dashboard
-
-References:
-[Official Minikube Documentation](https://minikube.sigs.k8s.io/docs/handbook/accessing/)
-
-```
-minikube start --driver=docker --kubernetes-version=v1.24.1
-```
-
-![Minikube Start |150x150](./Documentation/Images/S5/Minikube_Start.PNG)
-
-```
-minikube status
-
-docker container inspect minikube --format={{.State.Status}}"
-```
-
-![Minikube Status |150x150](./Documentation/Images/S5/Minikube_Status.PNG)
-
-```
-minikube dashboard
-```
-
-![Minikube Dashboard |150x150](./Documentation/Images/S5/Minikube_Dashboard.PNG)
-
-```
-minikube stop
-```
-
-![Minikube Stop |150x150](./Documentation/Images/S5/Minikube_Stop.PNG)
-
-### Accessing the Minikube Dashboard
-
-![Minikube Dashboard |150x150](./Documentation/Images/S5/K8s_Dashboard.PNG)
-
-### Deploying `Multi Containers` in **Minikube** using **YML**
-
-> 1. Demo and Discussion
-> 1. Deploying Multi Containers in `Minikube` using `YML`
-> 1. Port Forwarding
-> 1. Accessing the Products API deployed inside K8s
-> 1. `Minikube tunnel` and accessing the Products API deployed inside K8s
-
-**Port Forwarding**
-![Minikube Port Forwarding |150x150](./Documentation/Images/S5/Minikube_PortForwarding.PNG)
-
-**Accessing the Products API deployed inside K8s**
-![Products API deployed inside K8s |150x150](./Documentation/Images/S5/Accessing_Api_K8s.PNG)
-
-**Minikube Tunneling**
-![Products API deployed inside K8s |150x150](./Documentation/Images/S5/Minikube_Tunnel.PNG)
-
----
-
-## Deploying `Multi Containers` in **AKS** using **YML** (`10 Minutes`)
-
-**Note:**
-Kubernetes and YAML files will be discussed in the next session.
-
-> 1. Kubernetes Cluster has been deployed using Github Actions
-> 1. Please refer [eshop-products-api-k8s.yml](./Deploy/eshop-products-api-k8s.yml) file
-> 1. Deployment of Products API Micro Service Multi Containers using `kubectl apply -f` command
-> 1. Accessing the Products API from AKS Multi Containers
-
-**Kubernetes Cluster has been deployed using Github Actions**
-![Deploy Kubernetes Cluster to AKS |150x150](./Documentation/Images/S4/K8s_Image1.PNG)
-
-**Deployment of Products API Micro Service Multi Containers in K8s**
-![Deployment of Products API |150x150](./Documentation/Images/S4/Deploy_Products_into_K8s.PNG)
-
-**Accessing the Products API from AKS Multi Containers**
-![Deploy Kubernetes Cluster to AKS |150x150](./Documentation/Images/S4/Accessing_Products_API_K8s.PNG)
+> 1. Unit Testing
+> 1. Integration Testing
+> 1. Performance Testing
 
 ---
 
@@ -213,72 +179,3 @@ Kubernetes and YAML files will be discussed in the next session.
 > 1. Demo and Discussion
 
 ![Postman Collections for 8 environments |150x150](./Documentation/Images/S5/Postman_Collections.PNG)
-
-## Review/Q & A/Panel Discussion
-
-> 1. Discussion
-
-## What is next in `Session 6`?
-
-> 1. Discussion
-
----
-
-## **Wish List**
-
-## New Features (`10 Minutes`)
-
-> 1. Using Record for Product Dto
-> 1. Using ResponseDto for sending Unified Response
-> 1. Model Validations
-> 1. Health Checks
-> 1. Versioning
-> 1. Paging, Filtering, Sorting, and Searching
-
-## Registries
-> 1. Azure Container Registry
-> 1. GitHub Registry
-
-## DevOps
-> 1. IaC with ARM/Bicep/Terraform
-> 1. CI/CD with Azure DevOps/GitHub Actions
-
-## Deployments
-> 1. Deployment into Container Apps
-> 1. Kubernetes Service Mesh
-
-## Alerts and Monitoring
-> 1. Prometheus
-> 1. Grafana
-
-## Security
-> 1. Static Analysis
-> 1. Vulnerability Scanning
-> 1. Supply Chain Security
-> 1. Software Composition
-> 1. Use Network Security Policies to Restrict Cluster Level Access
-> 1. Cluster Hardening - RBAC
-> 1. Properly Set Up Ingress Objects with Security Control
-> 1. Protect Node Metadata and Endpoints
-
-## Testing
-> 1. Unit Testing
-> 1. Integration Testing
-> 1. Performance Testing
-
----
-
-## IaC using Terraform (`15 Minutes`)
-
-> 1. Demo and Discussion
-
----
-
-## Deployment into Container Apps (`15 Minutes`)
-
-> 1. Demo and Discussion
-
----
-
----
-
