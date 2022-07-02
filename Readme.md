@@ -131,6 +131,8 @@ Description: **`To Be Done`**
 
 ## Deployments
 
+> 1. Deployment into K8s using Docker Image
+> 1. Deployment into K8s using ACR
 > 1. Deployment into Container Apps
 > 1. Kubernetes Service Mesh
 
