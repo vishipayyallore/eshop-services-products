@@ -32,7 +32,7 @@ Description: **`To Be Done`**
 
 ---
 
-## Session 5
+## Session 6
 
 ## What are we going to do today?
 
