@@ -103,7 +103,7 @@ Description: **`To Be Done`**
 > 1. What is Block?
 
 ```
-BlockName Provider_Resource ResourceName
+BlockName Provider_ResourceType ResourceName
 {
    Arguments
 }
