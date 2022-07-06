@@ -100,10 +100,11 @@ Description: **`To Be Done`**
 ## Deploy Virtual Network, and AKS using Terraform (`10 Minutes`)
 
 > 1. Demo and Discussion
-> 1. What is Block?
+> 1. Providers - Official, Verified, and Community
+> 1. What is Block Configuration?
 
 ```
-BlockName Provider_Resource ResourceName
+BlockName Provider_ResourceType ResourceName
 {
    Arguments
 }
@@ -116,7 +117,7 @@ resource "local_file" "hello"{
 }
 ```
 
-1. Few of the Terraform commands
+> 1. Few of the Terraform commands
 
 ```
 terraform init
