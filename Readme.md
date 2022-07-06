@@ -75,6 +75,8 @@ Description: **`To Be Done`**
 ## What is IaC? (`3 Minutes`)
 
 > 1. Demo and Discussion
+> 1. `Provisioning Tools` Azure Resource Manager (ARM), Terraform (TF), and Cloud Formation (CF)
+> 1. Configuration Management, and Server Templating tools
 
 **Reference:** [What is infrastructure as code](https://docs.microsoft.com/en-us/devops/deliver/what-is-infrastructure-as-code)
 
@@ -93,10 +95,36 @@ Description: **`To Be Done`**
 ## Introduction to Terraform (`5 Minutes`)
 
 > 1. Demo and Discussion
+> 1. Private and Public Clouds. HashiCorp Configuration Language (HCL - Declarative Language)
 
 ## Deploy Virtual Network, and AKS using Terraform (`10 Minutes`)
 
 > 1. Demo and Discussion
+> 1. What is Block?
+
+```
+BlockName Provider_Resource ResourceName
+{
+   Arguments
+}
+```
+
+```
+resource "local_file" "hello"{
+   filename = "Sample.txt"
+   content = "Hello World !!"
+}
+```
+
+1. Few of the Terraform commands
+
+```
+terraform init
+terraform plan (Review the execution plan)
+terraform apply
+terraform destroy
+terraform show
+```
 
 ## Review/Q & A/Panel Discussion (`5 Minutes`)
 
