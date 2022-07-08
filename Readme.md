@@ -63,13 +63,17 @@ Description: **`To Be Done`**
 ## Create a Windows & Ubuntu Virtual Machine in using .PS1 (`4 Minutes`)
 
 > 1. Demo and Discussion
+> 1. Creating [Windows VM](./Documentation/StarterFiles/S6/CreateVmWindows.ps1)
+> 1. Creating [Ubuntu VM](./Documentation/StarterFiles/S6/CreateVmUbuntu.ps1)
 
-```Azure CLI
+**Create a Ubuntu VM**
+
+```PowerShell
 # Variables
 $SubscriptionName = "Your Subscription Name"
 $RGName = "rg-az204-psubuntu-dev-001"
 $LocationName = "CentralUS"
-$BaseName = "apr2021ubuntu"
+$BaseName = "jul2022ubuntu"
 $VmName = "vm$($BaseName)"
 $VNetName = "vnet$($BaseName)"
 $SubNetName = "default"
