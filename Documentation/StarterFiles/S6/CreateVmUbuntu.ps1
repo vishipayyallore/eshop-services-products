@@ -83,7 +83,7 @@ Get-AzPublicIpAddress -ResourceGroupName $RGName -Name $PublicDns | Select-Objec
 > ssh -i C:\Users\YourUser\.ssh\id_rsa demouser@VmPublicIpAddress ## From Local Laptop
 > ssh -i /home/YourUser/.ssh/id_rsa demouser@VmPublicIpAddress ## From Local Laptop
 
-ssh -i /home/YourUser/.ssh/id_rsa demouser@40.77.1.129
+ssh -i /home/YourUser/.ssh/id_rsa demouser@VmPublicIpAddress
 
 
 ##### Inside the Ubuntu VM
