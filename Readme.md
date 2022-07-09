@@ -38,7 +38,7 @@ Description: **`To Be Done`**
 
 > 1. Azure Resource Creation - Manual (`3 Minutes`)
 > 1. Introduction to PowerShell and Az Module (`3 Minutes`)
-> 1. Create a Web App in using .PS1 (`4 Minutes`)
+> 1. Create a Windows & Ubuntu Virtual Machine in using .PS1 (`4 Minutes`)
 > 1. Introduction to `Azure CLI` (`3 Minutes`)
 > 1. Create a Web App in using `Azure CLI` (`4 Minutes`)
 > 1. What is IaC? (`3 Minutes`)
@@ -165,11 +165,11 @@ sudo apt-get -y install nginx
 http://VmPublicIpAddress
 ```
 
-## Introduction to PowerShell, Azure CLI (`3 Minutes`)
+## Introduction to `Azure CLI` (`3 Minutes`)
 
 > 1. Demo and Discussion
 
-## Create a Web App in using Azure CLI (`4 Minutes`)
+## Create a Web App in using `Azure CLI` (`4 Minutes`)
 
 > 1. Demo and Discussion
 
