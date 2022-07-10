@@ -54,15 +54,19 @@ Description: **`To Be Done`**
 
 ## Azure Resource Creation - Manual (`3 Minutes`)
 
-> 1. Demo and Discussion
+> 1. Discussion and Demo
+> 1. Azure Resource Group Creation - Manual
+> 1. Add couple of Tags to the Resource Group - Manual
+
+![Resource Group with Tags |150x150](./Documentation/Images/S6/RgUsingAzPortal.PNG)
 
 ## Introduction to PowerShell and Az Module (`3 Minutes`)
 
-> 1. Demo and Discussion
+> 1. Discussion and Demo
 
 ## Create a Windows & Ubuntu Virtual Machine in using .PS1 (`4 Minutes`)
 
-> 1. Demo and Discussion
+> 1. Discussion and Demo
 > 1. Creating [Windows VM](./Documentation/StarterFiles/S6/CreateVmWindows.ps1)
 > 1. Creating [Ubuntu VM](./Documentation/StarterFiles/S6/CreateVmUbuntu.ps1)
 
@@ -167,15 +171,21 @@ http://VmPublicIpAddress
 
 ## Introduction to `Azure CLI` (`3 Minutes`)
 
-> 1. Demo and Discussion
+> 1. Discussion and Demo
+
+```AzureCLI
+az login
+az account list
+az account list-locations -o table
+```
 
 ## Create a Web App in using `Azure CLI` (`4 Minutes`)
 
-> 1. Demo and Discussion
+> 1. Discussion and Demo
 
 ## What is IaC? (`3 Minutes`)
 
-> 1. Demo and Discussion
+> 1. Discussion and Demo
 > 1. `Provisioning Tools` Azure Resource Manager (ARM), Terraform (TF), and Cloud Formation (CF)
 > 1. Configuration Management, and Server Templating tools
 
@@ -183,45 +193,47 @@ http://VmPublicIpAddress
 
 ## Introduction to ARM (`5 Minutes`)
 
-> 1. Demo and Discussion
+> 1. Discussion and Demo
 
 ## Deploy SQL Server, Database using ARM + .PS1 (`5 Minutes`)
 
-> 1. Demo and Discussion
+> 1. Discussion and Demo
 
 ## Deplopy App Service, Web App using ARM + AZ CLI .sh (`5 Minutes`)
 
-> 1. Demo and Discussion
+> 1. Discussion and Demo
 
 ## Introduction to Terraform (`5 Minutes`)
 
-> 1. Demo and Discussion
+> 1. Discussion and Demo
 > 1. Private and Public Clouds. HashiCorp Configuration Language (HCL - Declarative Language)
 
 ## Deploy Virtual Network, and AKS using Terraform (`10 Minutes`)
 
-> 1. Demo and Discussion
+> 1. Discussion and Demo
 > 1. Providers - Official, Verified, and Community
-> 1. What is Block Configuration?
+> 1. Terrafrom Configuration Files OR Terraform Manifest Files
+> 1. Blocks | Arguments | Identifiers | Comments | Attributes Refernce | Variables | Outputs | Resources | Templates | etc.
 
 ```
-BlockName Provider_ResourceType ResourceName
+BlockType Provider_ResourceType ResourceName
 {
-   Arguments
+   <Identifier> = <Expression> # Arguments
 }
 ```
 
 ```
 resource "local_file" "hello"{
-   filename = "Sample.txt"
-   content = "Hello World !!"
+   filename = "Sample.txt" # Arguments
+   content = "Hello World !!" # Arguments
 }
 ```
 
 > 1. Few of the Terraform commands
 
-```
+```terraform
 terraform init
+terraform validate
 terraform plan (Review the execution plan)
 terraform apply
 terraform destroy
@@ -292,22 +304,22 @@ terraform show
 
 ## Verify the Deployments using Postman (`10 Minutes`)
 
-> 1. Demo and Discussion
+> 1. Discussion and Demo
 
 ### Verify the end points `locally` (Kestrel, IIS Express, Docker, Docker-Compose, and K8s)
 
-> 1. Demo and Discussion
+> 1. Discussion and Demo
 
 ### Verify the end points from `Azure Container Instances`
 
-> 1. Demo and Discussion
+> 1. Discussion and Demo
 
 ### Verify the end points `Docker Instances from App Service`
 
-> 1. Demo and Discussion
+> 1. Discussion and Demo
 
 ### Verify the end points `Azure Kubernetes Service`
 
-> 1. Demo and Discussion
+> 1. Discussion and Demo
 
 ![Postman Collections for 8 environments |150x150](./Documentation/Images/S5/Postman_Collections.PNG)

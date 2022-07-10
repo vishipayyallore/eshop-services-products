@@ -2,7 +2,7 @@
 
 ## Docker Desktop
 
-> 1. Demo and Discussion
+> 1. Discussion and Demo
 
 ## Mongo Db
 
@@ -22,7 +22,7 @@
 
 ## Dockerfile
 
-> 1. Demo and Discussion
+> 1. Discussion and Demo
 
 ## Local Execution Modes using VS 2022
 
