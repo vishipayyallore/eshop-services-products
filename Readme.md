@@ -55,6 +55,10 @@ Description: **`To Be Done`**
 ## Azure Resource Creation - Manual (`3 Minutes`)
 
 > 1. Demo and Discussion
+> 1. Azure Resource Group Creation - Manual
+> 1. Add couple of Tags to the Resource Group - Manual
+
+![Resource Group with Tags |150x150](./Documentation/Images/S6/RgUsingAzPortal.PNG)
 
 ## Introduction to PowerShell and Az Module (`3 Minutes`)
 
@@ -169,6 +173,12 @@ http://VmPublicIpAddress
 
 > 1. Demo and Discussion
 
+```AzureCLI
+az login
+az account list
+az account list-locations -o table
+```
+
 ## Create a Web App in using `Azure CLI` (`4 Minutes`)
 
 > 1. Demo and Discussion
@@ -202,26 +212,28 @@ http://VmPublicIpAddress
 
 > 1. Demo and Discussion
 > 1. Providers - Official, Verified, and Community
-> 1. What is Block Configuration?
+> 1. Terrafrom Configuration Files OR Terraform Manifest Files
+> 1. Blocks | Arguments | Identifiers | Comments | Variables | Outputs | Resources | Templates | etc.
 
 ```
-BlockName Provider_ResourceType ResourceName
+BlockType Provider_ResourceType ResourceName
 {
-   Arguments
+   <Identifier> = <Expression> # Arguments
 }
 ```
 
 ```
 resource "local_file" "hello"{
-   filename = "Sample.txt"
-   content = "Hello World !!"
+   filename = "Sample.txt" # Arguments
+   content = "Hello World !!" # Arguments
 }
 ```
 
 > 1. Few of the Terraform commands
 
-```
+```terraform
 terraform init
+terraform validate
 terraform plan (Review the execution plan)
 terraform apply
 terraform destroy
