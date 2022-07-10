@@ -21,7 +21,7 @@
 
 ## Executing the solution in `Ubuntu 20.04` using VS Code
 
-> 1. Demo and Discussion
+> 1. Discussion and Demo
 
 ![Executing API In Ubuntu 20.04 Swagger |150x150](../Images/S2/Executing_API_In_Ubuntu_Swagger.PNG)
 
@@ -29,7 +29,7 @@
 
 ## Shell Scripts
 
-> 1. Demo and Discussion
+> 1. Discussion and Demo
 
 Please refer the [example.bashrc](../../Scripts/example.bashrc) file for the shell script to be executed in the terminal.
 
@@ -66,7 +66,7 @@ MongoDbSettings__DatabaseName = ProductsDb
 
 ## Creating Azure Container Registry using Azure CLI
 
-> 1. Demo and Discussion
+> 1. Discussion and Demo
 
 ![Creating ACR Using Azure CLI |150x150](../Images/S2/Creating_ACR_Using_AzureCLI.PNG)
 

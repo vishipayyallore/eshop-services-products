@@ -11,7 +11,7 @@
 
 ## Introduction to K8s. What and Why of K8s (`5 Minutes`)
 
-> 1. Demo and Discussion
+> 1. Discussion and Demo
 > 1. K8s container runtime agnostic
 > 1. [DC/OS](https://dcos.io/), [Kubernetes](https://kubernetes.io/docs/home/), and [Docker Swarm](https://docs.docker.com/engine/swarm/)
 > 1. AKS, EKS, and GKE
@@ -20,7 +20,7 @@
 
 ## Hands on K8s & Hands on Minikube locally (`30 Minutes`)
 
-> 1. Demo and Discussion
+> 1. Discussion and Demo
 > 1. Few of the supported container runtimes - Docker, Containerd, and CRI-O
 
 ![Components of a Kubernetes cluster |150x150](../Images/S5/Components_K8s_Cluster.PNG)
@@ -49,7 +49,7 @@
 
 ### K8s CLI (kubectl)
 
-> 1. Demo and Discussion
+> 1. Discussion and Demo
 
 ```
 kubectl cluster-info
@@ -77,7 +77,7 @@ kubectl delete -f .\Deploy\eshop-products-api-az-webapp.yml
 
 ### Minikube
 
-> 1. Demo and Discussion
+> 1. Discussion and Demo
 > 1. Install Minikube
 > 1. Start Minikube
 > 1. Stop Minikube
@@ -118,7 +118,7 @@ minikube stop
 
 ### Deploying `Multi Containers` in **Minikube** using **YML**
 
-> 1. Demo and Discussion
+> 1. Discussion and Demo
 > 1. Deploying Multi Containers in `Minikube` using `YML`
 > 1. Port Forwarding
 > 1. Accessing the Products API deployed inside K8s
@@ -158,23 +158,23 @@ Kubernetes and YAML files will be discussed in the next session.
 
 ## Verify the Deployments using Postman (`10 Minutes`)
 
-> 1. Demo and Discussion
+> 1. Discussion and Demo
 
 ### Verify the end points `locally` (Kestrel, IIS Express, Docker, Docker-Compose, and K8s)
 
-> 1. Demo and Discussion
+> 1. Discussion and Demo
 
 ### Verify the end points from `Azure Container Instances`
 
-> 1. Demo and Discussion
+> 1. Discussion and Demo
 
 ### Verify the end points `Docker Instances from App Service`
 
-> 1. Demo and Discussion
+> 1. Discussion and Demo
 
 ### Verify the end points `Azure Kubernetes Service`
 
-> 1. Demo and Discussion
+> 1. Discussion and Demo
 
 ![Postman Collections for 8 environments |150x150](../Images/S5/Postman_Collections.PNG)
 

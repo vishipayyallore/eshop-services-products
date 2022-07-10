@@ -14,7 +14,7 @@
 
 ## Docker Compose
 
-> 1. Demo and Discussion
+> 1. Discussion and Demo
 > 1. Docker-Compose.yml
 > 1. Docker-Compose.override.yml
 
