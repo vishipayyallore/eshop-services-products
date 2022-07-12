@@ -46,7 +46,7 @@ Description: **`To Be Done`**
 > 1. Deploy SQL Server, Database using ARM + .PS1 (`5 Minutes`)
 > 1. Deplopy App Service, Web App using ARM + AZ CLI .sh (`5 Minutes`)
 > 1. Introduction to Terraform (`5 Minutes`)
-> 1. Deploy Resource Group, Virtual Network, and AKS using Terraform (`10 Minutes`)
+> 1. Deploy Resource Group, Virtual Network, and Web app using Terraform (`10 Minutes`)
 > 1. Review/Q & A/Panel Discussion (`5 Minutes`)
 > 1. What is next in `Session 6`? (`5 Minutes`)
 
@@ -210,7 +210,7 @@ az account list-locations -o table
 > 1. Discussion and Demo
 > 1. Private and Public Clouds. HashiCorp Configuration Language (HCL - Declarative Language)
 
-## Deploy Resource Group, Virtual Network, and AKS using Terraform (`10 Minutes`)
+## Deploy Resource Group, Virtual Network, and Web app using Terraform (`10 Minutes`)
 
 > 1. Discussion and Demo
 > 1. Providers - Official, Verified, and Community
