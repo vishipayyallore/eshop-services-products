@@ -1,6 +1,6 @@
 # Variables
-$SubscriptionName = "YourSubscriptionName"
-$RGName = "rg-az204-webapps-reactor-001"
+# $SubscriptionName = "YourSubscriptionName"
+$RGName = "rg-dnlh-eshop-dev-001"
 $LocationName = "EastUS"
 $BaseName = "jul2022win"
 $VmName = "vm$($BaseName)"
@@ -12,12 +12,12 @@ $PortsToOpen = 80, 3389
 $ImageName = "Win2019Datacenter" 
 
 ##### For Help
-get-help New-AzResourceGroup
+# get-help New-AzResourceGroup
 
 # Connecting to Subscription
-Connect-AzAccount
-Connect-AzAccount -SubscriptionName $SubscriptionName
-Set-AzContext -SubscriptionName $SubscriptionName
+# Connect-AzAccount
+# Connect-AzAccount -SubscriptionName $SubscriptionName
+# Set-AzContext -SubscriptionName $SubscriptionName
 
 # View All subscriptions
 Get-AzSubscription
@@ -36,11 +36,10 @@ New-AzVm -ResourceGroupName $RGName -Name $VmName -Location $LocationName `
     -VirtualNetworkName $VNetName -SubnetName $SubNetName -SecurityGroupName $NsgName `
     -PublicIpAddressName $PublicDns -OpenPorts $PortsToOpen
 
-
-New-AzVm -ResourceGroupName $RGName -Name $VmName -Location $LocationName `
-    -Credential (Get-Credential) -Image $ImageName `
-    -VirtualNetworkName $VNetName -SubnetName $SubNetName -SecurityGroupName $NsgName `
-    -PublicIpAddressName $PublicDns -OpenPorts $PortsToOpen
+# New-AzVm -ResourceGroupName $RGName -Name $VmName -Location $LocationName `
+#     -Credential (Get-Credential) -Image $ImageName `
+#     -VirtualNetworkName $VNetName -SubnetName $SubNetName -SecurityGroupName $NsgName `
+#     -PublicIpAddressName $PublicDns -OpenPorts $PortsToOpen
 
 Get-AzPublicIpAddress `
     -ResourceGroupName $RGName `
