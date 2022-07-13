@@ -1,6 +1,6 @@
 # Variables
 $SubscriptionName = "Your Subscription Name"
-$RGName = "rg-dnlh-eshop-dev-001"
+$RGName = "rg-dnlh-eshop-dev-002"
 $LocationName = "CentralUS"
 $BaseName = "jul2022ubuntu"
 $VmName = "vm$($BaseName)"
@@ -19,16 +19,18 @@ $NsgRuleForWeb = "NetworkSecurityGroupRuleForWeb"
 ssh-keygen -t rsa -b 4096
 
 # Connecting to Subscription
-Connect-AzAccount
-Set-AzContext -SubscriptionName $SubscriptionName
+# Connect-AzAccount
+# Connect-AzAccount -SubscriptionName $SubscriptionName
+# Set-AzContext -SubscriptionName $SubscriptionName
 
-Get-AzVm
+# View All subscriptions
+# Get-AzSubscription
+# Get-AzVm
+# Get-AzResourceGroup | Format-Table
 
-New-AzResourceGroup -Name $RGName -Location $LocationName
+New-AzResourceGroup -Name $RGName -Location $LocationName -Tag @{environment = "dev"; Contact = "Swamy" }
 
 $CredentialsForVm = New-Object System.Management.Automation.PSCredential ($username, $password)
-
-##### Create virtual network resources
 
 # Create a subnet configuration
 $subnetConfig = New-AzVirtualNetworkSubnetConfig -Name $SubNetName -AddressPrefix 192.168.1.0/24
@@ -40,8 +42,6 @@ $vnet = New-AzVirtualNetwork -ResourceGroupName $RGName -Location $LocationName 
 # Create a public IP address and specify a DNS name
 $pip = New-AzPublicIpAddress -ResourceGroupName $RGName -Location $LocationName -AllocationMethod Static `
   -IdleTimeoutInMinutes 4 -Name $PublicDns
-
-##### Network Security Group and traffic rule
 
 # Create an inbound network security group rule for port 22
 $nsgRuleSSH = New-AzNetworkSecurityRuleConfig -Name $NsgRuleForSsh -Protocol "Tcp" -Direction "Inbound" -Priority 1000 `
@@ -55,12 +55,9 @@ $nsgRuleWeb = New-AzNetworkSecurityRuleConfig -Name $NsgRuleForWeb -Protocol "Tc
 $nsg = New-AzNetworkSecurityGroup -ResourceGroupName $RGName -Location $LocationName -Name $NsgName `
   -SecurityRules $nsgRuleSSH, $nsgRuleWeb
 
-##### Virtual Network Interface card (NIC)
 # Create a virtual network card and associate with public IP address and NSG
 $nic = New-AzNetworkInterface -Name $NicName -ResourceGroupName $RGName -Location $LocationName `
   -SubnetId $vnet.Subnets[0].Id -PublicIpAddressId $pip.Id -NetworkSecurityGroupId $nsg.Id
-
-##### Create a virtual machine
 
 #### Verify the VM Size before working on the next command
 ##### Get-AzComputeResourceSku | where {$_.Locations -icontains "centralus"}
@@ -72,7 +69,7 @@ $vmConfig = New-AzVMConfig -VMName $VmName -VMSize "Standard_D1_v2" | `
   Add-AzVMNetworkInterface -Id $nic.Id
 
 # Configure the SSH key
-# $sshPublicKey = cat C:\Users\YourUser\.ssh\id_rsa.pub ## When On Local Laptop
+# $sshPublicKey = cat C:\Users\YourUser\.ssh\id_rsa.pub ## When On Local Laptop 
 $sshPublicKey = cat /home/YourUser/.ssh/id_rsa.pub ## When inside Azure Cloud Shell
 Add-AzVMSshPublicKey -VM $vmconfig -KeyData $sshPublicKey -Path "/home/demouser/.ssh/authorized_keys"
 
@@ -85,12 +82,14 @@ Get-AzPublicIpAddress -ResourceGroupName $RGName -Name $PublicDns | Select-Objec
 
 ssh -i /home/YourUser/.ssh/id_rsa demouser@VmPublicIpAddress
 
-
 ##### Inside the Ubuntu VM
 ```
 sudo apt-get -y update
 sudo apt-get -y install nginx
 ```
+##### Inside the Ubuntu VM
+
+##### From Our Local Laptop/PC
 # visit the URL
 http://VmPublicIpAddress
-
+##### From Our Local Laptop/PC

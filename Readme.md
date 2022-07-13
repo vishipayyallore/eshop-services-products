@@ -77,6 +77,11 @@ Description: **`To Be Done`**
 
 ![Verify IIS Server inside Windows VM |150x150](./Documentation/Images/S6/WinVM_Using_PowerShell_1.PNG)
 
+**Ubuntu VM using PowerShell**
+![Ubuntu VM using PowerShell |150x150](./Documentation/Images/S6/UbuntuVM_Using_PowerShell.PNG)
+
+![Verify Nginx Server inside Ubuntu VM |150x150](./Documentation/Images/S6/UbuntuVM_Using_PowerShell_1.PNG)
+
 ## Introduction to `Azure CLI` (`3 Minutes`)
 
 > 1. Discussion and Demo
