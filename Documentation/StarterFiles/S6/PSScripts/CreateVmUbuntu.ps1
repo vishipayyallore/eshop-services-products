@@ -1,6 +1,6 @@
 # Variables
 $SubscriptionName = "Your Subscription Name"
-$RGName = "rg-az204-psubuntu-dev-001"
+$RGName = "rg-dnlh-eshop-dev-001"
 $LocationName = "CentralUS"
 $BaseName = "jul2022ubuntu"
 $VmName = "vm$($BaseName)"
