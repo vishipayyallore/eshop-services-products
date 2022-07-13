@@ -20,11 +20,10 @@ $ImageName = "Win2019Datacenter"
 # Set-AzContext -SubscriptionName $SubscriptionName
 
 # View All subscriptions
-Get-AzSubscription
+# Get-AzSubscription
+# Get-AzVm
+# Get-AzResourceGroup | Format-Table
 
-Get-AzVm
-
-Get-AzResourceGroup | Format-Table
 New-AzResourceGroup -Name $RGName -Location $LocationName -Tag @{environment = "dev"; Contact = "Swamy" }
 
 $username = 'demouser'
@@ -50,8 +49,9 @@ mstsc /v:publicIpAddress
 # From within the newly created VM
 # PS:> 
 Install-WindowsFeature -name Web-Server -IncludeManagementTools
+# From within the newly created VM
 
-# visit the URL
+# From your Laptop/PC visit the URL
 http://IpAddress-Of-Newly-Created-VM
 
 # Stop-AzVm -Name $VmName -ResourceGroupName $RGName
