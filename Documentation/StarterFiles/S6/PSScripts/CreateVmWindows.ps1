@@ -54,8 +54,6 @@ Install-WindowsFeature -name Web-Server -IncludeManagementTools
 # visit the URL
 http://IpAddress-Of-Newly-Created-VM
 
-Stop-AzVm -Name $VmName -ResourceGroupName $RGName
-
-Remove-AzVM -Name $VmName -ResourceGroupName $RGName
-
-Remove-AzResourceGroup -Name $RGName
+# Stop-AzVm -Name $VmName -ResourceGroupName $RGName
+# Remove-AzVM -Name $VmName -ResourceGroupName $RGName
+# Remove-AzResourceGroup -Name $RGName
