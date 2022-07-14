@@ -69,8 +69,9 @@ Description: **`To Be Done`**
 ## Create a Windows & Ubuntu Virtual Machine in using .PS1 (`4 Minutes`)
 
 > 1. Discussion and Demo
-> 1. Creating [Windows VM](./Documentation/StarterFiles/S6/CreateVmWindows.ps1)
-> 1. Creating [Ubuntu VM](./Documentation/StarterFiles/S6/CreateVmUbuntu.ps1)
+> 1. Search [AzVMImage](./Documentation/StarterFiles/S6/PSScripts/SearchVms.ps1)
+> 1. Creating [Windows VM](./Documentation/StarterFiles/S6/PSScripts/CreateVmWindows.ps1)
+> 1. Creating [Ubuntu VM](./Documentation/StarterFiles/S6/PSScripts/CreateVmUbuntu.ps1)
 
 **Windows VM using PowerShell**
 ![Windows VM using PowerShell |150x150](./Documentation/Images/S6/WinVM_Using_PowerShell.PNG)
