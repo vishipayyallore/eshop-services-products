@@ -1,5 +1,5 @@
 # Variables
-$SubscriptionName = "Your Subscription Name"
+# $SubscriptionName = "Your Subscription Name"
 $RGName = "rg-dnlh-eshop-dev-002"
 $LocationName = "CentralUS"
 $BaseName = "jul2022ubuntu"
@@ -11,7 +11,7 @@ $NicName = "nic$($BaseName)"
 $PublicDns = "publicdns$($BaseName)$(Get-Random)"
 $PortsToOpen = 80, 22
 $username = 'demouser'
-$password = ConvertTo-SecureString 'ToBeDone' -AsPlainText -Force
+$password = ConvertTo-SecureString 'NoPassword@1' -AsPlainText -Force
 $NsgRuleForSsh = "NetworkSecurityGroupRuleForSSH"
 $NsgRuleForWeb = "NetworkSecurityGroupRuleForWeb"
 
