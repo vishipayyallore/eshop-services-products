@@ -128,6 +128,9 @@ az account list-locations -o table
 > 1. Providers - Official, Verified, and Community
 > 1. Terrafrom Configuration Files OR Terraform Manifest Files
 > 1. Blocks | Arguments | Identifiers | Comments | Attributes Refernce | Variables | Outputs | Resources | Templates | etc.
+> 1. Create a Resource Group
+> 1. Create a Virtual Network
+> 1. Create a Static Web Site
 
 ```
 BlockType Provider_ResourceType ResourceName
@@ -153,6 +156,9 @@ terraform apply
 terraform destroy
 terraform show
 ```
+
+**Create Resource Group using Terraform **
+![Create Resource Group using Terraform |150x150](./Documentation/Images/S6/Terraform_ResourceGroup.PNG)
 
 ## Review/Q & A/Panel Discussion (`5 Minutes`)
 
