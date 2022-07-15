@@ -98,10 +98,12 @@ az account list-locations -o table
 > 1. Discussion and Demo
 
 ```
-az appservice plan create --name plan-simplesite15jul2022 --resource-group rg-womd-dev-002 --location eastus --sku B1 
+az appservice plan create --name plan-simplesite15jul2022 --resource-group rg-womd-dev-002 --location eastus --sku B1
 
 az webapp up --location eastus --name app-simplesite15jul2022 --resource-group rg-womd-dev-002 --plan plan-simplesite15jul2022 --html
 ```
+
+![Az Web App with Static Site |150x150](./Documentation/Images/S6/Az_WebApp_Static_Site.PNG)
 
 ## What is IaC? (`3 Minutes`)
 
