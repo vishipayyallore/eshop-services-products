@@ -157,8 +157,11 @@ terraform destroy
 terraform show
 ```
 
-**Create Resource Group using Terraform **
+**Create Resource Group using Terraform**
 ![Create Resource Group using Terraform |150x150](./Documentation/Images/S6/Terraform_ResourceGroup.PNG)
+
+**Create Virtual Network using Terraform**
+![Create Virtual Network using Terraform |150x150](./Documentation/Images/S6/Terraform_VNet.PNG)
 
 ## Review/Q & A/Panel Discussion (`5 Minutes`)
 
