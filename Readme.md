@@ -46,7 +46,7 @@ Description: **`To Be Done`**
 > 1. Deploy SQL Server, Database using ARM + .PS1 (`5 Minutes`)
 > 1. Deplopy App Service, Web App using ARM + AZ CLI .sh (`5 Minutes`)
 > 1. Introduction to Terraform (`5 Minutes`)
-> 1. Deploy Resource Group, Virtual Network, and Static Website using Terraform (`10 Minutes`)
+> 1. Deploy Resource Group, Virtual Network, and Storage Account using Terraform (`10 Minutes`)
 > 1. Review/Q & A/Panel Discussion (`5 Minutes`)
 > 1. What is next in `Session 6`? (`5 Minutes`)
 
@@ -122,12 +122,15 @@ az account list-locations -o table
 > 1. Discussion and Demo
 > 1. Private and Public Clouds. HashiCorp Configuration Language (HCL - Declarative Language)
 
-## Deploy Resource Group, Virtual Network, and Static Website using Terraform (`10 Minutes`)
+## Deploy Resource Group, Virtual Network, and Storage Account using Terraform (`10 Minutes`)
 
 > 1. Discussion and Demo
 > 1. Providers - Official, Verified, and Community
 > 1. Terrafrom Configuration Files OR Terraform Manifest Files
 > 1. Blocks | Arguments | Identifiers | Comments | Attributes Refernce | Variables | Outputs | Resources | Templates | etc.
+> 1. Create a Resource Group
+> 1. Create a Network Security Group (NSG), Virtual Network, and Subnet
+> 1. Create a Storage Account
 
 ```
 BlockType Provider_ResourceType ResourceName
@@ -153,6 +156,15 @@ terraform apply
 terraform destroy
 terraform show
 ```
+
+**Create Resource Group using Terraform**
+![Create Resource Group using Terraform |150x150](./Documentation/Images/S6/Terraform_ResourceGroup.PNG)
+
+**Network Security Group (NSG), Virtual Network, and Subnet using Terraform**
+![Create Virtual Network using Terraform |150x150](./Documentation/Images/S6/Terraform_VNet.PNG)
+
+**Storage Account using Terraform**
+![Create Storage Account using Terraform |150x150](./Documentation/Images/S6/Terraform_StorageAccount.PNG)
 
 ## Review/Q & A/Panel Discussion (`5 Minutes`)
 
