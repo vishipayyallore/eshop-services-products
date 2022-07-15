@@ -117,11 +117,17 @@ az webapp up --location eastus --name app-simplesite15jul2022 --resource-group r
 
 > 1. Discussion and Demo
 
-## Deploy SQL Server, Database using ARM + .PS1 (`5 Minutes`)
+## Deploy SQL Server, Database using ARM + AZ (`5 Minutes`)
 
 > 1. Discussion and Demo
 
-## Deplopy App Service, Web App using ARM + AZ CLI .sh (`5 Minutes`)
+```
+az deployment group create --resource-group rg-womd-dev-002 --template-file sql-server.deploy.json --parameters sql-server.parameters.json
+```
+
+![ARM Template using AZ |150x150](./Documentation/Images/S6/ARM_Sql_Server_Db.PNG)
+
+## Deplopy App Service, Web App using ARM + AZ CLI (`5 Minutes`)
 
 > 1. Discussion and Demo
 
