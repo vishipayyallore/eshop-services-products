@@ -31,7 +31,7 @@ provider "azurerm" {
 
 # Resource Block - Resource Group
 resource "azurerm_resource_group" "rgwomdtest002" {
-  name     = "rg-womd-test-002" // Azure Resource Group Name
+  name     = "rg-womd-test-003" // Azure Resource Group Name
   location = "eastus"           // Azure Region
 
   tags = {

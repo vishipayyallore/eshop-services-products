@@ -20,6 +20,7 @@ terraform {
   #   container_name       = "terraformstate"
   #   key                  = "azrg-terraform.tfstate"
   # }
+
 }
 
 # Provider Block

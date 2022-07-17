@@ -100,6 +100,8 @@ terraform show
 > 1. Terraform State - The state file is a file that contains the state of your infrastructure.
 > 1. Terraform State - `Local state` file `terraform.tfstate` are stored in the your project directory.
 > 1. Terraform State - `Remote state` - Terraform writes the state data to a remote data store (Terraform Cloud, HashiCorp Consul, Amazon S3, Azure Blob Storage, Google Cloud Storage, Alibaba Cloud OSS, and more)
+> 1. If you wish to attempt automatic migration of the state, use `"terraform init -migrate-state"`
+> 1. If you wish to store the current configuration with no changes to the state, use `"terraform init -reconfigure"`
 
 **References:**
 
