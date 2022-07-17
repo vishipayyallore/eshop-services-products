@@ -65,9 +65,6 @@ Description: **`To Be Done`**
 > 1. Providers - Official, Verified, and Community
 > 1. Terrafrom Configuration Files OR Terraform Manifest Files
 > 1. Blocks | Arguments | Identifiers | Comments | Attributes Reference | Variables | Outputs | Resources | Templates | etc.
-> 1. Create a Resource Group
-> 1. Create a Network Security Group (NSG), Virtual Network, and Subnet
-> 1. Create a Storage Account
 
 ```
 BlockType Provider_ResourceType ResourceName
