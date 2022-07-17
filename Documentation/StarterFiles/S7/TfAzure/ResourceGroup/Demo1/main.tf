@@ -5,13 +5,22 @@
 
 # Terraform/Settings Block
 terraform {
-  required_version = ">= 1.2.4"
+  required_version = ">= 1.2.5"
+
   required_providers {
     azurerm = {
       source  = "hashicorp/azurerm"
       version = "~> 3.0"
     }
   }
+
+  # backend "azurerm" {
+  #   resource_group_name  = "rg-dnlh-12mar-dev"
+  #   storage_account_name = "sttfstatedhls"
+  #   container_name       = "terraformstate"
+  #   key                  = "azrg-terraform.tfstate"
+  # }
+
 }
 
 # Provider Block

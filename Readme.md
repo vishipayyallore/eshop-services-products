@@ -42,9 +42,10 @@ Description: **`To Be Done`**
 > 1. Terraform State (`5 Minutes`)
 > 1. Deploy `Resource Group`, `Virtual Network`, and `Storage Account` to Azure using Terraform (`10 Minutes`)
 > 1. DevOps from 30,000 feet (`1 Minutes`)
-> 1. Pull Request (`5 Minutes`)
+> 1. Pull Request Process (`5 Minutes`)
 > 1. Infrastructure AKS - Gated Build, and Continuous Integration Build using `GitHub Actions` (`5 Minutes`)
 > 1. Infrastructure AKS - Release Pipeline using `GitHub Actions` (`5 Minutes`)
+> 1. Deploy Products Microservice into AKS (`5 Minutes`) - **Stretch Goal**
 > 1. Deploy `S3 Bucket` to AWS using Terraform (`5 Minutes`) - **Stretch Goal**
 > 1. Review/Q & A/Panel Discussion (`5 Minutes`)
 > 1. What is next in `Session 8`? (`5 Minutes`)
@@ -64,9 +65,6 @@ Description: **`To Be Done`**
 > 1. Providers - Official, Verified, and Community
 > 1. Terrafrom Configuration Files OR Terraform Manifest Files
 > 1. Blocks | Arguments | Identifiers | Comments | Attributes Reference | Variables | Outputs | Resources | Templates | etc.
-> 1. Create a Resource Group
-> 1. Create a Network Security Group (NSG), Virtual Network, and Subnet
-> 1. Create a Storage Account
 
 ```
 BlockType Provider_ResourceType ResourceName
@@ -99,10 +97,20 @@ terraform show
 > 1. Terraform State - The state file is a file that contains the state of your infrastructure.
 > 1. Terraform State - `Local state` file `terraform.tfstate` are stored in the your project directory.
 > 1. Terraform State - `Remote state` - Terraform writes the state data to a remote data store (Terraform Cloud, HashiCorp Consul, Amazon S3, Azure Blob Storage, Google Cloud Storage, Alibaba Cloud OSS, and more)
+> 1. If you wish to attempt automatic migration of the state, use `"terraform init -migrate-state"`
+> 1. If you wish to store the current configuration with no changes to the state, use `"terraform init -reconfigure"`
 
 **References:**
 
 > 1. [Terraform State - Remote](https://www.terraform.io/language/state/remote)
+
+**Terraform `Local` State**
+![Terraform Local State |150x150](./Documentation/Images/S7/TfLocalState_FilesAndContents.PNG)
+
+**Terraform `Remote` State**
+![Azure Storage and Container to store Terraform State |150x150](./Documentation/Images/S7/TfRemoteState_Container.PNG)
+
+![Terraform State Contents |150x150](./Documentation/Images/S7/TfRemoteState_Contents.PNG)
 
 ## Deploy Resource Group, Virtual Network, and Storage Account to Azure using Terraform (`10 Minutes`)
 
@@ -128,7 +136,7 @@ terraform show
 
 > 1. [Azure DevOps](https://docs.microsoft.com/en-us/azure/devops/user-guide/what-is-azure-devops?view=azure-devops)
 
-## Pull Request (`5 Minutes`)
+## Pull Request Process (`5 Minutes`)
 
 > 1. Discussion and Demo
 
@@ -139,6 +147,10 @@ terraform show
 > 1. Discussion and Demo
 
 ## Infrastructure AKS - Release Pipeline using `GitHub Actions` (`5 Minutes`)
+
+> 1. Discussion and Demo
+
+## Deploy Products Microservice into AKS (`5 Minutes`) - **Stretch Goal**
 
 > 1. Discussion and Demo
 

@@ -5,13 +5,22 @@
 
 # Terraform/Settings Block
 terraform {
-  required_version = ">= 1.2.4"
+  required_version = ">= 1.2.5"
+
   required_providers {
     azurerm = {
       source  = "hashicorp/azurerm"
       version = "~> 3.0"
     }
   }
+
+  backend "azurerm" {
+    resource_group_name  = "rg-dnlh-12mar-dev"
+    storage_account_name = "sttfstatedhls"
+    container_name       = "terraformstate"
+    key                  = "azvnet-nsg-terraform.tfstate"
+  }
+
 }
 
 # Provider Block
@@ -22,7 +31,7 @@ provider "azurerm" {
 
 # Resource Block - Resource Group
 resource "azurerm_resource_group" "rgwomdtest002" {
-  name     = "rg-womd-test-002" // Azure Resource Group Name
+  name     = "rg-womd-test-003" // Azure Resource Group Name
   location = "eastus"           // Azure Region
 
   tags = {
