@@ -18,7 +18,7 @@ terraform {
     resource_group_name  = "rg-dnlh-12mar-dev"
     storage_account_name = "sttfstatedhls"
     container_name       = "terraformstate"
-    key                  = "azstorage-terraformstate.tfstate"
+    key                  = "azstorage-terraform.tfstate"
   }
 
 }

@@ -5,7 +5,7 @@
 
 # Terraform/Settings Block
 terraform {
-  required_version = ">= 1.2.4"
+  required_version = ">= 1.2.5"
 
   required_providers {
     azurerm = {
@@ -18,7 +18,7 @@ terraform {
   #   resource_group_name  = "rg-dnlh-12mar-dev"
   #   storage_account_name = "sttfstatedhls"
   #   container_name       = "terraformstate"
-  #   key                  = "azrg-terraformstate.tfstate"
+  #   key                  = "azrg-terraform.tfstate"
   # }
 }
 
