@@ -58,7 +58,7 @@ Description: **`To Be Done`**
 > 1. Discussion and Demo
 > 1. Private and Public Clouds. HashiCorp Configuration Language (HCL - Declarative Language)
 
-## Deploy Resource Group, Virtual Network, and Storage Account using Terraform (`10 Minutes`)
+## Hands-on with local resources using Terraform (main.tf, variables.tf, and output.tf) (`10 Minutes`)
 
 > 1. Discussion and Demo
 > 1. Providers - Official, Verified, and Community
@@ -93,14 +93,46 @@ terraform destroy
 terraform show
 ```
 
+## Terraform State (`5 Minutes`)
+
+> 1. Discussion and Demo
+> 1. Terraform State - The state file is a file that contains the state of your infrastructure.
+> 1. Terraform State - `Local state` file `terraform.tfstate` are stored in the your project directory.
+> 1. Terraform State - `Remote state` - Terraform writes the state data to a remote data store (Terraform Cloud, HashiCorp Consul, Amazon S3, Azure Blob Storage, Google Cloud Storage, Alibaba Cloud OSS, and more)
+
+**References:**
+
+> 1. [Terraform State - Remote](https://www.terraform.io/language/state/remote)
+
+## Deploy Resource Group, Virtual Network, and Storage Account using Terraform (`10 Minutes`)
+
+> 1. Discussion and Demo
+> 1. Create Resource Group using Terraform in Azure
+> 1. Create Virtual Network using Terraform in Azure
+> 1. Create Storage Account using Terraform in Azure
+
 **Create Resource Group using Terraform**
-![Create Resource Group using Terraform |150x150](./Documentation/Images/S6/Terraform_ResourceGroup.PNG)
+![Create Resource Group using Terraform |150x150](./Documentation/Images/S7/Terraform_ResourceGroup.PNG)
 
 **Network Security Group (NSG), Virtual Network, and Subnet using Terraform**
-![Create Virtual Network using Terraform |150x150](./Documentation/Images/S6/Terraform_VNet.PNG)
+![Create Virtual Network using Terraform |150x150](./Documentation/Images/S7/Terraform_VNet.PNG)
 
 **Storage Account using Terraform**
-![Create Storage Account using Terraform |150x150](./Documentation/Images/S6/Terraform_StorageAccount.PNG)
+![Create Storage Account using Terraform |150x150](./Documentation/Images/S7/Terraform_StorageAccount.PNG)
+
+## DevOps from 30,000 feet (`1 Minutes`)
+
+> 1. Discussion and Demo
+
+**Reference(s):**
+
+> 1. [Azure DevOps](https://docs.microsoft.com/en-us/azure/devops/user-guide/what-is-azure-devops?view=azure-devops)
+
+## Pull Request (`5 Minutes`)
+
+> 1. Discussion and Demo
+
+![Pull Request Process |150x150](./Documentation/Images/S7/PullRequest_Process.PNG)
 
 ## Review/Q & A/Panel Discussion (`5 Minutes`)
 
