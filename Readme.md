@@ -114,7 +114,7 @@ terraform show
 
 ## `**Wish List**`
 
-## New Features (`10 Minutes`)
+## New Features
 
 > 1. Using Record for Product Dto
 > 1. Using ResponseDto for sending Unified Response
