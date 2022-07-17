@@ -105,6 +105,14 @@ terraform show
 
 > 1. [Terraform State - Remote](https://www.terraform.io/language/state/remote)
 
+**Terraform `Local` State**
+![Terraform Local State |150x150](./Documentation/Images/S7/TfLocalState_FilesAndContents.PNG)
+
+**Terraform `Remote` State**
+![Azure Storage and Container to store Terraform State |150x150](./Documentation/Images/S7/TfRemoteState_Container.PNG)
+
+![Terraform State Contents |150x150](./Documentation/Images/S7/TfRemoteState_Contents.PNG)
+
 ## Deploy Resource Group, Virtual Network, and Storage Account to Azure using Terraform (`10 Minutes`)
 
 > 1. Discussion and Demo
