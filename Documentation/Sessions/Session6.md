@@ -3,10 +3,10 @@
 ## What are we going to do today?
 
 > 1. Azure Resource Creation using Portal (`5 Minutes`)
-> 1. Introduction to PowerShell and Az Module (`5 Minutes`)
-> 1. Create a Windows & Ubuntu Virtual Machine in using PowerShell (`10 Minutes`)
-> 1. Introduction to `Azure CLI` (`5 Minutes`)
-> 1. Create a Web App in using `Azure CLI` (`5 Minutes`)
+> 1. Introduction to PowerShell and Az Module (`3 Minutes`)
+> 1. Create a Windows & Ubuntu Virtual Machine in using PowerShell (`12 Minutes`)
+> 1. Introduction to `Azure CLI` (`4 Minutes`)
+> 1. Create a Web App in using `Azure CLI` (`6 Minutes`)
 > 1. What is IaC? (`5 Minutes`)
 > 1. Introduction to ARM Templates (`5 Minutes`)
 > 1. Deploy SQL Server, Database using ARM, and Azure CLI (`5 Minutes`)
@@ -22,11 +22,11 @@
 
 ![Resource Group with Tags |150x150](../Images/S6/RgUsingAzPortal.PNG)
 
-## Introduction to PowerShell and Az Module (`5 Minutes`)
+## Introduction to PowerShell and Az Module (`3 Minutes`)
 
 > 1. Discussion and Demo
 
-## Create a Windows & Ubuntu Virtual Machine in using PowerShell (`10 Minutes`)
+## Create a Windows & Ubuntu Virtual Machine in using PowerShell (`12 Minutes`)
 
 > 1. Discussion and Demo
 > 1. Search [AzVMImage](./Documentation/StarterFiles/S6/PSScripts/SearchVms.ps1)
@@ -43,7 +43,7 @@
 
 ![Verify Nginx Server inside Ubuntu VM |150x150](../Images/S6/UbuntuVM_Using_PowerShell_1.PNG)
 
-## Introduction to `Azure CLI` (`5 Minutes`)
+## Introduction to `Azure CLI` (`4 Minutes`)
 
 > 1. Discussion and Demo
 
@@ -53,7 +53,7 @@ az account list
 az account list-locations -o table
 ```
 
-## Create a Web App in using `Azure CLI` (`5 Minutes`)
+## Create a Web App in using `Azure CLI` (`6 Minutes`)
 
 > 1. Discussion and Demo
 
