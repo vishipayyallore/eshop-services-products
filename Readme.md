@@ -146,7 +146,7 @@ terraform show
 
 > 1. Discussion and Demo
 
-## Infrastructure AKS - Release Pipeline using `GitHub Actions` (`5 Minutes`)
+## Deploy AKS Infrastructure - Release Pipeline using `GitHub Actions` (`5 Minutes`)
 
 > 1. Discussion and Demo
 
