@@ -43,8 +43,8 @@ Description: **`To Be Done`**
 > 1. Deploy `Resource Group`, `Virtual Network`, and `Storage Account` to Azure using Terraform (`10 Minutes`)
 > 1. DevOps from 30,000 feet (`1 Minutes`)
 > 1. Pull Request Process (`5 Minutes`)
-> 1. Infrastructure AKS - Gated Build, and Continuous Integration Build using `GitHub Actions` (`5 Minutes`)
-> 1. Infrastructure AKS - Release Pipeline using `GitHub Actions` (`5 Minutes`)
+> 1. Gated Build, and Continuous Integration Build using `GitHub Actions` for AKS Infrastructure (`5 Minutes`)
+> 1. Deploy AKS Infrastructure through Release Pipeline using `GitHub Actions` (`5 Minutes`)
 > 1. Deploy Products Microservice into AKS (`5 Minutes`)
 > 1. Deploy `S3 Bucket` to AWS using Terraform (`5 Minutes`) - **Stretch Goal**
 > 1. Review/Q & A/Panel Discussion (`5 Minutes`)
@@ -142,11 +142,11 @@ terraform show
 
 ![Pull Request Process |150x150](./Documentation/Images/S7/PullRequest_Process.PNG)
 
-## Infrastructure AKS - Gated Build, and Continuous Integration Build using `GitHub Actions` (`5 Minutes`)
+## Gated Build, and Continuous Integration Build using `GitHub Actions` for AKS Infrastructure (`5 Minutes`)
 
 > 1. Discussion and Demo
 
-## Deploy AKS Infrastructure - Release Pipeline using `GitHub Actions` (`5 Minutes`)
+## Deploy AKS Infrastructure through Release Pipeline using `GitHub Actions` (`5 Minutes`)
 
 > 1. Discussion and Demo
 
