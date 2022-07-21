@@ -45,7 +45,7 @@ Description: **`To Be Done`**
 > 1. Pull Request Process (`5 Minutes`)
 > 1. Infrastructure AKS - Gated Build, and Continuous Integration Build using `GitHub Actions` (`5 Minutes`)
 > 1. Infrastructure AKS - Release Pipeline using `GitHub Actions` (`5 Minutes`)
-> 1. Deploy Products Microservice into AKS (`5 Minutes`) - **Stretch Goal**
+> 1. Deploy Products Microservice into AKS (`5 Minutes`)
 > 1. Deploy `S3 Bucket` to AWS using Terraform (`5 Minutes`) - **Stretch Goal**
 > 1. Review/Q & A/Panel Discussion (`5 Minutes`)
 > 1. What is next in `Session 8`? (`5 Minutes`)
@@ -150,7 +150,7 @@ terraform show
 
 > 1. Discussion and Demo
 
-## Deploy Products Microservice into AKS (`5 Minutes`) - **Stretch Goal**
+## Deploy Products Microservice into AKS (`5 Minutes`)
 
 > 1. Discussion and Demo
 
