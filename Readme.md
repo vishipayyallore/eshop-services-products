@@ -67,7 +67,7 @@ Description: **`To Be Done`**
 > 1. Blocks | Arguments | Identifiers | Comments | Attributes Reference | Variables | Outputs | Resources | Templates | etc.
 
 ```
-BlockType Provider_ResourceType ResourceName
+BlockType Provider_ResourceType ResourceIdentifier
 {
    <Identifier> = <Expression> # Arguments
 }
@@ -145,6 +145,11 @@ terraform show
 ## Gated Build, and Continuous Integration Build using `GitHub Actions` for AKS Infrastructure (`5 Minutes`)
 
 > 1. Discussion and Demo
+
+**References:**
+
+> 1. [https://docs.github.com/en/actions/using-workflows/reusing-workflows](https://docs.github.com/en/actions/using-workflows/reusing-workflows)
+> 1. [https://github.blog/2022-02-10-using-reusable-workflows-github-actions](https://github.blog/2022-02-10-using-reusable-workflows-github-actions)
 
 ## Deploy AKS Infrastructure through Release Pipeline using `GitHub Actions` (`5 Minutes`)
 
