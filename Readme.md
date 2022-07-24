@@ -151,9 +151,13 @@ terraform show
 > 1. [https://docs.github.com/en/actions/using-workflows/reusing-workflows](https://docs.github.com/en/actions/using-workflows/reusing-workflows)
 > 1. [https://github.blog/2022-02-10-using-reusable-workflows-github-actions](https://github.blog/2022-02-10-using-reusable-workflows-github-actions)
 
+![Gated Build when PR is Raise |150x150](./Documentation/Images/S7/GatedBuildWhenPR.PNG)
+
 ## Deploy AKS Infrastructure through Release Pipeline using `GitHub Actions` (`5 Minutes`)
 
 > 1. Discussion and Demo
+
+![Release waiting for Approver |150x150](./Documentation/Images/S7/ReleaseWaitingForApprover.PNG)
 
 ## Deploy Products Microservice into AKS (`5 Minutes`)
 
