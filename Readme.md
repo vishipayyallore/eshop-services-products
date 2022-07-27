@@ -45,8 +45,6 @@ Description: **`To Be Done`**
 > 1. Pull Request Process (`5 Minutes`)
 > 1. Gated Build, and Continuous Integration Build using `GitHub Actions` for AKS Infrastructure (`5 Minutes`)
 > 1. Deploy AKS Infrastructure through Release Pipeline using `GitHub Actions` (`5 Minutes`)
-> 1. Deploy Products Microservice into AKS (`5 Minutes`)
-> 1. Deploy `S3 Bucket` to AWS using Terraform (`5 Minutes`) - **Stretch Goal**
 > 1. Review/Q & A/Panel Discussion (`5 Minutes`)
 > 1. What is next in `Session 8`? (`5 Minutes`)
 
@@ -159,21 +157,48 @@ terraform show
 
 ![Release waiting for Approver |150x150](./Documentation/Images/S7/ReleaseWaitingForApprover.PNG)
 
-## Deploy Products Microservice into AKS (`5 Minutes`)
-
-> 1. Discussion and Demo
-
-## Deploy `S3 Bucket` to AWS using Terraform (`5 Minutes`) - **Stretch Goal**
-
-> 1. Discussion and Demo
-
 ## Review/Q & A/Panel Discussion (`5 Minutes`)
 
 > 1. Discussion
 
 ## What is next in `Session 8`? (`5 Minutes`) on `19-Aug-2022`
 
-> 1. Discussion
+> 1. Deploy `S3 Bucket` to AWS using Terraform (`5 Minutes`)
+> 1. Discussion on Infrastructure using Terraform (`5 Minutes`)
+> 1. Deploy Products Microservice into AKS (`5 Minutes`)
+> 1. Verify the Deployments using Postman (`10 Minutes`)
+> 1. Unit Testing (`10 Minutes`)
+> 1. Static code Analysis (`10 Minutes`)
+> 1. Code Review (`5 Minutes`)
+> 1. Software Composition (`5 Minutes`)
+
+## Deploy `S3 Bucket` to AWS using Terraform (`5 Minutes`)
+
+> 1. Discussion and Demo
+
+## Discussion on Infrastructure using Terraform (`5 Minutes`)
+
+> 1. Discussion and Demo
+
+![Resources creation using Terraform |150x150](./Documentation/Images/S8/Infra_In_Terraform.PNG)
+
+## Deploy Products Microservice into AKS (`5 Minutes`)
+
+> 1. Discussion and Demo
+
+## Verify the Deployments using Postman (`10 Minutes`)
+
+> 1. Discussion and Demo
+> 1. CRUD operations using Postman
+
+## Unit Testing (`10 Minutes`)
+
+> 1. Discussion and Demo
+> 1. Test Coverage
+
+## Static code Analysis (`10 Minutes`)
+
+> 1. Discussion and Demo
 
 ---
 
