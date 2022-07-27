@@ -171,7 +171,7 @@ terraform show
 
 > 1. Discussion
 
-## What is next in `Session 7`? (`5 Minutes`)
+## What is next in `Session 8`? (`5 Minutes`) on `19-Aug-2022`
 
 > 1. Discussion
 
