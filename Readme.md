@@ -106,10 +106,10 @@ terraform show
 
 ```JSON
   backend "azurerm" {
-    resource_group_name  = "rg-dnlh-12mar-dev"
-    storage_account_name = "sttfstatedhls"
-    container_name       = "terraformstate"
-    key                  = "azstorage-terraform.tfstate"
+    resource_group_name  = "resource_group_name"
+    storage_account_name = "storage_account_name"
+    container_name       = "container_name"
+    key                  = "filename.tfstate"
   }
 ```
 
