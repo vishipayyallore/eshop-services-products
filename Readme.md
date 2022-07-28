@@ -89,6 +89,10 @@ terraform destroy
 terraform show
 ```
 
+**Multiple Providers**
+![Terraform Multiple Providers |150x150](./Documentation/Images/S7/TFB_01.PNG)
+
+
 ## Terraform State (`5 Minutes`)
 
 > 1. Discussion and Demo
