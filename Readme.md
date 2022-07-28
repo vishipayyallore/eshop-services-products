@@ -90,8 +90,10 @@ terraform show
 ```
 
 **Multiple Providers**
-![Terraform Multiple Providers |150x150](./Documentation/Images/S7/TFB_01.PNG)
+![Terraform Multiple Providers |150x150](./Documentation/Images/S7/TFB_01_MultipleProviders.PNG)
 
+**Resource Dependencies**
+![Terraform Multiple Providers |150x150](./Documentation/Images/S7/TFB_04_ResourceDependencies.PNG)
 
 ## Terraform State (`5 Minutes`)
 

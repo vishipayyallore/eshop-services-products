@@ -1,5 +1,5 @@
 /*
-    Description: This is a simple example of a Terraform lifecycle demo.
+    Description: This is a simple example of a Terraform Resource Dependencies demo.
 */
 
 terraform {
@@ -44,7 +44,7 @@ resource "local_file" "fileforpet" {
   content  = random_pet.petdetails.id # Implicit Dependencies
   filename = var.filenameforpet
   depends_on = [
-    random_pet.petdetails
+    random_pet.petdetails # Explicit Dependencies
   ]
 }
 
