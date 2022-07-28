@@ -30,10 +30,10 @@ provider "random" {
 resource "local_file" "file" {
   filename        = var.filename
   file_permission = var.permission
-  content         = random_string.string.id # Implicit Dependencies
+  content         = random_string.stringdata.id # Implicit Dependencies
 }
 
-resource "random_string" "string" {
+resource "random_string" "stringdata" {
   length = var.length
   keepers = {
     length = var.length
@@ -58,6 +58,3 @@ resource "random_pet" "petdetails" {
 }
 
 
-output "petdetails" {
-  value = random_pet.petdetails
-}
