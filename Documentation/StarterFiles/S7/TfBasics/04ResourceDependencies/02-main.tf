@@ -41,7 +41,11 @@ resource "random_string" "string" {
 }
 
 resource "local_file" "fileforpet" {
-  content  = random_pet.petdetails.id # Implicit Dependencies
+  content  = <<EOT
+                This is a file for pet.
+                It also shows explicit dependencies.
+                ${random_pet.petdetails.id}
+              EOT
   filename = var.filenameforpet
   depends_on = [
     random_pet.petdetails # Explicit Dependencies
@@ -55,6 +59,3 @@ resource "random_pet" "petdetails" {
 }
 
 
-output "petdetails" {
-  value = random_pet.petdetails
-}
