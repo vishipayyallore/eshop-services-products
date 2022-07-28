@@ -98,6 +98,15 @@ terraform show
 > 1. If you wish to attempt automatic migration of the state, use `"terraform init -migrate-state"`
 > 1. If you wish to store the current configuration with no changes to the state, use `"terraform init -reconfigure"`
 
+```JSON
+  backend "azurerm" {
+    resource_group_name  = "rg-dnlh-12mar-dev"
+    storage_account_name = "sttfstatedhls"
+    container_name       = "terraformstate"
+    key                  = "azstorage-terraform.tfstate"
+  }
+```
+
 **References:**
 
 > 1. [Terraform State - Remote](https://www.terraform.io/language/state/remote)
