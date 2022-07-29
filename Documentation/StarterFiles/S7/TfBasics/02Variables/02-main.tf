@@ -1,5 +1,5 @@
 /*
-    Description: This is a simple example of a Terraform Multiple Providers demo.
+    Description: This is a simple example of a Terraform Variables.
 */
 
 terraform {
@@ -28,15 +28,15 @@ provider "random" {
 }
 
 resource "local_file" "file" {
-  filename        = "./data/hello_world.txt"
-  file_permission = 0700
-  content         = "Hello Terraform World !!"
+  filename        = var.filename
+  file_permission = var.permission
+  content         = var.content
 }
 
 resource "random_string" "string" {
-  length = 10
+  length = var.length
   keepers = {
-    length = 10
+    length = var.length
   }
 }
 
