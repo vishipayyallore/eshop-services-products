@@ -95,6 +95,9 @@ terraform show
 **Variables**
 ![Terraform Variables |150x150](./Documentation/Images/S7/TFB_02_Variables.PNG)
 
+**Attributes and Outputs**
+![Terraform Variables |150x150](./Documentation/Images/S7/TFB_03_AttributesOutputs.PNG)
+
 **Resource Dependencies**
 ![Terraform Resource Dependencies |150x150](./Documentation/Images/S7/TFB_04_ResourceDependencies.PNG)
 

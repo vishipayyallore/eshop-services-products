@@ -33,7 +33,7 @@ resource "local_file" "file" {
   content         = var.content
 }
 
-resource "random_string" "string" {
+resource "random_string" "stringdata" {
   length = var.length
   keepers = {
     length = var.length

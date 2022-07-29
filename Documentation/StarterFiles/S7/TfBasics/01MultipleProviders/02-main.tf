@@ -33,7 +33,7 @@ resource "local_file" "file" {
   content         = "Hello Terraform World !!"
 }
 
-resource "random_string" "string" {
+resource "random_string" "stringdata" {
   length = 10
   keepers = {
     length = 10
