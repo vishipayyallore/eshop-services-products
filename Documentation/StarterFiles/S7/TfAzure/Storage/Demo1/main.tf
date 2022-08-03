@@ -5,7 +5,7 @@
 
 # Terraform/Settings Block
 terraform {
-  required_version = ">= 1.2.5"
+  required_version = ">= 1.2.6"
 
   required_providers {
     azurerm = {
@@ -67,4 +67,23 @@ resource "azurerm_storage_account" "storage_account" {
     environment = "Test"
     contact     = "Swamy PKV"
   }
+}
+
+#Add index.html to blob storage
+resource "azurerm_storage_blob" "index_html" {
+  name                   = "index.html"
+  storage_account_name   = azurerm_storage_account.storage_account.name
+  storage_container_name = "$web"
+  type                   = "Block"
+  content_type           = "text/html"
+  source_content         = "<h1>This is static content coming from the Terraform</h1>"
+}
+
+
+output "static_website_url" {
+  value = azurerm_storage_account.storage_account.primary_web_endpoint
+}
+
+output "website_details" {
+  value = azurerm_storage_account.storage_account.static_website
 }

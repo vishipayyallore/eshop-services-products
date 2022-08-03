@@ -1,9 +1,9 @@
 /*
-    Description: This is a simple example of a Terraform Resource Dependencies demo.
+    Description: This is a simple example of a Terraform lifecycle demo.
 */
 
 terraform {
-  required_version = ">= 1.2.5"
+  required_version = ">= 1.2.6"
   required_providers {
 
     local = {
@@ -30,25 +30,24 @@ provider "random" {
 resource "local_file" "file" {
   filename        = var.filename
   file_permission = var.permission
-  content         = random_string.string.id # Implicit Dependencies
+  content         = random_string.stringdata.id # Implicit Dependencies
 }
 
-resource "random_string" "string" {
+resource "random_string" "stringdata" {
   length = var.length
   keepers = {
     length = var.length
   }
+  lifecycle {
+    create_before_destroy = true
+  }
 }
 
 resource "local_file" "fileforpet" {
-  content  = <<EOT
-                This is a file for pet.
-                It also shows explicit dependencies.
-                ${random_pet.petdetails.id}
-              EOT
+  content  = random_pet.petdetails.id # Implicit Dependencies
   filename = var.filenameforpet
   depends_on = [
-    random_pet.petdetails # Explicit Dependencies
+    random_pet.petdetails
   ]
 }
 
