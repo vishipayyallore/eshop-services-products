@@ -1,3 +1,0 @@
-                This is a file for pet.
-                It also shows explicit dependencies.
-                Mr . stinkbug
