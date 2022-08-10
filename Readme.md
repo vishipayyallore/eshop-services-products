@@ -34,58 +34,89 @@ Description: **`To Be Done`**
 
 ---
 
-## Session 7
+![Information |150x150](./Documentation/Images/Information.PNG)
+
+## Session 8
 
 ## What are we going to do today?
 
-> 1. Introduction to Terraform (`5 Minutes`)
-> 1. Hands-on with local resources using Terraform (main.tf, variables.tf, and output.tf) (`10 Minutes`)
-> 1. Terraform State (`5 Minutes`)
-> 1. Deploy `Resource Group`, `Virtual Network`, and `Storage Account` to Azure using Terraform (`10 Minutes`)
-> 1. DevOps from 30,000 feet (`1 Minutes`)
-> 1. Pull Request Process (`5 Minutes`)
-> 1. Gated Build, and Continuous Integration Build using `GitHub Actions` for AKS Infrastructure (`5 Minutes`)
-> 1. Deploy AKS Infrastructure through Release Pipeline using `GitHub Actions` (`5 Minutes`)
+> 1. Deploy `S3 Bucket` and Static Web Site to AWS using Terraform (`5 Minutes`)
+> 1. Discussion on Infrastructure Terraform Configuration files (`5 Minutes`)
+> 1. Discussion on GitHub Actions deploying AKS Infrastructure (`5 Minutes`)
+> 1. Containerize and Deploy Products Microservice into AKS using Shell Scripts (`5 Minutes`)
+> 1. Verify the Deployed `Products` microservice into AKS using Postman (`5 Minutes`)
+> 1. Unit Testing (`10 Minutes`)
+> 1. Static code Analysis (`5 Minutes`)
+> 1. Code Review (`5 Minutes`)
+> 1. Software Composition (`5 Minutes`)
 > 1. Review/Q & A/Panel Discussion (`5 Minutes`)
 > 1. What is next in `Session 8`? (`5 Minutes`)
 
-![Information |150x150](./Documentation/Images/Information.PNG)
-
 ![Faster Your Seat Belt |150x150](./Documentation/Images/SeatBelt.PNG)
 
-
-
-## Deploy `S3 Bucket` to AWS using Terraform (`5 Minutes`)
+## Deploy `S3 Bucket` and Static Web Site to AWS using Terraform (`5 Minutes`)
 
 > 1. Discussion and Demo
+> 1. Cloud Agnostic
 
-## Discussion on Infrastructure using Terraform (`5 Minutes`)
+## Discussion on Infrastructure Terraform Configuration files (`5 Minutes`)
 
 > 1. Discussion and Demo
 
 ![Resources creation using Terraform |150x150](./Documentation/Images/S8/Infra_In_Terraform.PNG)
 
-## Deploy Products Microservice into AKS (`5 Minutes`)
+## Discussion on GitHub Actions deploying AKS Infrastructure (`5 Minutes`)
 
 > 1. Discussion and Demo
 
-## Verify the Deployments using Postman (`10 Minutes`)
+## Containerize and Deploy Products Microservice into AKS using Shell Scripts (`5 Minutes`)
+
+> 1. Discussion and Demo
+
+## Verify the Deployed `Products` microservice into AKS using Postman (`5 Minutes`)
 
 > 1. Discussion and Demo
 > 1. CRUD operations using Postman
+
+![Postman Collections for 8 environments |150x150](./Documentation/Images/S5/Postman_Collections.PNG)
 
 ## Unit Testing (`10 Minutes`)
 
 > 1. Discussion and Demo
 > 1. Test Coverage
 
-## Static code Analysis (`10 Minutes`)
+## Static code Analysis (`5 Minutes`)
 
 > 1. Discussion and Demo
 
+## Code Review (`5 Minutes`)
+
+> 1. Discussion and Demo
+
+## Software Composition (`5 Minutes`)
+
+> 1. Discussion and Demo
+
+## Review/Q & A/Panel Discussion (`5 Minutes`)
+
+> 1. Discussion
+
 ---
 
-## `**Wish List**`
+## What is next in `Session 9`? (`5 Minutes`) on `09-Sep-2022`
+
+> 1. Deploy `S3 Bucket` to AWS using Terraform (`5 Minutes`)
+> 1. Discussion on Infrastructure using Terraform (`5 Minutes`)
+> 1. Deploy Products Microservice into AKS (`5 Minutes`)
+> 1. Verify the Deployments using Postman (`10 Minutes`)
+> 1. Unit Testing (`10 Minutes`)
+> 1. Static code Analysis (`10 Minutes`)
+> 1. Code Review (`5 Minutes`)
+> 1. Software Composition (`5 Minutes`)
+
+---
+
+## `****************************** WISH LIST ******************************`
 
 ## New Features
 
