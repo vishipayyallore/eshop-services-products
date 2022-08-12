@@ -59,6 +59,8 @@ Description: **`To Be Done`**
 > 1. Discussion and Demo
 > 1. Cloud Agnostic
 
+![AWS S3 with Static Web Site |150x150](./Documentation/Images/S8/TF_AWS_S3_StaticWebSite.PNG)
+
 ## Discussion on Infrastructure Terraform Configuration files (`5 Minutes`)
 
 > 1. Discussion and Demo
