@@ -41,7 +41,7 @@ Description: **`To Be Done`**
 ## What are we going to do today?
 
 > 1. Deploy `S3 Bucket` and Static Web Site to AWS using Terraform (`5 Minutes`)
-> 1. Discussion on Infrastructure Terraform Configuration files (`5 Minutes`)
+> 1. Discussion on AKS Infrastructure Terraform Configuration files (`5 Minutes`)
 > 1. Discussion on GitHub Actions deploying AKS Infrastructure (`5 Minutes`)
 > 1. Containerize and Deploy Products Microservice into AKS using Shell Scripts (`5 Minutes`)
 > 1. Verify the Deployed `Products` microservice into AKS using Postman (`5 Minutes`)
@@ -61,7 +61,7 @@ Description: **`To Be Done`**
 
 ![AWS S3 with Static Web Site |150x150](./Documentation/Images/S8/TF_AWS_S3_StaticWebSite.PNG)
 
-## Discussion on Infrastructure Terraform Configuration files (`5 Minutes`)
+## Discussion on AKS Infrastructure Terraform Configuration files (`5 Minutes`)
 
 > 1. Discussion and Demo
 
