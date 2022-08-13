@@ -43,12 +43,13 @@ Description: **`To Be Done`**
 > 1. Deploy `S3 Bucket` and Static Web Site to AWS using Terraform (`5 Minutes`)
 > 1. Discussion on AKS Infrastructure Terraform Configuration files (`5 Minutes`)
 > 1. Discussion on GitHub Actions deploying AKS Infrastructure (`5 Minutes`)
-> 1. Containerize and Deploy Products Microservice into AKS using Shell Scripts (`5 Minutes`)
+> 1. Create Products.API's docker image and upload it to `Docker Hub` using Shell Scripts (`5 Minutes`)
+> 1. Deploy Products Microservice docker image into AKS using Shell Scripts (`5 Minutes`)
 > 1. Verify the Deployed `Products` microservice into AKS using Postman (`5 Minutes`)
-> 1. Unit Testing (`10 Minutes`)
+> 1. Unit Testing (`5 Minutes`)
 > 1. Static code Analysis (`5 Minutes`)
-> 1. Code Review (`5 Minutes`)
 > 1. Software Composition (`5 Minutes`)
+> 1. Code Review (`5 Minutes`)
 > 1. Review/Q & A/Panel Discussion (`5 Minutes`)
 > 1. What is next in `Session 9`? (`5 Minutes`)
 
@@ -71,31 +72,49 @@ Description: **`To Be Done`**
 
 > 1. Discussion and Demo
 
-## Containerize and Deploy Products Microservice into AKS using Shell Scripts (`5 Minutes`)
+![GitHub Actions deploying Infrastructure into Azure |150x150](./Documentation/Images/S8/GitHubActions_AKS_Infra.PNG)
+
+## Create Products.API's docker image and upload it to `Docker Hub` using Shell Scripts (`5 Minutes`)
 
 > 1. Discussion and Demo
+
+![Create And Push Image To Docker |150x150](./Documentation/Images/S8/CreateAndPushImageToDocker.PNG)
+
+## Deploy Products Microservice docker image into AKS using Shell Scripts (`5 Minutes`)
+
+> 1. Discussion and Demo
+
+![Deploy Docker Image into AKS using Scripts |150x150](./Documentation/Images/S8/DeployToAKS.PNG)
+
+![eShop Products API inside AKS |150x150](./Documentation/Images/S8/eshop_ProductsAPI_Inside_AKS.PNG)
 
 ## Verify the Deployed `Products` microservice into AKS using Postman (`5 Minutes`)
 
 > 1. Discussion and Demo
 > 1. CRUD operations using Postman
 
-![Postman Collections for 8 environments |150x150](./Documentation/Images/S5/Postman_Collections.PNG)
+![Validate Products API inside AKS using Postman |150x150](./Documentation/Images/S8/ValidateProductsAPI_insideAKS.PNG)
 
-## Unit Testing (`10 Minutes`)
+## Unit Testing (`5 Minutes`)
 
 > 1. Discussion and Demo
 > 1. Test Coverage
+
+![Unit Testing and Code Coverage |150x150](./Documentation/Images/S8/UnitTesting_CodeCoverage.PNG)
 
 ## Static code Analysis (`5 Minutes`)
 
 > 1. Discussion and Demo
 
-## Code Review (`5 Minutes`)
+![Static Code Analysis |150x150](./Documentation/Images/S8/StaticCodeAnalysis.PNG)
+
+![JFrog scans Docker Images |150x150](./Documentation/Images/S8/JFrog_Scan.PNG)
+
+## Software Composition (`5 Minutes`)
 
 > 1. Discussion and Demo
 
-## Software Composition (`5 Minutes`)
+## Code Review (`5 Minutes`)
 
 > 1. Discussion and Demo
 
