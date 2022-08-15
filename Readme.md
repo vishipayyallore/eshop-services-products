@@ -68,6 +68,14 @@ Description: **`To Be Done`**
 
 ![Resources creation using Terraform |150x150](./Documentation/Images/S8/Infra_In_Terraform.PNG)
 
+**Terraform Environment Variables**
+
+![Environment Variables |150x150](./Documentation/Images/S8/TF_EnvironmentVariables.PNG)
+
+**Terraform Logs**
+
+![Terraform Logs |150x150](./Documentation/Images/S8/Tf_Logs.PNG)
+
 ## Discussion on GitHub Actions deploying AKS Infrastructure (`5 Minutes`)
 
 > 1. Discussion and Demo
