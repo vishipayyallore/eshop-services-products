@@ -65,6 +65,9 @@ Description: **`To Be Done`**
 ## Discussion on AKS Infrastructure Terraform Configuration files (`5 Minutes`)
 
 > 1. Discussion and Demo
+> 1. Terraform Logs for Debugging
+> 1. Terraform State in Azure
+> 1. Terraform State in Terraform Cloud
 
 ![Resources creation using Terraform |150x150](./Documentation/Images/S8/Infra_In_Terraform.PNG)
 
