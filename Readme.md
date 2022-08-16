@@ -77,7 +77,7 @@ Description: **`To Be Done`**
 
 **Terraform Logs**
 
-![Terraform Logs |150x150](./Documentation/Images/S8/Tf_Logs.PNG)
+![Terraform Logs |150x150](./Documentation/Images/S8/TF_Logs.PNG)
 
 **State in Terraform Cloud**
 ![State in Terraform Cloud |150x150](./Documentation/Images/S8/StateInTerraformCloud.PNG)
