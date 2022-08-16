@@ -1,6 +1,14 @@
 terraform {
   required_version = ">= 1.2.6"
 
+  cloud {
+    organization = "swamy-the-tf-learner"
+
+    workspaces {
+      name = "First-Simple-Work-Space"
+    }
+  }
+
   required_providers {
     aws = {
       source  = "hashicorp/aws"

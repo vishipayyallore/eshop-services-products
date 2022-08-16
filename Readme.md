@@ -68,6 +68,9 @@ Description: **`To Be Done`**
 
 ![Resources creation using Terraform |150x150](./Documentation/Images/S8/Infra_In_Terraform.PNG)
 
+**State in Terraform Cloud**
+![State in Terraform Cloud |150x150](./Documentation/Images/S8/StateInTerraformCloud.PNG)
+
 ## Discussion on GitHub Actions deploying AKS Infrastructure (`5 Minutes`)
 
 > 1. Discussion and Demo
