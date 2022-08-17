@@ -128,6 +128,9 @@ Description: **`To Be Done`**
 
 > 1. Discussion and Demo
 
+**FOSSA SCA**
+![FOSSA SCA |150x150](./Documentation/Images/S8/FOSSA_SCA.PNG)
+
 ## Code Review (`5 Minutes`)
 
 > 1. Discussion and Demo
