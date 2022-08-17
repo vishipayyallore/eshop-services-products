@@ -44,10 +44,10 @@ jobs:
         uses: codecov/codecov-action@v2.1.0
         with:
           token: ${{secrets.CODECOV_TOKEN}}
-      # - name: Veracode Dependency Scanning
-      #   uses: veracode/veracode-sca@v1.09
-      #   with:
-      #     github_token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Official FOSSA Action
+        uses: fossas/fossa-action@v1.3.1
+        with:
+          api-key: ${{secrets.FossaApiKey}}
       - name: Branch name
         run: echo running on branch ${GITHUB_REF##*/} ${{github.ref_name}}
       - name: Publish
