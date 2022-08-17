@@ -48,7 +48,7 @@ Description: **`To Be Done`**
 > 1. Verify the Deployed `Products` microservice into AKS using Postman (`5 Minutes`)
 > 1. Unit Testing (`5 Minutes`)
 > 1. Static code Analysis (`5 Minutes`)
-> 1. Software Composition (`5 Minutes`)
+> 1. Software Composition Analysis (`5 Minutes`)
 > 1. Code Review (`5 Minutes`)
 > 1. Review/Q & A/Panel Discussion (`5 Minutes`)
 > 1. What is next in `Session 9`? (`5 Minutes`)
@@ -124,9 +124,12 @@ Description: **`To Be Done`**
 
 ![JFrog scans Docker Images |150x150](./Documentation/Images/S8/JFrog_Scan.PNG)
 
-## Software Composition (`5 Minutes`)
+## Software Composition Analysis (`5 Minutes`)
 
 > 1. Discussion and Demo
+
+**FOSSA SCA**
+![FOSSA SCA |150x150](./Documentation/Images/S8/FOSSA_SCA.PNG)
 
 ## Code Review (`5 Minutes`)
 
