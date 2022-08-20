@@ -31,107 +31,80 @@ Description: **`To Be Done`**
 > 1. Please refer [Session5.md](./Documentation/Sessions/Session5.md) and [Video](https://www.youtube.com/watch?v=LPI0VVM24KI) for more details.
 > 1. Please refer [Session6.md](./Documentation/Sessions/Session6.md) and [Video](https://www.youtube.com/watch?v=FmMIF6_bGuw) for more details.
 > 1. Please refer [Session7.md](./Documentation/Sessions/Session7.md) and [Video](https://www.youtube.com/watch?v=7abmbzh0ckA) for more details.
+> 1. Please refer [Session8.md](./Documentation/Sessions/Session8.md) and [Video](https://www.youtube.com/watch?v=z5hxCeCowFM) for more details.
 
 ---
 
 ![Information |150x150](./Documentation/Images/Information.PNG)
 
-## Session 8
+## Session 9
 
 ## What are we going to do today?
 
-> 1. Deploy `S3 Bucket` and Static Web Site to AWS using Terraform (`5 Minutes`)
-> 1. Discussion on AKS Infrastructure Terraform Configuration files (`5 Minutes`)
-> 1. Discussion on GitHub Actions deploying AKS Infrastructure (`5 Minutes`)
-> 1. Create Products.API's docker image and upload it to `Docker Hub` using Shell Scripts (`5 Minutes`)
-> 1. Deploy Products Microservice docker image into AKS using Shell Scripts (`5 Minutes`)
-> 1. Verify the Deployed `Products` microservice into AKS using Postman (`5 Minutes`)
-> 1. Unit Testing (`5 Minutes`)
-> 1. Static code Analysis (`5 Minutes`)
-> 1. Software Composition Analysis (`5 Minutes`)
-> 1. Code Review (`5 Minutes`)
-> 1. Review/Q & A/Panel Discussion (`5 Minutes`)
-> 1. What is next in `Session 9`? (`5 Minutes`)
+1. Changes to Terraform `configuration files` for Azure Infrastructure (`10 Minutes`) [^1]
+1. Deploying Kubernetes and other Infrastructure using GitHub Actions to Azure (`5 Minutes`)
+1. Create Products.API's `docker image` and upload it to `Docker Hub` using GitHub Actions (`5 Minutes`)
+1. Deploy Products Microservice using `docker image` from Docker Hub into `AKS` using GitHub Actions (`5 Minutes`)
+1. CRUD Operations on the Deployed `Products` microservice into AKS using Postman (`5 Minutes`)
+1. Hands of Azure Kubernetes Infrastructure using Portal / VS Code Extension (`10 Minutes`)
+    - Using `Azure Portal`
+    - Using `VS Code Extension`
+1. Hands of Azure Kubernetes Infrastructure using Imperative way (`10 Minutes`)
+    - kubectl get nodes | pods | service | deployments
+1. Review/Q & A/Panel Discussion (`5 Minutes`)
+1. What is next in `Session 10`? (`5 Minutes`)
+
+### Notes:
+
+[^1] Discuss coupling of Gate/CI/Release Build with Terraform Configuration for Source Code Repository Agnostic Deployment/Pattern
 
 ![Faster Your Seat Belt |150x150](./Documentation/Images/SeatBelt.PNG)
 
-## Deploy `S3 Bucket` and Static Web Site to AWS using Terraform (`5 Minutes`)
-
-> 1. Discussion and Demo
-> 1. Cloud Agnostic
-
-![AWS S3 with Static Web Site |150x150](./Documentation/Images/S8/TF_AWS_S3_StaticWebSite.PNG)
-
-## Discussion on AKS Infrastructure Terraform Configuration files (`5 Minutes`)
-
-> 1. Discussion and Demo
-> 1. Terraform Logs for Debugging
-> 1. Terraform State in Azure
-> 1. Terraform State in Terraform Cloud
-
-![Resources creation using Terraform |150x150](./Documentation/Images/S8/Infra_In_Terraform.PNG)
-
-**Terraform Environment Variables**
-
-![Environment Variables |150x150](./Documentation/Images/S8/TF_EnvironmentVariables.PNG)
-
-**Terraform Logs**
-
-![Terraform Logs |150x150](./Documentation/Images/S8/TF_Logs.PNG)
-
-**State in Terraform Cloud**
-![State in Terraform Cloud |150x150](./Documentation/Images/S8/StateInTerraformCloud.PNG)
-
-## Discussion on GitHub Actions deploying AKS Infrastructure (`5 Minutes`)
+## Changes to Terraform `configuration files` for Azure Infrastructure (`10 Minutes`)
 
 > 1. Discussion and Demo
 
-![GitHub Actions deploying Infrastructure into Azure |150x150](./Documentation/Images/S8/GitHubActions_AKS_Infra.PNG)
-
-## Create Products.API's docker image and upload it to `Docker Hub` using Shell Scripts (`5 Minutes`)
+## Deploying Kubernetes and other Infrastructure using GitHub Actions to Azure (`5 Minutes`)
 
 > 1. Discussion and Demo
 
-![Create And Push Image To Docker |150x150](./Documentation/Images/S8/CreateAndPushImageToDocker.PNG)
-
-## Deploy Products Microservice docker image into AKS using Shell Scripts (`5 Minutes`)
+## Create Products.API's `docker image` and upload it to `Docker Hub` using GitHub Actions (`5 Minutes`)
 
 > 1. Discussion and Demo
 
-![Deploy Docker Image into AKS using Scripts |150x150](./Documentation/Images/S8/DeployToAKS.PNG)
-
-![eShop Products API inside AKS |150x150](./Documentation/Images/S8/eshop_ProductsAPI_Inside_AKS.PNG)
-
-## Verify the Deployed `Products` microservice into AKS using Postman (`5 Minutes`)
-
-> 1. Discussion and Demo
-> 1. CRUD operations using Postman
-
-![Validate Products API inside AKS using Postman |150x150](./Documentation/Images/S8/ValidateProductsAPI_insideAKS.PNG)
-
-## Unit Testing (`5 Minutes`)
-
-> 1. Discussion and Demo
-> 1. Test Coverage
-
-![Unit Testing and Code Coverage |150x150](./Documentation/Images/S8/UnitTesting_CodeCoverage.PNG)
-
-## Static code Analysis (`5 Minutes`)
+## Deploy Products Microservice using `docker image` from Docker Hub into `AKS` using GitHub Actions (`5 Minutes`)
 
 > 1. Discussion and Demo
 
-![Static Code Analysis |150x150](./Documentation/Images/S8/StaticCodeAnalysis.PNG)
-
-![JFrog scans Docker Images |150x150](./Documentation/Images/S8/JFrog_Scan.PNG)
-
-## Software Composition Analysis (`5 Minutes`)
+## CRUD Operations on the Deployed `Products` microservice into AKS using Postman (`5 Minutes`)
 
 > 1. Discussion and Demo
 
-**FOSSA SCA**
-![FOSSA SCA |150x150](./Documentation/Images/S8/FOSSA_SCA.PNG)
+## Hands of Azure Kubernetes Infrastructure using Portal / VS Code Extension (`10 Minutes`)
 
-## Code Review (`5 Minutes`)
+> 1. Discussion and Demo
+
+### Using `Azure Portal`
+
+### Using `VS Code Extension`
+
+## Hands of Azure Kubernetes Infrastructure using Imperative way (`10 Minutes`)
+
+> 1. Discussion and Demo
+
+### kubectl get `nodes`
+
+> 1. Discussion and Demo
+
+### kubectl get `pods`
+
+> 1. Discussion and Demo
+
+### kubectl get `service`
+
+> 1. Discussion and Demo
+
+### kubectl get `deployments`
 
 > 1. Discussion and Demo
 
@@ -139,18 +112,9 @@ Description: **`To Be Done`**
 
 > 1. Discussion
 
----
+## What is next in `Session 10`? (`5 Minutes`) on `30-Sep-2022`
 
-## What is next in `Session 9`? (`5 Minutes`) on `09-Sep-2022`
-
-> 1. Deploy `S3 Bucket` to AWS using Terraform (`5 Minutes`)
-> 1. Discussion on Infrastructure using Terraform (`5 Minutes`)
-> 1. Deploy Products Microservice into AKS (`5 Minutes`)
-> 1. Verify the Deployments using Postman (`10 Minutes`)
-> 1. Unit Testing (`10 Minutes`)
-> 1. Static code Analysis (`10 Minutes`)
-> 1. Code Review (`5 Minutes`)
-> 1. Software Composition (`5 Minutes`)
+> 1. To be Done
 
 ---
 
