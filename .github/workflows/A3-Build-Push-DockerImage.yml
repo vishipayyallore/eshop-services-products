@@ -44,6 +44,7 @@ jobs:
         with:
           # working-directory: ${{ env.WORKING_DIRECTORY }}
           context: ${{ env.WORKING_DIRECTORY }}
+          file: ./Dockerfile
           push: true
-          tags: vishipayyallore/eshop-services-products:latest # ${{ steps.meta.outputs.tags }}
-          labels: ${{ steps.meta.outputs.labels }}
+          tags: ${{ secrets.DOCKER_USERNAME }}/eshop-services-products:latest # ${{ steps.meta.outputs.tags }}
+          # labels: ${{ steps.meta.outputs.labels }}
