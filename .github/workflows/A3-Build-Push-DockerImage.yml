@@ -42,5 +42,5 @@ jobs:
           # working-directory: ${{ env.WORKING_DIRECTORY }}
           context: ${{ env.WORKING_DIRECTORY }}
           push: true
-          tags: ${{ steps.meta.outputs.tags }}
+          tags: vishipayyallore/eshop-services-products:latest # ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
