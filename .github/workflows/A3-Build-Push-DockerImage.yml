@@ -39,8 +39,8 @@ jobs:
       - name: Build and push Docker images
         uses: docker/build-push-action@v3.1.1
         with:
-          working-directory: ${{ env.WORKING_DIRECTORY }}
-          # context: ./Source/Products.API
+          # working-directory: ${{ env.WORKING_DIRECTORY }}
+          context: ${{ env.WORKING_DIRECTORY }}
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
