@@ -43,5 +43,5 @@ jobs:
           context: .
           file: ${{ env.WORKING_DIRECTORY }}/Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/eshop-services-products:latest,${{ secrets.DOCKER_USERNAME }}/eshop-services-products:$(date +%s)
+          tags: ${{ secrets.DOCKER_USERNAME }}/eshop-services-products:latest,${{ secrets.DOCKER_USERNAME }}/eshop-services-products:${{date +%s}}
           labels: ${{ steps.meta.outputs.labels }}
