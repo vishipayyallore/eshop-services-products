@@ -2,16 +2,18 @@
 
 ## What are we going to do today?
 
-> 1. Introduction to Terraform (`5 Minutes`)
-> 1. Hands-on with local resources using Terraform (main.tf, variables.tf, and output.tf) (`10 Minutes`)
-> 1. Terraform State (`5 Minutes`)
-> 1. Deploy `Resource Group`, `Virtual Network`, and `Storage Account` to Azure using Terraform (`10 Minutes`)
-> 1. DevOps from 30,000 feet (`1 Minutes`)
-> 1. Pull Request Process (`5 Minutes`)
-> 1. Gated Build, and Continuous Integration Build using `GitHub Actions` for AKS Infrastructure (`5 Minutes`)
-> 1. Deploy AKS Infrastructure through Release Pipeline using `GitHub Actions` (`5 Minutes`)
-> 1. Review/Q & A/Panel Discussion (`5 Minutes`)
-> 1. What is next in `Session 8`? (`5 Minutes`)
+> 1. Deploy S3 Bucket and Static Web Site to AWS using Terraform (5 Minutes)
+> 1. Discussion on AKS Infrastructure Terraform Configuration files (5 Minutes)
+> 1. Discussion on GitHub Actions deploying AKS Infrastructure (5 Minutes)
+> 1. Create Products.API's docker image and upload it to Docker Hub using Shell Scripts (5 Minutes)
+> 1. Deploy Products Microservice docker image into AKS using Shell Scripts (5 Minutes)
+> 1. Verify the Deployed Products microservice into AKS using Postman (5 Minutes)
+> 1. Unit Testing (5 Minutes)
+> 1. Static code Analysis (5 Minutes)
+> 1. Software Composition Analysis (5 Minutes)
+> 1. Code Review (5 Minutes)
+> 1. Review/Q & A/Panel Discussion (5 Minutes)
+> 1. What is next in Session 9? (5 Minutes)
 
 ## Introduction to Terraform (`5 Minutes`)
 
@@ -156,5 +158,3 @@ terraform show
 > 1. Static code Analysis (`10 Minutes`)
 > 1. Code Review (`5 Minutes`)
 > 1. Software Composition (`5 Minutes`)
-
-
