@@ -31,27 +31,32 @@ Description: **`To Be Done`**
 > 1. Please refer [Session5.md](./Documentation/Sessions/Session5.md) and [Video](https://www.youtube.com/watch?v=LPI0VVM24KI) for more details.
 > 1. Please refer [Session6.md](./Documentation/Sessions/Session6.md) and [Video](https://www.youtube.com/watch?v=FmMIF6_bGuw) for more details.
 > 1. Please refer [Session7.md](./Documentation/Sessions/Session7.md) and [Video](https://www.youtube.com/watch?v=7abmbzh0ckA) for more details.
+> 1. Please refer [Session8.md](./Documentation/Sessions/Session8.md) and [Video](https://www.youtube.com/watch?v=z5hxCeCowFM) for more details.
 
 ---
 
 ![Information |150x150](./Documentation/Images/Information.PNG)
 
-## Session 8
+## Session 9
 
 ## What are we going to do today?
 
-> 1. Deploy `S3 Bucket` and Static Web Site to AWS using Terraform (`5 Minutes`)
-> 1. Discussion on AKS Infrastructure Terraform Configuration files (`5 Minutes`)
-> 1. Discussion on GitHub Actions deploying AKS Infrastructure (`5 Minutes`)
-> 1. Create Products.API's docker image and upload it to `Docker Hub` using Shell Scripts (`5 Minutes`)
-> 1. Deploy Products Microservice docker image into AKS using Shell Scripts (`5 Minutes`)
-> 1. Verify the Deployed `Products` microservice into AKS using Postman (`5 Minutes`)
-> 1. Unit Testing (`5 Minutes`)
-> 1. Static code Analysis (`5 Minutes`)
-> 1. Software Composition Analysis (`5 Minutes`)
-> 1. Code Review (`5 Minutes`)
-> 1. Review/Q & A/Panel Discussion (`5 Minutes`)
-> 1. What is next in `Session 9`? (`5 Minutes`)
+1. Changes to Terraform `configuration files` for Azure Infrastructure (`10 Minutes`) [^1]
+1. Deploying AKS and other Infrastructure using GitHub Actions (`5 Minutes`)
+1. Create Products.API's `docker image` and upload it to `Docker Hub` using GitHub Actions (`5 Minutes`)
+1. Deploy Products Microservice using `docker image` from Docker Hub into `AKS` using GitHub Actions (`5 Minutes`)
+1. CRUD Operations on the Deployed `Products` microservice into AKS using Postman (`5 Minutes`)
+1. Hands of Azure Kubernetes Infrastructure using Portal / VS Code Extension (`10 Minutes`)
+    - Using `Portal`
+    - Using `VS Code Extension`
+1. Hands of Azure Kubernetes Infrastructure using Imperative way (`10 Minutes`)
+    - kubectl get nodes | pods | service | deployments
+1. Review/Q & A/Panel Discussion (`5 Minutes`)
+1. What is next in `Session 9`? (`5 Minutes`)
+
+### Notes:
+
+[^1] Discuss coupling of Gate/CI/Release Build with Terraform Configuration for Source Code Repository Agnostic Deployment/Pattern
 
 ![Faster Your Seat Belt |150x150](./Documentation/Images/SeatBelt.PNG)
 
