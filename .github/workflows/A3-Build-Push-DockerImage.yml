@@ -36,6 +36,9 @@ jobs:
           # GitHub Token as provided by secrets
           github-token: ${{ github.token }}
 
+      - name: Tags
+        run: echo Tags ${{ steps.meta.outputs.tags }}
+
       - name: Build and push Docker images
         uses: docker/build-push-action@v3.1.1
         with:
