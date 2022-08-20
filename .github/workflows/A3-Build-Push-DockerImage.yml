@@ -31,9 +31,7 @@ jobs:
       - name: Docker Metadata action
         uses: docker/metadata-action@v4.0.1
         with:
-          # List of Docker images to use as base name for tags
           images: vishipayyallore/eshop-services-products
-          # GitHub Token as provided by secrets
           github-token: ${{ github.token }}
 
       - name: Tags
@@ -45,5 +43,5 @@ jobs:
           context: .
           file: ${{ env.WORKING_DIRECTORY }}/Dockerfile
           push: true
-          tags: ${{ steps.meta.outputs.tags }} # ${{ secrets.DOCKER_USERNAME }}/eshop-services-products:latest #
+          tags: ${{ secrets.DOCKER_USERNAME }}/eshop-services-products:latest
           labels: ${{ steps.meta.outputs.labels }}
