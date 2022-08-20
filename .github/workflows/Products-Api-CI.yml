@@ -71,6 +71,7 @@ jobs:
 
   build-push-docker-image:
     name: Build and Push Docker Image
+    if: ${{ github.ref_name == 'main' }}
     needs: [build]
     uses: ./.github/workflows/A3-Build-Push-DockerImage.yml
     secrets: inherit
