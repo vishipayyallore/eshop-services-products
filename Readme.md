@@ -68,11 +68,21 @@ Description: **`To Be Done`**
 
 > 1. Discussion and Demo
 
+### Azure Resources creation with Terraform using GitHub Actions
+
+![Azure Resources creation using Terraform |150x150](./Documentation/Images/S8/GitHubActions_AKS_Infra.PNG)
+
 ## Create Products.API's `docker image` and upload it to `Docker Hub` using GitHub Actions (`5 Minutes`)
 
 > 1. Discussion and Demo
+> 1. Build And Push Docker Image To Docker Hub
+> 1. Products Micro Service Docker Image Docker Hub
 
-###
+### Build And Push Docker Image To Docker Hub
+
+![Build And Push Docker Image To  Docker Hub |150x150](./Documentation/Images/S9/BuildAndPushDockerImageToHub.PNG)
+
+### Products Micro Service Docker Image Docker Hub
 
 ![Products Micro Service Docker Image Docker Hub |150x150](./Documentation/Images/S9/DockerImage_DockerHub.PNG)
 

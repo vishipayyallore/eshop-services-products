@@ -16,7 +16,14 @@ on:
 jobs:
   gated-build-services-products:
     name: Gated Build Services Products
-    uses: ./.github/workflows/01-Gated-Build-Services-Products.yml
+    uses: ./.github/workflows/A1-Gated-Build-Services-Products.yml
+    secrets: inherit
+
+  ci-build-services-products:
+    name: Build and Push Docker Image
+    # if: ${{ github.ref_name == 'main' }}
+    needs: [gated-build-services-products]
+    uses: ./.github/workflows/A2-CI-Build-Services-Products.yml
     secrets: inherit
 
   build-push-docker-image:

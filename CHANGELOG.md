@@ -6,4 +6,4 @@ _note to project team: let's keep a changelog once we get past an initial workin
 ## pre-MVP
 
 - completing scaffolding.
-- set up ci-cd
+- set up ci-cd.
