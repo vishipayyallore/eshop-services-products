@@ -15,19 +15,19 @@ on:
 
 jobs:
   gated-build-services-products:
-    name: Gated Build Services Products
+    name: Gated Build Services Products When PR is Raised
     uses: ./.github/workflows/A1-Gated-Build-Services-Products.yml
     secrets: inherit
 
   ci-build-services-products:
-    name: Build and Push Docker Image
+    name: CI Build Services Products When PR is Approved
     # if: ${{ github.ref_name == 'main' }}
     needs: [gated-build-services-products]
     uses: ./.github/workflows/A2-CI-Build-Services-Products.yml
     secrets: inherit
 
   build-push-docker-image:
-    name: Build and Push Docker Image
+    name: Build and Push Docker Image When PR is Approved
     # if: ${{ github.ref_name == 'main' }}
     needs: [ci-build-services-products]
     uses: ./.github/workflows/A3-Build-Push-DockerImage.yml
