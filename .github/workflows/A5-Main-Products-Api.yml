@@ -1,0 +1,83 @@
+# To Build, Publish, and Push to Docker Hub Products-API
+
+name: Products-Api-CI
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the main branch
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  gated-build-services-products:
+    name: Gated Build Services Products When PR is Raised
+    uses: ./.github/workflows/A1-Gated-Build-Services-Products.yml
+    secrets: inherit
+
+  ci-build-services-products:
+    name: CI Build Services Products When PR is Approved
+    if: ${{ github.ref_name == 'main' }}
+    needs: [gated-build-services-products]
+    uses: ./.github/workflows/A2-CI-Build-Services-Products.yml
+    secrets: inherit
+
+  build-push-docker-image:
+    name: Build and Push Docker Image When PR is Approved
+    if: ${{ github.ref_name == 'main' }}
+    needs: [ci-build-services-products]
+    uses: ./.github/workflows/A3-Build-Push-DockerImage.yml
+    secrets: inherit
+
+  # build:
+  #   # The type of runner that the job will run on
+  #   runs-on: ubuntu-latest
+
+  #   # Steps represent a sequence of tasks that will be executed as part of the job
+  #   steps:
+  #     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+  #     - uses: actions/checkout@v3
+
+  #     # Runs a single command using the runners shell
+  #     - name: Setup .NET
+  #       uses: actions/setup-dotnet@v1
+  #       with:
+  #         dotnet-version: 6.0.x
+
+  #     - name: Restore dependencies
+  #       run: dotnet restore eshop-services-products.sln
+
+  #     - name: Build
+  #       run: dotnet build eshop-services-products.sln --no-restore
+
+  #     - name: Test
+  #       run: dotnet test eshop-services-products.sln --no-build --verbosity normal --collect:"XPlat Code Coverage"
+
+  #     - name: CodeCoverage
+  #       uses: codecov/codecov-action@v2.1.0
+  #       with:
+  #         token: ${{secrets.CODECOV_TOKEN}}
+
+  #     # - name: Official FOSSA Action
+  #     #   uses: fossas/fossa-action@v1.3.1
+  #     #   with:
+  #     #     api-key: ${{secrets.FossaApiKey}}
+
+  #     - name: Branch name
+  #       run: echo running on branch ${GITHUB_REF##*/} ${{github.ref_name}}
+
+  #     - name: Publish
+  #       if: ${{ github.ref_name == 'main' }}
+  #       run: dotnet publish eshop-services-products.sln -c Release -o productsapi
+
+  #     - name: Upload a Build Artifact
+  #       if: ${{ github.ref_name == 'main' }}
+  #       uses: actions/upload-artifact@v2.2.2
+  #       with:
+  #         name: productsapi
+  #         path: productsapi/**
+  #         if-no-files-found: error

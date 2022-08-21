@@ -1,0 +1,45 @@
+name: "01 Gated Build Services Products"
+
+on:
+  workflow_call:
+
+jobs:
+  gated-build-services-products:
+    runs-on: ubuntu-latest
+
+    # Use the Bash shell regardless whether the GitHub Actions runner is ubuntu-latest, macos-latest, or windows-latest
+    defaults:
+      run:
+        shell: bash
+
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v3
+
+      # Runs a single command using the runners shell
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: 6.0.x
+
+      - name: Restore dependencies
+        run: dotnet restore eshop-services-products.sln
+
+      - name: Build
+        run: dotnet build eshop-services-products.sln --no-restore
+
+      - name: Test
+        run: dotnet test eshop-services-products.sln --no-build --verbosity normal --collect:"XPlat Code Coverage"
+
+      - name: CodeCoverage
+        uses: codecov/codecov-action@v2.1.0
+        with:
+          token: ${{secrets.CODECOV_TOKEN}}
+
+      # - name: Official FOSSA Action
+      #   uses: fossas/fossa-action@v1.3.1
+      #   with:
+      #     api-key: ${{secrets.FossaApiKey}}
+
+      - name: Branch name
+        run: echo running on branch ${GITHUB_REF##*/} ${{github.ref_name}}
