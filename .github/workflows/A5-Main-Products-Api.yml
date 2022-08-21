@@ -21,14 +21,14 @@ jobs:
 
   ci-build-services-products:
     name: CI Build Services Products When PR is Approved
-    # if: ${{ github.ref_name == 'main' }}
+    if: ${{ github.ref_name == 'main' }}
     needs: [gated-build-services-products]
     uses: ./.github/workflows/A2-CI-Build-Services-Products.yml
     secrets: inherit
 
   build-push-docker-image:
     name: Build and Push Docker Image When PR is Approved
-    # if: ${{ github.ref_name == 'main' }}
+    if: ${{ github.ref_name == 'main' }}
     needs: [ci-build-services-products]
     uses: ./.github/workflows/A3-Build-Push-DockerImage.yml
     secrets: inherit
