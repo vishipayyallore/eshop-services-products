@@ -1,4 +1,4 @@
-name: "03. Build and Push Docker Image"
+name: "A3 Build and Push Docker Image"
 
 on:
   workflow_call:
