@@ -72,6 +72,10 @@ Description: **`To Be Done`**
 
 > 1. Discussion and Demo
 
+###
+
+![Products Micro Service Docker Image Docker Hub |150x150](./Documentation/Images/S9/DockerImage_DockerHub.PNG)
+
 ## Deploy Products Microservice using `docker image` from Docker Hub into `AKS` using GitHub Actions (`5 Minutes`)
 
 > 1. Discussion and Demo
