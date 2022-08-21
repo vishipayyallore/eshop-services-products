@@ -1,4 +1,4 @@
-name: "01 Gated Build Services Products"
+name: "A1 Gated Build Services Products"
 
 on:
   workflow_call:
