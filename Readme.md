@@ -90,6 +90,11 @@ Description: **`To Be Done`**
 
 > 1. Discussion and Demo
 
+
+### Products Micro Service Docker Image Docker Hub
+
+![Accessing the Products API from AKS |150x150](./Documentation/Images/S9/AccessTheProductsAPIFromK8s.PNG)
+
 ## CRUD Operations on the Deployed `Products` microservice into AKS using Postman (`5 Minutes`)
 
 > 1. Discussion and Demo
