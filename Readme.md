@@ -6,7 +6,7 @@ Description: **`To Be Done`**
 
 | PR, and CI Builds                                                                                                                                                                                                                  | Code QL                                                                                                                                                                                                                   |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [![Products-Api-CI](https://github.com/vishipayyallore/eshop-services-products/actions/workflows/A5-Main-Products-Api.yml/badge.svg)](https://github.com/vishipayyallore/eshop-services-products/actions/workflows/A5-Main-Products-Api.yml) | [![CodeQL](https://github.com/vishipayyallore/eshop-services-products/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/vishipayyallore/eshop-services-products/actions/workflows/codeql-analysis.yml) |
+| [![Products-Api-CI](https://github.com/vishipayyallore/eshop-services-products/actions/workflows/A5-Main-Products-Api.yml/badge.svg)](https://github.com/vishipayyallore/eshop-services-products/actions/workflows/A5-Main-Products-Api.yml) | [![A6 CodeQL Analysis](https://github.com/vishipayyallore/eshop-services-products/actions/workflows/A6-CodeQL-Analysis.yml/badge.svg)](https://github.com/vishipayyallore/eshop-services-products/actions/workflows/A6-CodeQL-Analysis.yml) |
 
 ## Solution Map Diagram
 
@@ -90,6 +90,13 @@ Description: **`To Be Done`**
 
 > 1. Discussion and Demo
 
+### Deployment To AKS For Approval
+
+![Deployment To AKS For Approval |150x150](./Documentation/Images/S9/DeploymentToAKSForApproval.PNG)
+
+### Deployment To AKS
+
+![Deployment To AKS |150x150](./Documentation/Images/S9/DeploymentToAKS.PNG)
 
 ### Products Micro Service Docker Image Docker Hub
 
