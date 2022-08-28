@@ -35,7 +35,7 @@ jobs:
 
   deploy-docker-image-to-aks:
     name: Deploy Docker Image to AKS When Release is Approved
-    if: ${{ github.ref_name == 'main' }}
+    # if: ${{ github.ref_name == 'main' }}
     needs: [gated-build-services-products]
     uses: ./.github/workflows/A4-Deploy-DockerImage-ToAKS.yml
     secrets: inherit
