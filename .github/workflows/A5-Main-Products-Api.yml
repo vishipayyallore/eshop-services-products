@@ -1,6 +1,6 @@
 # To Build, Publish, and Push to Docker Hub Products-API
 
-name: Products-Api-CI
+name: A5 Main Products Api CI
 
 # Controls when the workflow will run
 on:
