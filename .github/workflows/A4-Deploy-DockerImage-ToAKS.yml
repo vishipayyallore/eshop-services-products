@@ -11,15 +11,12 @@ env:
   AZURE_SUBSCRIPTION_ID: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
   AZURE_TENANT_ID: ${{ secrets.AZURE_AD_TENANT_ID }}
   CLUSTER_NAME: "k8s-eshop"
-  RESOURSE_GROUP: "rg-womd-dev-001"
+  RESOURCE_GROUP: "rg-womd-dev-001"
 
 jobs:
-  # permissions:
-  #   actions: read
-  #   contents: read
-  #   id-token: write
   build-push-docker-image:
     runs-on: ubuntu-latest
+    environment: Development
 
     # Use the Bash shell regardless whether the GitHub Actions runner is ubuntu-latest, macos-latest, or windows-latest
     defaults:
@@ -41,7 +38,7 @@ jobs:
       - name: Get K8s context
         uses: azure/aks-set-context@v2.0
         with:
-          resource-group: ${{ env.RESOURSE_GROUP }}
+          resource-group: ${{ env.RESOURCE_GROUP }}
           cluster-name: ${{ env.CLUSTER_NAME }}
 
       # Deploys application based on manifest files from previous step
