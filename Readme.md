@@ -128,6 +128,8 @@ Description: **`To Be Done`**
 
 > 1. Discussion and Demo
 
+![K8s from Cloud Shell |150x150](./Documentation/Images/S9/K8sFromCloudShell.PNG)
+
 ## Hands of Azure Kubernetes Infrastructure using Imperative way (`10 Minutes`)
 
 > 1. Discussion and Demo
