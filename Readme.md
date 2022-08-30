@@ -42,9 +42,9 @@ Description: **`To Be Done`**
 ## What are we going to do today?
 
 1. Changes to Terraform `configuration files` for Azure Infrastructure (`10 Minutes`) [^1]
-1. Deploying Kubernetes and other Infrastructure using GitHub Actions to Azure (`5 Minutes`)
-1. Create Products.API's `docker image` and upload it to `Docker Hub` using GitHub Actions (`5 Minutes`)
-1. Deploy Products Microservice using `docker image` from Docker Hub into `AKS` using GitHub Actions (`5 Minutes`)
+1. Deploying Infrastructure to Azure using GitHub Actions (`5 Minutes`)
+1. Create Products.API's `docker image` and push it to `Docker Hub` using GitHub Actions (`5 Minutes`)
+1. Deploy Products Microservice `docker image` from Docker Hub into `AKS` using GitHub Actions (`5 Minutes`)
 1. CRUD Operations on the Deployed `Products` microservice into AKS using Postman (`5 Minutes`)
 1. Hands of Azure Kubernetes Infrastructure using Portal / VS Code Extension (`10 Minutes`)
     - Using `Azure Portal`
@@ -64,7 +64,7 @@ Description: **`To Be Done`**
 
 > 1. Discussion and Demo
 
-## Deploying Kubernetes and other Infrastructure using GitHub Actions to Azure (`5 Minutes`)
+## Deploying Infrastructure to Azure using GitHub Actions (`5 Minutes`)
 
 > 1. Discussion and Demo
 
@@ -72,7 +72,7 @@ Description: **`To Be Done`**
 
 ![Azure Resources creation using Terraform |150x150](./Documentation/Images/S8/GitHubActions_AKS_Infra.PNG)
 
-## Create Products.API's `docker image` and upload it to `Docker Hub` using GitHub Actions (`5 Minutes`)
+## Create Products.API's `docker image` and push it to `Docker Hub` using GitHub Actions (`5 Minutes`)
 
 > 1. Discussion and Demo
 > 1. Build And Push Docker Image To Docker Hub
@@ -86,7 +86,7 @@ Description: **`To Be Done`**
 
 ![Products Micro Service Docker Image Docker Hub |150x150](./Documentation/Images/S9/DockerImage_DockerHub.PNG)
 
-## Deploy Products Microservice using `docker image` from Docker Hub into `AKS` using GitHub Actions (`5 Minutes`)
+## Deploy Products Microservice `docker image` from Docker Hub into `AKS` using GitHub Actions (`5 Minutes`)
 
 > 1. Discussion and Demo
 
@@ -105,6 +105,11 @@ Description: **`To Be Done`**
 ## CRUD Operations on the Deployed `Products` microservice into AKS using Postman (`5 Minutes`)
 
 > 1. Discussion and Demo
+> 1. CRUD operations using Postman
+
+### Validating the Products API's Endpoints using Postman
+
+![Postman Collections for 8 environments |150x150](./Documentation/Images/S5/Postman_Collections.PNG)
 
 ## Hands of Azure Kubernetes Infrastructure using Portal / VS Code Extension (`10 Minutes`)
 
