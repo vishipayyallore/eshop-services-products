@@ -17,8 +17,8 @@ Description: **`To Be Done`**
 > 1. Windows 10 / Ubuntu 20.04 / Mac OS 12.3 (build 21E230)
 > 1. Visual Studio 2022
 > 1. .NET 6
-> 1. VS Code (https://code.visualstudio.com/)
-> 1. Docker Desktop (https://docs.docker.com/docker-for-windows/install/)
+> 1. VS Code (<https://code.visualstudio.com/>)
+> 1. Docker Desktop (<https://docs.docker.com/docker-for-windows/install/>)
 
 ---
 
@@ -54,7 +54,7 @@ Description: **`To Be Done`**
 1. Review/Q & A/Panel Discussion (`5 Minutes`)
 1. What is next in `Session 10`? (`5 Minutes`)
 
-### Notes:
+### Notes
 
 [^1] Discuss coupling of Gate/CI/Release Build with Terraform Configuration for Source Code Repository Agnostic Deployment/Pattern
 
@@ -117,7 +117,15 @@ Description: **`To Be Done`**
 
 ### Using `Azure Portal`
 
+> 1. Discussion and Demo
+
 ### Using `VS Code Extension`
+
+> 1. Discussion and Demo
+
+### Using `Azure Cloud Shell`
+
+> 1. Discussion and Demo
 
 ## Hands of Azure Kubernetes Infrastructure using Imperative way (`10 Minutes`)
 
