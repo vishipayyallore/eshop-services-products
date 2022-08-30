@@ -41,18 +41,19 @@ Description: **`To Be Done`**
 
 ## What are we going to do today?
 
-1. Changes to Terraform `configuration files` for Azure Infrastructure (`10 Minutes`) [^1]
-1. Deploying Infrastructure to Azure using GitHub Actions (`5 Minutes`)
-1. Create Products.API's `docker image` and push it to `Docker Hub` using GitHub Actions (`5 Minutes`)
-1. Deploy Products Microservice `docker image` from Docker Hub into `AKS` using GitHub Actions (`5 Minutes`)
-1. CRUD Operations on the Deployed `Products` microservice into AKS using Postman (`5 Minutes`)
-1. Hands of Azure Kubernetes Infrastructure using Portal / VS Code Extension (`10 Minutes`)
-    - Using `Azure Portal`
-    - Using `VS Code Extension`
-1. Hands of Azure Kubernetes Infrastructure using Imperative way (`10 Minutes`)
-    - kubectl get nodes | pods | service | deployments
-1. Review/Q & A/Panel Discussion (`5 Minutes`)
-1. What is next in `Session 10`? (`5 Minutes`)
+> 1. Changes to Terraform `configuration files` for Azure Infrastructure (`10 Minutes`) [^1]
+> 1. Deploying Infrastructure to Azure using GitHub Actions (`5 Minutes`)
+> 1. Create Products.API's `docker image` and push it to `Docker Hub` using GitHub Actions (`5 Minutes`)
+> 1. Deploy Products Microservice `docker image` from Docker Hub into `AKS` using GitHub Actions (`5 Minutes`)
+> 1. CRUD Operations on the Deployed `Products` microservice into AKS using Postman (`5 Minutes`)
+> 1. Hands of Azure Kubernetes Infrastructure using Portal / VS Code Extension / Azure Cloud Shell  (`10 Minutes`)
+>     - Using `Azure Portal`
+>     - Using `VS Code Extension`
+>     - Using `Azure Cloud Shell`
+> 1. Hands of Azure Kubernetes Infrastructure using Imperative way (`10 Minutes`)
+>     - kubectl get nodes | pods | service | deployments
+> 1. Review/Q & A/Panel Discussion (`5 Minutes`)
+> 1. What is next in `Session 10`? (`5 Minutes`)
 
 ### Notes
 
@@ -111,7 +112,7 @@ Description: **`To Be Done`**
 
 ![Postman Collections for 8 environments |150x150](./Documentation/Images/S5/Postman_Collections.PNG)
 
-## Hands of Azure Kubernetes Infrastructure using Portal / VS Code Extension (`10 Minutes`)
+## Hands of Azure Kubernetes Infrastructure using Portal / VS Code Extension / Azure Cloud Shell (`10 Minutes`)
 
 > 1. Discussion and Demo
 
