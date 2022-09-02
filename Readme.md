@@ -65,13 +65,15 @@ Description: **`To Be Done`**
 
 > 1. Discussion and Demo
 
+![Terraform Configuration Files |150x150](./Documentation/Images/S9/TF_ConfigurationFiles.PNG)
+
 ## Deploying Infrastructure to Azure using GitHub Actions (`5 Minutes`)
 
 > 1. Discussion and Demo
 
 ### Azure Resources creation with Terraform using GitHub Actions
 
-![Azure Resources creation using Terraform |150x150](./Documentation/Images/S8/GitHubActions_AKS_Infra.PNG)
+![Azure Resources creation using Terraform |150x150](./Documentation/Images/S9/GitHubActions_AKS_Infra.PNG)
 
 ## Create Products.API's `docker image` and push it to `Docker Hub` using GitHub Actions (`5 Minutes`)
 
