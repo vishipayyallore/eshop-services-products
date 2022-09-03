@@ -10,7 +10,7 @@ export DOCKER_USERNAME='YourDockerUsername'
 export DOCKER_IMAGE_NAME='eshop-services-products'
 
 # Azure Related
-export AZ_RESOURCE_GROUP='rg-womd-dev-001'
+export AZ_RESOURCE_GROUP='rg-eshop-dev-001'
 
 # Azure Container Instances
 export AZ_ACI_FROM_DOCKER='aci-productsapi-from-docker'
