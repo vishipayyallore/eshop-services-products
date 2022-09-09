@@ -71,6 +71,10 @@ Description: **`To Be Done`**
 
 > 1. Discussion and Demo
 
+### Graph API Permissions for the Service Pricipal
+
+![Graph API Permissions for the Service Pricipal |150x150](./Documentation/Images/S9/GraphAPIPermissions.PNG)
+
 ### Azure Resources creation with Terraform using GitHub Actions
 
 ![Azure Resources creation using Terraform |150x150](./Documentation/Images/S9/GitHubActions_AKS_Infra.PNG)
