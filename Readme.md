@@ -61,13 +61,13 @@ Description: **`To Be Done`**
 
 ![Faster Your Seat Belt |150x150](./Documentation/Images/SeatBelt.PNG)
 
-## Changes to Terraform `configuration files` for Azure Infrastructure (`10 Minutes`)
+## 1. Changes to Terraform `configuration files` for Azure Infrastructure (`10 Minutes`)
 
 > 1. Discussion and Demo
 
 ![Terraform Configuration Files |150x150](./Documentation/Images/S9/TF_ConfigurationFiles.PNG)
 
-## Deploying Infrastructure to Azure using GitHub Actions (`5 Minutes`)
+## 2. Deploying Infrastructure to Azure using GitHub Actions (`5 Minutes`)
 
 > 1. Discussion and Demo
 
@@ -79,7 +79,7 @@ Description: **`To Be Done`**
 
 ![Azure Resources creation using Terraform |150x150](./Documentation/Images/S9/GitHubActions_AKS_Infra.PNG)
 
-## Create Products.API's `docker image` and push it to `Docker Hub` using GitHub Actions (`5 Minutes`)
+## 3. Create Products.API's `docker image` and push it to `Docker Hub` using GitHub Actions (`5 Minutes`)
 
 > 1. Discussion and Demo
 > 1. Build And Push Docker Image To Docker Hub
@@ -93,7 +93,7 @@ Description: **`To Be Done`**
 
 ![Products Micro Service Docker Image Docker Hub |150x150](./Documentation/Images/S9/DockerImage_DockerHub.PNG)
 
-## Deploy Products Microservice `docker image` from Docker Hub into `AKS` using GitHub Actions (`5 Minutes`)
+## 4. Deploy Products Microservice `docker image` from Docker Hub into `AKS` using GitHub Actions (`5 Minutes`)
 
 > 1. Discussion and Demo
 
@@ -109,7 +109,7 @@ Description: **`To Be Done`**
 
 ![Accessing the Products API from AKS |150x150](./Documentation/Images/S9/AccessTheProductsAPIFromK8s.PNG)
 
-## CRUD Operations on the Deployed `Products` microservice into AKS using Postman (`5 Minutes`)
+## 5. CRUD Operations on the Deployed `Products` microservice into AKS using Postman (`5 Minutes`)
 
 > 1. Discussion and Demo
 > 1. CRUD operations using Postman
@@ -118,7 +118,7 @@ Description: **`To Be Done`**
 
 ![Postman Collections for 8 environments |150x150](./Documentation/Images/S5/Postman_Collections.PNG)
 
-## Hands of Azure Kubernetes Infrastructure using Portal / VS Code Extension / Azure Cloud Shell (`10 Minutes`)
+## 6. Hands of Azure Kubernetes Infrastructure using Portal / VS Code Extension / Azure Cloud Shell (`10 Minutes`)
 
 > 1. Discussion and Demo
 
@@ -138,7 +138,7 @@ Description: **`To Be Done`**
 
 ![K8s from Cloud Shell |150x150](./Documentation/Images/S9/K8sFromCloudShell_1.PNG)
 
-## Hands of Azure Kubernetes Infrastructure using Imperative way (`10 Minutes`)
+## 7. Hands of Azure Kubernetes Infrastructure using Imperative way (`10 Minutes`)
 
 > 1. Discussion and Demo
 
@@ -158,11 +158,11 @@ Description: **`To Be Done`**
 
 > 1. Discussion and Demo
 
-## Review/Q & A/Panel Discussion (`5 Minutes`)
+## 8. Review/Q & A/Panel Discussion (`5 Minutes`)
 
 > 1. Discussion
 
-## What is next in `Session 10`? (`5 Minutes`) on `30-Sep-2022`
+## 9. What is next in `Session 10`? (`5 Minutes`) on `30-Sep-2022`
 
 > 1. To be Done
 
