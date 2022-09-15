@@ -84,6 +84,14 @@ Description: **`To Be Done`**
 
 > 1. Discussion and Demo
 
+### App Service In Azure
+
+![App Service In Azure |150x150](./Documentation/Images/S9/AppService_In_Azure.PNG)
+
+### GitHub Actions Secrets
+
+![GitHub Actions Secrets |150x150](./Documentation/Images/S9/GitHubActions_Action_Secrets.PNG)
+
 ## 3. Create Products.API's `docker image` and push it to `Docker Hub` using GitHub Actions (`5 Minutes`)
 
 > 1. Discussion and Demo
