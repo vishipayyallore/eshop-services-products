@@ -92,7 +92,7 @@ Description: **`To Be Done`**
 
 ![GitHub Actions Secrets |150x150](./Documentation/Images/S9/GitHubActions_Action_Secrets.PNG)
 
-## 3. Create Products.API's `docker image` and push it to `Docker Hub` using GitHub Actions (`5 Minutes`)
+## 4. Create Products.API's `docker image` and push it to `Docker Hub` using GitHub Actions (`5 Minutes`)
 
 > 1. Discussion and Demo
 > 1. Build And Push Docker Image To Docker Hub
@@ -106,7 +106,7 @@ Description: **`To Be Done`**
 
 ![Products Micro Service Docker Image Docker Hub |150x150](./Documentation/Images/S9/DockerImage_DockerHub.PNG)
 
-## 4. Deploy Products Microservice `docker image` from Docker Hub into `AKS` using GitHub Actions (`5 Minutes`)
+## 5. Deploy Products Microservice `docker image` from Docker Hub into `AKS` using GitHub Actions (`5 Minutes`)
 
 > 1. Discussion and Demo
 
@@ -122,7 +122,7 @@ Description: **`To Be Done`**
 
 ![Accessing the Products API from AKS |150x150](./Documentation/Images/S9/AccessTheProductsAPIFromK8s.PNG)
 
-## 5. CRUD Operations on the Deployed `Products` microservice into AKS using Postman (`5 Minutes`)
+## 6. CRUD Operations on the Deployed `Products` microservice into AKS using Postman (`5 Minutes`)
 
 > 1. Discussion and Demo
 > 1. CRUD operations using Postman
@@ -131,7 +131,7 @@ Description: **`To Be Done`**
 
 ![Postman Collections for 8 environments |150x150](./Documentation/Images/S5/Postman_Collections.PNG)
 
-## 6. Hands of Azure Kubernetes Infrastructure using Portal / VS Code Extension / Azure Cloud Shell (`10 Minutes`)
+## 7. Hands of Azure Kubernetes Infrastructure using Portal / VS Code Extension / Azure Cloud Shell (`10 Minutes`)
 
 > 1. Discussion and Demo
 
@@ -151,7 +151,7 @@ Description: **`To Be Done`**
 
 ![K8s from Cloud Shell |150x150](./Documentation/Images/S9/K8sFromCloudShell_1.PNG)
 
-## 7. Hands of Azure Kubernetes Infrastructure using Imperative way (`10 Minutes`)
+## 8. Hands of Azure Kubernetes Infrastructure using Imperative way (`10 Minutes`)
 
 > 1. Discussion and Demo
 
@@ -171,11 +171,11 @@ Description: **`To Be Done`**
 
 > 1. Discussion and Demo
 
-## 8. Review/Q & A/Panel Discussion (`5 Minutes`)
+## 9. Review/Q & A/Panel Discussion (`5 Minutes`)
 
 > 1. Discussion
 
-## 9. What is next in `Session 10`? (`5 Minutes`) on `30-Sep-2022`
+## 10. What is next in `Session 10`? (`5 Minutes`) on `30-Sep-2022`
 
 > 1. To be Done
 
