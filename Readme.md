@@ -175,9 +175,12 @@ Description: **`To Be Done`**
 
 > 1. Discussion
 
-## 10. What is next in `Session 10`? (`5 Minutes`) on `30-Sep-2022`
+## 10. What is next in `Session 10`? (`5 Minutes`) on `14-Oct-2022`
 
-> 1. To be Done
+> 1. Discussion on `eShop Main` Project Repository
+> 1. Discussion on `eShop Services Products` Project Repository
+> 1. Discussion on `How to configure and execute the solution` locally
+> 1. Recap of our previous 9 sessions
 
 ---
 
