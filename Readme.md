@@ -43,6 +43,7 @@ Description: **`To Be Done`**
 
 > 1. Changes to Terraform `configuration files` for Azure Infrastructure (`10 Minutes`) [^1]
 > 1. Deploying Infrastructure to Azure using GitHub Actions (`5 Minutes`)
+> 1. How GitHub Actions gets access on Azure Resources? (`5 Minutes`)
 > 1. Create Products.API's `docker image` and push it to `Docker Hub` using GitHub Actions (`5 Minutes`)
 > 1. Deploy Products Microservice `docker image` from Docker Hub into `AKS` using GitHub Actions (`5 Minutes`)
 > 1. CRUD Operations on the Deployed `Products` microservice into AKS using Postman (`5 Minutes`)
@@ -78,6 +79,10 @@ Description: **`To Be Done`**
 ### Azure Resources creation with Terraform using GitHub Actions
 
 ![Azure Resources creation using Terraform |150x150](./Documentation/Images/S9/GitHubActions_AKS_Infra.PNG)
+
+## 3. How GitHub Actions gets access on Azure Resources? (`5 Minutes`)
+
+> 1. Discussion and Demo
 
 ## 3. Create Products.API's `docker image` and push it to `Docker Hub` using GitHub Actions (`5 Minutes`)
 
