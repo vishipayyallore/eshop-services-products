@@ -105,19 +105,31 @@ Description: **`To Be Done`**
 
 > 1. Discussion
 
-## 5. CRUD Operations on the Deployed `Products` microservice into AKS using Postman (`5 Minutes`)
+## 5. Recap and Review of Products Microservice (`10 Minutes`)
+
+> 1. Discussion
+
+## 6. CRUD Operations on the Deployed `Products` microservice into AKS using Postman (`5 Minutes`)
 
 > 1. Discussion
 
 ![Postman Collections for 8 environments |150x150](./Documentation/Images/S5/Postman_Collections.PNG)
 
-## x. Review/Q & A/Panel Discussion (`5 Minutes`)
+## 7. Using Main as the Source of publishing the entire solution (`5 Minutes`)
 
 > 1. Discussion
 
-## x. What is next in `Session 11`? (`5 Minutes`) on `4-Nov-2022`
+## 8. Review/Q & A/Panel Discussion (`5 Minutes`)
 
-> 1. To be Done
+> 1. Discussion
+
+## 9. What is next in `Session 11`? (`5 Minutes`) on `4-Nov-2022`
+
+> 1. Introduction to `eShop` Client Application Angular 14
+> 1. eShop Client Integrating with Products Micro Services WITHOUT Authentication
+> 1. List of Products ONLY
+> 1. Review/Q & A/Panel Discussion (`5 Minutes`)
+> 1. What is next in `Session 11`? (`5 Minutes`)
 
 ---
 
