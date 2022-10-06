@@ -46,7 +46,7 @@ Description: **`To Be Done`**
 > 1. Hands of Azure Kubernetes Infrastructure using Portal / VS Code Extension / Azure Cloud Shell  (`10 Minutes`)
 >     - Using `Azure Portal` | `VS Code Extension` | `Azure Cloud Shell`
 > 1. Hands of Azure Kubernetes Infrastructure using Imperative way (`10 Minutes`)
->     - kubectl get nodes | pods | service | deployments
+>     - kubectl get `nodes` | `pods` | `service` | `deployments`
 > 1. Introduction of eShop Main Repo (`5 Minutes`)
 > 1. PS1/Shell Scripts (`5 Minutes`)
 > 1. Recap and Review of Products Microservice (`10 Minutes`)
