@@ -33,7 +33,7 @@ Description: **`To Be Done`**
 > 1. Please refer [Session7.md](./Documentation/Sessions/Session7.md) and [Video](https://www.youtube.com/watch?v=7abmbzh0ckA) for more details.
 > 1. Please refer [Session8.md](./Documentation/Sessions/Session8.md) and [Video](https://www.youtube.com/watch?v=z5hxCeCowFM) for more details.
 > 1. Please refer [Session9.md](./Documentation/Sessions/Session9.md) and [Video](https://www.youtube.com/watch?v=-aEf272gZBM) for more details.
-> 1. Please refer [Session10.md](./Documentation/Sessions/Session10.md) and [Video](https://www.youtube.com/watch?v=-aEf272gZBM) for more details.
+> 1. Please refer [Session10.md](./Documentation/Sessions/Session10.md) and [Video](https://www.youtube.com/watch?v=9Z4tT84VAr4) for more details.
 
 ---
 
