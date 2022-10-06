@@ -47,13 +47,13 @@ Description: **`To Be Done`**
 >     - Using `Azure Portal` | `VS Code Extension` | `Azure Cloud Shell`
 > 1. Hands of Azure Kubernetes Infrastructure using Imperative way (`10 Minutes`)
 >     - kubectl get nodes | pods | service | deployments
-> 1. Introduction of eShop Main Repo (5 Minutes)
-> 1. PS1/Sh Scripts (5 Minutes)
-> 1. Recap and Review of Products Microservice (10 Minutes)
-> 1. CRUD Operations on the Deployed `Products` microservice into AKS using Postman (5 Minutes)
-> 1. Using Main as the Source of publishing the entire solution (10 Minutes)
+> 1. Introduction of eShop Main Repo (`5 Minutes`)
+> 1. PS1/Shell Scripts (`5 Minutes`)
+> 1. Recap and Review of Products Microservice (`10 Minutes`)
+> 1. CRUD Operations on the Deployed `Products` microservice into AKS using Postman (`5 Minutes`)
+> 1. Using Main as the Source of publishing the entire solution (`5 Minutes`)
 > 1. Review/Q & A/Panel Discussion (`5 Minutes`)
-> 1. What is next in `Session 10`? (`5 Minutes`)
+> 1. What is next in `Session 11`? (`5 Minutes`)
 
 ![Faster Your Seat Belt |150x150](./Documentation/Images/SeatBelt.PNG)
 
@@ -96,6 +96,20 @@ Description: **`To Be Done`**
 ### kubectl get `deployments`
 
 > 1. Discussion and Demo
+
+## 3. Introduction of eShop Main Repo (`5 Minutes`)
+
+> 1. Discussion
+
+## 4. PS1/Shell Scripts (`5 Minutes`)
+
+> 1. Discussion
+
+## 5. CRUD Operations on the Deployed `Products` microservice into AKS using Postman (`5 Minutes`)
+
+> 1. Discussion
+
+![Postman Collections for 8 environments |150x150](./Documentation/Images/S5/Postman_Collections.PNG)
 
 ## x. Review/Q & A/Panel Discussion (`5 Minutes`)
 
