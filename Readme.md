@@ -43,12 +43,12 @@ Description: **`To Be Done`**
 
 ## What are we going to do today?
 
-> 1. Hands of Azure Kubernetes Service using Portal / VS Code Extension  (`10 Minutes`)
+> 1. Hands on Azure Kubernetes Service using Portal / VS Code Extension  (`10 Minutes`)
 >     - Using `Azure Portal` | `VS Code Extension`
-> 1. Hands of Azure Kubernetes Service using Imperative way using Azure Cloud Shell (`10 Minutes`)
+> 1. Hands on Azure Kubernetes Service using Imperative way using Azure Cloud Shell (`10 Minutes`)
 >     - kubectl get `nodes` | `pods` | `service` | `deployments`
-> 1. Introduction of eShop Main Repo (`5 Minutes`)
-> 1. PS1/Shell Scripts (`5 Minutes`)
+> 1. Introduction of eShop Main GitHub Repository (`5 Minutes`)
+> 1. PowerShell/Shell Scripts in 'Main' Repository (`5 Minutes`)
 > 1. Recap and Review of Products Microservice (`10 Minutes`)
 > 1. CRUD Operations on the Deployed `Products` microservice into AKS using Postman (`5 Minutes`)
 > 1. Using Main as the Source of publishing the entire solution (`5 Minutes`)
@@ -57,7 +57,7 @@ Description: **`To Be Done`**
 
 ![Faster Your Seat Belt |150x150](./Documentation/Images/SeatBelt.PNG)
 
-## 1. Hands of Azure Kubernetes Service using Portal / VS Code Extension (`10 Minutes`)
+## 1. Hands on Azure Kubernetes Service using Portal / VS Code Extension (`10 Minutes`)
 
 > 1. Discussion and Demo
 
@@ -65,7 +65,7 @@ Description: **`To Be Done`**
 
 > 1. Discussion and Demo
 
-## 2. Hands of Azure Kubernetes Service using Imperative way using Azure Cloud Shell (`10 Minutes`)
+## 2. Hands on Azure Kubernetes Service using Imperative way using Azure Cloud Shell (`10 Minutes`)
 
 > 1. Discussion and Demo
 
@@ -81,13 +81,13 @@ Description: **`To Be Done`**
 
 ![K8s from Cloud Shell |150x150](./Documentation/Images/S9/K8sFromCloudShell_1.PNG)
 
-## 3. Introduction of eShop Main Repo (`5 Minutes`)
+## 3. Introduction of eShop Main GitHub Repository (`5 Minutes`)
 
 > 1. Discussion
 
-## 4. PS1/Shell Scripts (`5 Minutes`)
+## 4. PowerShell/Shell Scripts in 'Main' Repository (`5 Minutes`)
 
-> 1. Discussion
+> 1. Discussion and Demo
 
 ## 5. Recap and Review of Products Microservice (`10 Minutes`)
 
@@ -95,7 +95,7 @@ Description: **`To Be Done`**
 
 ## 6. CRUD Operations on the Deployed `Products` microservice into AKS using Postman (`5 Minutes`)
 
-> 1. Discussion
+> 1. Discussion and Demo
 
 ![Postman Collections for 8 environments |150x150](./Documentation/Images/S5/Postman_Collections.PNG)
 
