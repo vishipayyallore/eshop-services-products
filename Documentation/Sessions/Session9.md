@@ -63,15 +63,15 @@
 
 > 1. Discussion and Demo
 
-### Deployment To AKS For Approval
+### Deployment To AKS with Approval
 
-![Deployment To AKS For Approval |150x150](../Images/S9/DeploymentToAKSForApproval.PNG)
+![Deployment To AKS with Approval |150x150](../Images/S9/DeploymentToAKSForApproval.PNG)
 
 ### Deployment To AKS
 
 ![Deployment To AKS |150x150](../Images/S9/DeploymentToAKS.PNG)
 
-### Products Micro Service Docker Image Docker Hub
+### Accessing the Products API from AKS
 
 ![Accessing the Products API from AKS |150x150](../Images/S9/AccessTheProductsAPIFromK8s.PNG)
 
@@ -92,15 +92,13 @@
 
 ## 8. What is next in `Session 10`? (`5 Minutes`) on `09-Sep-2022`
 
-1. Changes to Terraform `configuration files` for Azure Infrastructure (`10 Minutes`) [^1]
-1. Deploying AKS and other Infrastructure using GitHub Actions (`5 Minutes`)
-1. Create Products.API's `docker image` and upload it to `Docker Hub` using GitHub Actions (`5 Minutes`)
-1. Deploy Products Microservice using `docker image` from Docker Hub into `AKS` using GitHub Actions (`5 Minutes`)
-1. CRUD Operations on the Deployed `Products` microservice into AKS using Postman (`5 Minutes`)
-1. Hands of Azure Kubernetes Infrastructure using Portal / VS Code Extension (`10 Minutes`)
-    - Using `Portal`
-    - Using `VS Code Extension`
-1. Hands of Azure Kubernetes Infrastructure using Imperative way (`10 Minutes`)
-    - kubectl get nodes | pods | service | deployments
+1. Introduction - (5 Minutes)
+1. Hands of Azure Kubernetes Infrastructure using Portal / VS Code Extension / Azure Cloud Shell (10 Minutes)
+1. Hands of Azure Kubernetes Infrastructure using Imperative way (10 Minutes)
+1. Introduction of eShop Main Repo (5 Minutes)
+1. PS1/Sh Scripts (5 Minutes)
+1. Recap and Review of Products Microservice (10 Minutes)
+1. CRUD Operations on the Deployed `Products` microservice into AKS using Postman (5 Minutes)
+1. Using Main as the Source of publishing the entire solution (10 Minutes)
 1. Review/Q & A/Panel Discussion (`5 Minutes`)
-1. What is next in `Session 9`? (`5 Minutes`)
+1. What is next in `Session 11`? - (5 Minutes)

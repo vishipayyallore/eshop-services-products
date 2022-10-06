@@ -32,6 +32,8 @@ Description: **`To Be Done`**
 > 1. Please refer [Session6.md](./Documentation/Sessions/Session6.md) and [Video](https://www.youtube.com/watch?v=FmMIF6_bGuw) for more details.
 > 1. Please refer [Session7.md](./Documentation/Sessions/Session7.md) and [Video](https://www.youtube.com/watch?v=7abmbzh0ckA) for more details.
 > 1. Please refer [Session8.md](./Documentation/Sessions/Session8.md) and [Video](https://www.youtube.com/watch?v=z5hxCeCowFM) for more details.
+> 1. Please refer [Session9.md](./Documentation/Sessions/Session9.md) and [Video](https://www.youtube.com/watch?v=-aEf272gZBM) for more details.
+> 1. Please refer [Session10.md](./Documentation/Sessions/Session10.md) and [Video](https://www.youtube.com/watch?v=9Z4tT84VAr4) for more details.
 
 ---
 
@@ -42,13 +44,16 @@ Description: **`To Be Done`**
 ## What are we going to do today?
 
 > 1. Hands of Azure Kubernetes Infrastructure using Portal / VS Code Extension / Azure Cloud Shell  (`10 Minutes`)
->     - Using `Azure Portal`
->     - Using `VS Code Extension`
->     - Using `Azure Cloud Shell`
+>     - Using `Azure Portal` | `VS Code Extension` | `Azure Cloud Shell`
 > 1. Hands of Azure Kubernetes Infrastructure using Imperative way (`10 Minutes`)
 >     - kubectl get nodes | pods | service | deployments
+> 1. Introduction of eShop Main Repo (`5 Minutes`)
+> 1. PS1/Shell Scripts (`5 Minutes`)
+> 1. Recap and Review of Products Microservice (`10 Minutes`)
+> 1. CRUD Operations on the Deployed `Products` microservice into AKS using Postman (`5 Minutes`)
+> 1. Using Main as the Source of publishing the entire solution (`5 Minutes`)
 > 1. Review/Q & A/Panel Discussion (`5 Minutes`)
-> 1. What is next in `Session 10`? (`5 Minutes`)
+> 1. What is next in `Session 11`? (`5 Minutes`)
 
 ![Faster Your Seat Belt |150x150](./Documentation/Images/SeatBelt.PNG)
 
@@ -92,13 +97,39 @@ Description: **`To Be Done`**
 
 > 1. Discussion and Demo
 
-## x. Review/Q & A/Panel Discussion (`5 Minutes`)
+## 3. Introduction of eShop Main Repo (`5 Minutes`)
 
 > 1. Discussion
 
-## x. What is next in `Session 11`? (`5 Minutes`) on `4-Nov-2022`
+## 4. PS1/Shell Scripts (`5 Minutes`)
 
-> 1. To be Done
+> 1. Discussion
+
+## 5. Recap and Review of Products Microservice (`10 Minutes`)
+
+> 1. Discussion
+
+## 6. CRUD Operations on the Deployed `Products` microservice into AKS using Postman (`5 Minutes`)
+
+> 1. Discussion
+
+![Postman Collections for 8 environments |150x150](./Documentation/Images/S5/Postman_Collections.PNG)
+
+## 7. Using Main as the Source of publishing the entire solution (`5 Minutes`)
+
+> 1. Discussion
+
+## 8. Review/Q & A/Panel Discussion (`5 Minutes`)
+
+> 1. Discussion
+
+## 9. What is next in `Session 11`? (`5 Minutes`) on `4-Nov-2022`
+
+> 1. Introduction to `eShop` Client Application Angular 14
+> 1. eShop Client Integrating with Products Micro Services WITHOUT Authentication
+> 1. List of Products ONLY
+> 1. Review/Q & A/Panel Discussion (`5 Minutes`)
+> 1. What is next in `Session 11`? (`5 Minutes`)
 
 ---
 
