@@ -61,6 +61,8 @@ Description: **`To Be Done`**
 
 > 1. Discussion and Demo
 
+![AKS |150x150](./Documentation/Images/S10/AKS_1.PNG)
+
 ### Using `Azure Portal` | `VS Code Extension`
 
 > 1. Discussion and Demo
