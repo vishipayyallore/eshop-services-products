@@ -77,9 +77,9 @@ Description: **`To Be Done`**
 
 > 1. Discussion and Demo
 
-![K8s from Cloud Shell |150x150](./Documentation/Images/S9/K8sFromCloudShell.PNG)
+![K8s from Cloud Shell |150x150](./Documentation/Images/S10/K8sFromCloudShell.PNG)
 
-![K8s from Cloud Shell |150x150](./Documentation/Images/S9/K8sFromCloudShell_1.PNG)
+![K8s from Cloud Shell |150x150](./Documentation/Images/S10/K8sFromCloudShell_1.PNG)
 
 ## 3. Introduction of eShop Main GitHub Repository (`5 Minutes`)
 
