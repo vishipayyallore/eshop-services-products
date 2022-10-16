@@ -22,7 +22,7 @@ Description: **`To Be Done`**
 
 ---
 
-## Links to individual sessions Documentation and its Videos
+## Links to individual session(s) Documentation and its Videos
 
 > 1. Please refer [Session1.md](./Documentation/Sessions/Session1.md) and [Video](https://www.youtube.com/watch?v=wQ0Xf4pKZaQ) for more details.
 > 1. Please refer [Session2.md](./Documentation/Sessions/Session2.md) and [Video](https://www.youtube.com/watch?v=R8QIrph-rCI) for more details.
