@@ -57,32 +57,6 @@ Description: **`To Be Done`**
 
 ![Faster Your Seat Belt |150x150](./Documentation/Images/SeatBelt.PNG)
 
-## 1. Hands on Azure Kubernetes Service using Portal / VS Code Extension (`10 Minutes`)
-
-> 1. Discussion and Demo
-
-![AKS |150x150](./Documentation/Images/S10/AKS_1.PNG)
-
-### Using `Azure Portal` | `VS Code Extension`
-
-> 1. Discussion and Demo
-
-## 2. Hands on Azure Kubernetes Service using Imperative way using Azure Cloud Shell (`10 Minutes`)
-
-> 1. Discussion and Demo
-
-### kubectl get `nodes` | `pods` | `service` | `deployments`
-
-> 1. Discussion and Demo
-
-### Using `Azure Cloud Shell`
-
-> 1. Discussion and Demo
-
-![K8s from Cloud Shell |150x150](./Documentation/Images/S10/K8sFromCloudShell.PNG)
-
-![K8s from Cloud Shell |150x150](./Documentation/Images/S10/K8sFromCloudShell_1.PNG)
-
 ## 3. Introduction of eShop Main GitHub Repository (`5 Minutes`)
 
 > 1. Discussion
@@ -90,16 +64,6 @@ Description: **`To Be Done`**
 ## 4. PowerShell/Shell Scripts in 'Main' Repository (`5 Minutes`)
 
 > 1. Discussion and Demo
-
-## 5. Recap and Review of Products Microservice (`10 Minutes`)
-
-> 1. Discussion
-
-## 6. CRUD Operations on the Deployed `Products` microservice into AKS using Postman (`5 Minutes`)
-
-> 1. Discussion and Demo
-
-![Postman Collections for 8 environments |150x150](./Documentation/Images/S5/Postman_Collections.PNG)
 
 ## 7. Using Main as the Source of publishing the entire solution (`5 Minutes`)
 
