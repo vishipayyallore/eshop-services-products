@@ -39,87 +39,11 @@ Description: **`To Be Done`**
 
 ![Information |150x150](./Documentation/Images/Information.PNG)
 
-## Session 10
-
-## What are we going to do today?
-
-> 1. Hands on Azure Kubernetes Service using Portal / VS Code Extension  (`10 Minutes`)
->     - Using `Azure Portal` | `VS Code Extension`
-> 1. Hands on Azure Kubernetes Service using Imperative way using Azure Cloud Shell (`10 Minutes`)
->     - kubectl get `nodes` | `pods` | `service` | `deployments`
-> 1. Introduction of eShop Main GitHub Repository (`5 Minutes`)
-> 1. PowerShell/Shell Scripts in 'Main' Repository (`5 Minutes`)
-> 1. Recap and Review of Products Microservice (`10 Minutes`)
-> 1. CRUD Operations on the Deployed `Products` microservice into AKS using Postman (`5 Minutes`)
-> 1. Using Main as the Source of publishing the entire solution (`5 Minutes`)
-> 1. Review/Q & A/Panel Discussion (`5 Minutes`)
-> 1. What is next in `Session 11`? (`5 Minutes`)
-
 ![Faster Your Seat Belt |150x150](./Documentation/Images/SeatBelt.PNG)
-
-## 1. Hands on Azure Kubernetes Service using Portal / VS Code Extension (`10 Minutes`)
-
-> 1. Discussion and Demo
-
-![AKS |150x150](./Documentation/Images/S10/AKS_1.PNG)
-
-### Using `Azure Portal` | `VS Code Extension`
-
-> 1. Discussion and Demo
-
-## 2. Hands on Azure Kubernetes Service using Imperative way using Azure Cloud Shell (`10 Minutes`)
-
-> 1. Discussion and Demo
-
-### kubectl get `nodes` | `pods` | `service` | `deployments`
-
-> 1. Discussion and Demo
-
-### Using `Azure Cloud Shell`
-
-> 1. Discussion and Demo
-
-![K8s from Cloud Shell |150x150](./Documentation/Images/S10/K8sFromCloudShell.PNG)
-
-![K8s from Cloud Shell |150x150](./Documentation/Images/S10/K8sFromCloudShell_1.PNG)
-
-## 3. Introduction of eShop Main GitHub Repository (`5 Minutes`)
-
-> 1. Discussion
-
-## 4. PowerShell/Shell Scripts in 'Main' Repository (`5 Minutes`)
-
-> 1. Discussion and Demo
-
-## 5. Recap and Review of Products Microservice (`10 Minutes`)
-
-> 1. Discussion
-
-## 6. CRUD Operations on the Deployed `Products` microservice into AKS using Postman (`5 Minutes`)
-
-> 1. Discussion and Demo
-
-![Postman Collections for 8 environments |150x150](./Documentation/Images/S5/Postman_Collections.PNG)
-
-## 7. Using Main as the Source of publishing the entire solution (`5 Minutes`)
-
-> 1. Discussion
-
-## 8. Review/Q & A/Panel Discussion (`5 Minutes`)
-
-> 1. Discussion
-
-## 9. What is next in `Session 11`? (`5 Minutes`) on `4-Nov-2022`
-
-> 1. Introduction to `eShop` Client Application Angular 14
-> 1. eShop Client Integrating with Products Micro Services WITHOUT Authentication
-> 1. List of Products ONLY
-> 1. Review/Q & A/Panel Discussion (`5 Minutes`)
-> 1. What is next in `Session 11`? (`5 Minutes`)
 
 ---
 
-## `****************** WISH LIST ******************`
+## `****************** WISH LIST - Future Sessions to be planned ******************`
 
 ## New Features
 
@@ -137,11 +61,10 @@ Description: **`To Be Done`**
 
 ## DevOps
 
-> 1. CI/CD with Azure DevOps/GitHub Actions
+> 1. NIL
 
 ## Deployments
 
-> 1. Deployment into K8s using Docker Image
 > 1. Deployment into K8s using ACR
 > 1. Deployment into Container Apps
 > 1. Kubernetes Service Mesh
@@ -153,7 +76,6 @@ Description: **`To Be Done`**
 
 ## Security
 
-> 1. Static Analysis
 > 1. Vulnerability Scanning
 > 1. Supply Chain Security
 > 1. Software Composition
@@ -169,25 +91,3 @@ Description: **`To Be Done`**
 > 1. Performance Testing
 
 ---
-
-## Verify the Deployments using Postman (`10 Minutes`)
-
-> 1. Discussion and Demo
-
-### Verify the end points `locally` (Kestrel, IIS Express, Docker, Docker-Compose, and K8s)
-
-> 1. Discussion and Demo
-
-### Verify the end points from `Azure Container Instances`
-
-> 1. Discussion and Demo
-
-### Verify the end points `Docker Instances from App Service`
-
-> 1. Discussion and Demo
-
-### Verify the end points `Azure Kubernetes Service`
-
-> 1. Discussion and Demo
-
-![Postman Collections for 8 environments |150x150](./Documentation/Images/S5/Postman_Collections.PNG)
