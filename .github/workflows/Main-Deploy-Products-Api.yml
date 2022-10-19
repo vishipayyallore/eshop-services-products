@@ -31,6 +31,8 @@ jobs:
     # if: ${{ github.ref_name == 'main' }}
     needs: [ci-build-services-products]
     uses: ./.github/workflows/A3-Build-Push-DockerImage.yml
+    with:
+      WORKING_DIRECTORY: "./Source/Products.API"
     secrets: inherit
 
   deploy-docker-image-to-aks:

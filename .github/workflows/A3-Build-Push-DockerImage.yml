@@ -2,11 +2,15 @@ name: "A3 Build and Push Docker Image"
 
 on:
   workflow_call:
+    inputs:
+      WORKING_DIRECTORY:
+        required: true
+        type: string
 
 env:
   DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
   DOCKER_HUB_ACCESS_TOKEN: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
-  WORKING_DIRECTORY: "./Source/Products.API"
+  # WORKING_DIRECTORY: "./Source/Products.API"
 
 jobs:
   build-push-docker-image:
@@ -46,7 +50,7 @@ jobs:
         uses: docker/build-push-action@v3.1.1
         with:
           context: .
-          file: ${{ env.WORKING_DIRECTORY }}/Dockerfile
+          file: ${{ inputs.WORKING_DIRECTORY }}/Dockerfile
           push: true
           tags: ${{ env.DOCKER_USERNAME }}/eshop-services-products:latest,${{ env.DOCKER_USERNAME }}/eshop-services-products:${{ steps.start.outputs.timestamp }}
           labels: ${{ steps.meta.outputs.labels }}
