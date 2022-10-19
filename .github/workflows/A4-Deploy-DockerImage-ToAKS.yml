@@ -43,7 +43,7 @@ jobs:
         with:
           action: deploy
           manifests: |
-            vishipayyallore/eshop-services-products/blob/main/Deploy/eshop-products-api-k8s.yml@main
+            https://raw.githubusercontent.com/vishipayyallore/eshop-services-products/main/Deploy/eshop-products-api-k8s.yml
           images: |
             ${{ env.DOCKER_USERNAME }}/eshop-services-products:latest
 
