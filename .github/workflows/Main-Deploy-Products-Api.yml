@@ -1,6 +1,6 @@
 # To Build, Publish, and Push to Docker Hub Products-API
 
-name: A5 Main Products Api CI
+name: Main Deploy Products Microservice to AKS
 
 # Controls when the workflow will run
 on:
@@ -31,6 +31,8 @@ jobs:
     if: ${{ github.ref_name == 'main' }}
     needs: [ci-build-services-products]
     uses: ./.github/workflows/A3-Build-Push-DockerImage.yml
+    with:
+      WORKING_DIRECTORY: "./Source/Products.API"
     secrets: inherit
 
   deploy-docker-image-to-aks:
