@@ -14,7 +14,7 @@ env:
   RESOURCE_GROUP: "rg-eshop-dev-001"
 
 jobs:
-  build-push-docker-image:
+  deploy-docker-image-to-aks:
     runs-on: ubuntu-latest
     environment: Development
 
