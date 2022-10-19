@@ -4,18 +4,15 @@ on:
   workflow_call:
 
 env:
+  # DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+  # AZURE_CLIENT_ID: ${{ secrets.AZURE_AD_CLIENT_ID }}
+  # AZURE_CLIENT_SECRET: ${{ secrets.AZURE_AD_CLIENT_SECRET }}
+  # AZURE_SUBSCRIPTION_ID: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+  # AZURE_TENANT_ID: ${{ secrets.AZURE_AD_TENANT_ID }}
   DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
-  DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
-  AZURE_CLIENT_ID: ${{ secrets.AZURE_AD_CLIENT_ID }}
-  AZURE_CLIENT_SECRET: ${{ secrets.AZURE_AD_CLIENT_SECRET }}
-  AZURE_SUBSCRIPTION_ID: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
-  AZURE_TENANT_ID: ${{ secrets.AZURE_AD_TENANT_ID }}
+  AZURE_CREDENTIALS: ${{ secrets.AZURE_CREDENTIALS }}
   CLUSTER_NAME: "rg-eshop-dev-001-cluster"
   RESOURCE_GROUP: "rg-eshop-dev-001"
-
-permissions:
-      id-token: write
-      contents: read
 
 jobs:
   deploy-docker-image-to-aks:
@@ -36,7 +33,7 @@ jobs:
       - name: Azure login
         uses: azure/login@v1.4.5
         with:
-          creds: ${{ secrets.AZURE_CREDENTIALS }}
+          creds: ${{ env.AZURE_CREDENTIALS }}
 
       # Retrieves your Azure Kubernetes Service cluster's kubeconfig file
       - name: Get K8s context
@@ -53,4 +50,4 @@ jobs:
           manifests: |
             Deploy/eshop-products-api-k8s.yml
           images: |
-            ${{ secrets.DOCKER_USERNAME }}/eshop-services-products:latest
+            ${{ env.DOCKER_USERNAME }}/eshop-services-products:latest
