@@ -46,3 +46,5 @@ jobs:
             Deploy/eshop-products-api-k8s.yml
           images: |
             ${{ env.DOCKER_USERNAME }}/eshop-services-products:latest
+
+# Deploy/eshop-products-api-k8s.yml
