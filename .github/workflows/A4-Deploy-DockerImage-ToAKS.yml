@@ -13,6 +13,10 @@ env:
   CLUSTER_NAME: "rg-eshop-dev-001-cluster"
   RESOURCE_GROUP: "rg-eshop-dev-001"
 
+permissions:
+      id-token: write
+      contents: read
+
 jobs:
   deploy-docker-image-to-aks:
     runs-on: ubuntu-latest
