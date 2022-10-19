@@ -10,7 +10,6 @@ on:
 env:
   DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
   DOCKER_HUB_ACCESS_TOKEN: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
-  # WORKING_DIRECTORY: "./Source/Products.API"
 
 jobs:
   build-push-docker-image:
