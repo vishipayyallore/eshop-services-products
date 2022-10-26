@@ -1,12 +1,12 @@
-# eShop `Products` Microservice `API`
+# eShop Services `Products` Microservice
 
 Description: **`To Be Done`**
 
 ## Status Badges
 
-| PR, and CI Builds                                                                                                                                                                                                                  | Code QL                                                                                                                                                                                                                   |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [![Products-Api-CI](https://github.com/vishipayyallore/eshop-services-products/actions/workflows/A5-Main-Products-Api.yml/badge.svg)](https://github.com/vishipayyallore/eshop-services-products/actions/workflows/A5-Main-Products-Api.yml) | [![A6 CodeQL Analysis](https://github.com/vishipayyallore/eshop-services-products/actions/workflows/A6-CodeQL-Analysis.yml/badge.svg)](https://github.com/vishipayyallore/eshop-services-products/actions/workflows/A6-CodeQL-Analysis.yml) |
+| PR, and CI Builds                                                                                                                                                                                                                                                             | Code QL                                                                                                                                                                                                                                     |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [![Main Deploy Products Microservice to AKS](https://github.com/vishipayyallore/eshop-services-products/actions/workflows/Main-Deploy-Products-Api.yml/badge.svg)](https://github.com/vishipayyallore/eshop-services-products/actions/workflows/Main-Deploy-Products-Api.yml) | [![A5 CodeQL Analysis](https://github.com/vishipayyallore/eshop-services-products/actions/workflows/A5-CodeQL-Analysis.yml/badge.svg)](https://github.com/vishipayyallore/eshop-services-products/actions/workflows/A5-CodeQL-Analysis.yml) |
 
 ## Solution Map Diagram
 
@@ -43,7 +43,7 @@ Description: **`To Be Done`**
 
 ---
 
-## `****************** WISH LIST - Future Sessions to be planned ******************`
+## `***** WISH LIST - Future Sessions to be planned *****`
 
 ## New Features
 
