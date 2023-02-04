@@ -1,14 +1,17 @@
 version: '3.4'
 
 services:
-  productsdb:
+  productsmongodb:
     image: mongo
 
   products.api:
-    image: ${DOCKER_REGISTRY-}productsapi
+    image: vishipayyallore/eshop-services-products
     build:
       context: .
       dockerfile: Source/Products.API/Dockerfile
+
+  configuration.api:
+    image: vishipayyallore/eshop-services-configuration
 
 volumes:
   mongo_data:

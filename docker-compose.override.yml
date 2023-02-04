@@ -1,8 +1,8 @@
 version: '3.4'
 
 services:
-  productsdb:
-    container_name: productsdb
+  productsmongodb:
+    container_name: eshop-store-products
     restart: always
     ports:
       - "27017:27017"
@@ -10,16 +10,34 @@ services:
       - mongo_data:/data/db
 
   products.api:
-    container_name: products.api
+    container_name: eshop-services-products
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_URLS=https://+:443;http://+:80
       - ASPNETCORE_HTTPS_PORT=8001
-      - "MongoDbSettings__ConnectionString=mongodb://productsdb:27017"
+      - "MongoDbSettings__ConnectionString=mongodb://eshop-store-products:27017"
     depends_on:
-      - productsdb
+      - productsmongodb
     ports:
       - "8000:80"
       - "8001:443"
     volumes:
       - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
+
+  configuration.api:
+    container_name: eshop-services-configuration
+    environment:
+      - CDNHOST=https://blob.windows.net
+      - APIHOST=https://localhost:8001
+      - PRODUCTS_IMAGES_FOLDER=productimages
+      - IDENTITY_AUTHORITY=https://app.azurewebsites.net
+      - IDENTITY_SIGNIN=/post-sign-in-url
+      - IDENTITY_SIGNOUT=/post-sign-out-url
+      - IDENTITY_CLIENTID=dummy-data
+      - IDENTITY_SCOPE=dummy data
+      - IDENTITY_RESPONSETYPE=code
+      - CORS_ALLOWED_ORIGINS=["*"]
+      - CORS_SUPPORT_CREDENTIALS=false
+      - CONTAINER_NAME=banana
+    ports:
+      - "8002:80"
