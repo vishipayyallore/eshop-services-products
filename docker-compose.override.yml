@@ -1,8 +1,8 @@
 version: '3.4'
 
 services:
-  productsdb:
-    container_name: productsdb
+  productsmongodb:
+    container_name: eshop-store-products
     restart: always
     ports:
       - "27017:27017"
@@ -10,14 +10,14 @@ services:
       - mongo_data:/data/db
 
   products.api:
-    container_name: products.api
+    container_name: eshop-services-products
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_URLS=https://+:443;http://+:80
       - ASPNETCORE_HTTPS_PORT=8001
-      - "MongoDbSettings__ConnectionString=mongodb://productsdb:27017"
+      - "MongoDbSettings__ConnectionString=mongodb://eshop-store-products:27017"
     depends_on:
-      - productsdb
+      - productsmongodb
     ports:
       - "8000:80"
       - "8001:443"
