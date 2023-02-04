@@ -23,3 +23,21 @@ services:
       - "8001:443"
     volumes:
       - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
+
+  configuration.api:
+    container_name: eshop-services-configuration
+    environment:
+      - CDNHOST=https://blob.windows.net
+      - APIHOST=https://localhost:8001
+      - PRODUCTS_IMAGES_FOLDER=productimages
+      - IDENTITY_AUTHORITY=https://app.azurewebsites.net
+      - IDENTITY_SIGNIN=/post-sign-in-url
+      - IDENTITY_SIGNOUT=/post-sign-out-url
+      - IDENTITY_CLIENTID=dummy-data
+      - IDENTITY_SCOPE=dummy data
+      - IDENTITY_RESPONSETYPE=code
+      - CORS_ALLOWED_ORIGINS=["*"]
+      - CORS_SUPPORT_CREDENTIALS=false
+      - CONTAINER_NAME=banana
+    ports:
+      - "8002:80"
