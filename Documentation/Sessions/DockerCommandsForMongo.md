@@ -6,7 +6,7 @@ Reference: [Mongo Db on Docker Hub](https://hub.docker.com/_/mongo?tab=descripti
 
 ```
 docker image pull mongo
-docker container run -d -p 27017:27017 --name shop-mongo mongo
+docker container run -d -p 27017:27017 --name eshop-store-products mongo
 docker sbom mongo
 ```
 
@@ -27,7 +27,7 @@ docker container inspect --format "{{ .NetworkSettings.IPAddress }}" <ContainerN
 docker container ps
 docker container ps -a
 docker container ps -q
-docker container logs -f shop-mongo
+docker container logs -f eshop-store-products
 ```
 
 ![Mongo Db Container Logs |150x150](../Images/S3/MongoContainerLogs.PNG)
@@ -35,7 +35,7 @@ docker container logs -f shop-mongo
 ## Entering into the Mongo Db Container
 
 ```
-docker container exec -it shop-mongo /bin/bash
+docker container exec -it eshop-store-products /bin/bash
 ```
 
 ![Mongo Db Container Logs |150x150](../Images/S3/Inside_MongoDbContainer.PNG)
@@ -74,10 +74,10 @@ db.createCollection('Products');
 > 1. Execute `mongo` command and verify the `Products` is unavailable
 
 ```
-docker container rm -f shop-mongo
-docker container run -d -p 27017:27017 --name shop-mongo mongo
+docker container rm -f eshop-store-products
+docker container run -d -p 27017:27017 --name eshop-store-products mongo
 docker container ps -a
-docker exec -it shop-mongo /bin/bash
+docker exec -it eshop-store-products /bin/bash
 ```
 
 ![Re-creating Docker Container |150x150](../Images/S3/Recreating_MongoDbContainer.PNG)
@@ -85,7 +85,7 @@ docker exec -it shop-mongo /bin/bash
 ## Creating Mongo Db Container with Volumes
 
 ```
-docker container run -d -p 27017:27017 --name shop-mongo -v /var/lib/docker/volumes/mongo-db-persistance-store/_data:/data/db -v /var/lib/docker/volumes/mongo-db-config-store/_data:/data/configdb mongo
+docker container run -d -p 27017:27017 --name eshop-store-products -v /var/lib/docker/volumes/mongo-db-persistance-store/_data:/data/db -v /var/lib/docker/volumes/mongo-db-config-store/_data:/data/configdb mongo
 ```
 
 ## Creating Mongo Db Container with Volumes
